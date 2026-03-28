@@ -1,0 +1,874 @@
+{
+    "place": {
+        "id": "itmad",
+        "name": "Tomb of Itimad-ud-Daulah",
+        "map": {
+            "image": "/tours/itmad/map.png"
+        }
+    },
+    "spots": {
+        "spot1": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 95,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/1.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot2"
+                    }
+                ]
+            }
+        },
+        "spot2": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 85,
+                "angleOffset": 0
+            },
+            "available": [
+                "north",
+                "east",
+                "west",
+                "south"
+            ],
+            "images": {
+                "north": "/tours/itmad/2.1.jpg",
+                "east": "/tours/itmad/2.2.jpg",
+                "west": "/tours/itmad/2.3.jpg",
+                "south": "/tours/itmad/2.4.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot3"
+                    }
+                ]
+            }
+        },
+        "spot3": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 75,
+                "angleOffset": 0
+            },
+            "available": [
+                "north",
+                "east",
+                "west",
+                "south"
+            ],
+            "images": {
+                "north": "/tours/itmad/3.1.jpg",
+                "east": "/tours/itmad/3.2.jpg",
+                "west": "/tours/itmad/3.3.jpg",
+                "south": "/tours/itmad/3.4.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot4"
+                    }
+                ]
+            }
+        },
+        "spot4": {"heading": "Spot ",
+            "map": {
+                "x": 55,
+                "y": 75,
+                "angleOffset": 0
+            },
+            "available": [
+                "north",
+                "east",
+                "west",
+                "south"
+            ],
+            "images": {
+                "north": "/tours/itmad/4.1.jpg",
+                "east": "/tours/itmad/4.2.jpg",
+                "west": "/tours/itmad/4.3.jpg",
+                "south": "/tours/itmad/4.4.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot5"
+                    }
+                ]
+            }
+        },
+        "spot5": {"heading": "Spot ",
+            "map": {
+                "x": 45,
+                "y": 75,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/5.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot6"
+                    }
+                ]
+            }
+        },
+        "spot6": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 70,
+                "angleOffset": 0
+            },
+            "available": [
+                "north",
+                "east",
+                "west",
+                "south"
+            ],
+            "images": {
+                "north": "/tours/itmad/6.1.jpg",
+                "east": "/tours/itmad/6.2.jpg",
+                "west": "/tours/itmad/6.3.jpg",
+                "south": "/tours/itmad/6.4.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot7"
+                    }
+                ]
+            }
+        },
+        "spot7": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 65,
+                "angleOffset": 0
+            },
+            "available": [
+                "north",
+                "east",
+                "west",
+                "south"
+            ],
+            "images": {
+                "north": "/tours/itmad/7.1.jpg",
+                "east": "/tours/itmad/7.2.jpg",
+                "west": "/tours/itmad/7.3.jpg",
+                "south": "/tours/itmad/7.4.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot8"
+                    }
+                ]
+            }
+        },
+        "spot8": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 60,
+                "angleOffset": 0
+            },
+            "available": [
+                "north",
+                "east",
+                "west",
+                "south"
+            ],
+            "images": {
+                "north": "/tours/itmad/8.1.jpg",
+                "east": "/tours/itmad/8.2.jpg",
+                "west": "/tours/itmad/8.3.jpg",
+                "south": "/tours/itmad/8.4.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot9"
+                    }
+                ]
+            }
+        },
+        "spot9": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 55,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/9.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot10"
+                    }
+                ]
+            }
+        },
+        "spot10": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 50,
+                "angleOffset": 0
+            },
+            "available": [
+                "north",
+                "east",
+                "west",
+                "south"
+            ],
+            "images": {
+                "north": "/tours/itmad/10.1.jpg",
+                "east": "/tours/itmad/10.2.jpg",
+                "west": "/tours/itmad/10.3.jpg",
+                "south": "/tours/itmad/10.4.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot11"
+                    }
+                ]
+            }
+        },
+        "spot11": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 45,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/11.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 95,
+                        "target": "spot12"
+                    }
+                ]
+            }
+        },
+        "spot12": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 40,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/12.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot13"
+                    }
+                ]
+            }
+        },
+        "spot13": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 35,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/13.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot14"
+                    }
+                ]
+            }
+        },
+        "spot14": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 30,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/14.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot15"
+                    }
+                ]
+            }
+        },
+        "spot15": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 25,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/15.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot16"
+                    }
+                ]
+            }
+        },
+        "spot16": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 20,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/16.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot17"
+                    }
+                ]
+            }
+        },
+        "spot17": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 15,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/17.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot18"
+                    }
+                ]
+            }
+        },
+        "spot18": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 12,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/18.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot19"
+                    }
+                ]
+            }
+        },
+        "spot19": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 10,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/19.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot20"
+                    }
+                ]
+            }
+        },
+        "spot20": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 8,
+                "angleOffset": 0
+            },
+            "available": [
+                "north",
+                "east"
+            ],
+            "images": {
+                "north": "/tours/itmad/20.1.jpg",
+                "east": "/tours/itmad/20.2.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 95,
+                        "target": "spot21"
+                    }
+                ],
+                "east": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot21"
+                    }
+                ]
+            }
+        },
+        "spot21": {"heading": "Spot ",
+            "map": {
+                "x": 45,
+                "y": 20,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/21.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 95,
+                        "target": "spot22"
+                    }
+                ]
+            }
+        },
+        "spot22": {"heading": "Spot ",
+            "map": {
+                "x": 55,
+                "y": 20,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/22.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot23"
+                    }
+                ]
+            }
+        },
+        "spot23": {"heading": "Spot ",
+            "map": {
+                "x": 45,
+                "y": 15,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/23.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot24"
+                    }
+                ]
+            }
+        },
+        "spot24": {"heading": "Spot ",
+            "map": {
+                "x": 55,
+                "y": 15,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/24.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 95,
+                        "target": "spot25"
+                    }
+                ]
+            }
+        },
+        "spot25": {"heading": "Spot ",
+            "map": {
+                "x": 45,
+                "y": 10,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/25.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot26"
+                    }
+                ]
+            }
+        },
+        "spot26": {"heading": "Spot ",
+            "map": {
+                "x": 55,
+                "y": 10,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/26.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot27"
+                    }
+                ]
+            }
+        },
+        "spot27": {"heading": "Spot ",
+            "map": {
+                "x": 45,
+                "y": 5,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/27.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 95,
+                        "target": "spot28"
+                    }
+                ]
+            }
+        },
+        "spot28": {"heading": "Spot ",
+            "map": {
+                "x": 55,
+                "y": 5,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/28.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot29"
+                    }
+                ]
+            }
+        },
+        "spot29": {"heading": "Spot ",
+            "map": {
+                "x": 50,
+                "y": 3,
+                "angleOffset": 0
+            },
+            "available": [
+                "north",
+                "east",
+                "west"
+            ],
+            "images": {
+                "north": "/tours/itmad/29.3.jpg",
+                "east": "/tours/itmad/29.2.jpg",
+                "west": "/tours/itmad/29.1.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot30"
+                    }
+                ]
+            }
+        },
+        "spot30": {"heading": "Spot ",
+            "map": {
+                "x": 40,
+                "y": 3,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/30.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 40,
+                        "left": 50,
+                        "target": "spot31"
+                    }
+                ]
+            }
+        },
+        "spot31": {"heading": "Spot ",
+            "map": {
+                "x": 60,
+                "y": 3,
+                "angleOffset": 0
+            },
+            "available": [
+                "north",
+                "east",
+                "west",
+                "south"
+            ],
+            "images": {
+                "north": "/tours/itmad/31.1.jpg",
+                "east": "/tours/itmad/31.2.jpg",
+                "west": "/tours/itmad/31.3.jpg",
+                "south": "/tours/itmad/31.4.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot32"
+                    }
+                ]
+            }
+        },
+        "spot32": {"heading": "Spot ",
+            "map": {
+                "x": 60,
+                "y": 3,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/32.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 90,
+                        "target": "spot33"
+                    }
+                ]
+            }
+        },
+        "spot33": {"heading": "Spot ",
+            "map": {
+                "x": 60,
+                "y": 3,
+                "angleOffset": 0
+            },
+            "available": [
+                "north",
+                "east",
+                "west",
+                "south"
+            ],
+            "images": {
+                "north": "/tours/itmad/33.1.jpg",
+                "east": "/tours/itmad/33.2.jpg",
+                "west": "/tours/itmad/33.3.jpg",
+                "south": "/tours/itmad/33.4.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot34"
+                    }
+                ]
+            }
+        },
+        "spot34": {"heading": "Spot ",
+            "map": {
+                "x": 60,
+                "y": 3,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/34.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot35"
+                    }
+                ]
+            }
+        },
+        "spot35": {"heading": "Spot ",
+            "map": {
+                "x": 60,
+                "y": 3,
+                "angleOffset": 0
+            },
+            "available": [
+                "north"
+            ],
+            "images": {
+                "north": "/tours/itmad/35.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 70,
+                        "left": 10,
+                        "target": "spot36"
+                    }
+                ]
+            }
+        },
+        "spot36": {"heading": "Spot ",
+            "map": {
+                "x": 60,
+                "y": 3,
+                "angleOffset": 0
+            },
+            "available": [
+                "north",
+                "east",
+                "west"
+            ],
+            "images": {
+                "north": "/tours/itmad/36.1.jpg",
+                "east": "/tours/itmad/36.2.jpg",
+                "west": "/tours/itmad/36.3.jpg"
+            },
+            "hotspots": {
+                "north": [
+                    {
+                        "top": 60,
+                        "left": 50,
+                        "target": "spot8"
+                    }
+                ]
+            }
+        }
+    }
+}

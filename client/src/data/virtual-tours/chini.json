@@ -1,0 +1,33 @@
+{
+  "place": {
+    "id": "aram",
+    "name": "Aram Tomb",
+    "map": {
+      "image": "/tours/chini-ka-ruaza/map.png"
+    }
+  },
+
+  "spots": {
+    "spot1": {"heading": "Spot 1",
+      "map": { "x": 50, "y": 95, "angleOffset": 0 },
+      "available": ["north"],
+      "images": {
+        "north": "/tours/chini-ka-ruaza/1.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot2" }]
+      }
+    },
+
+    "spot2": {"heading": "Spot 2",
+      "map": { "x": 50, "y": 85, "angleOffset": 0 },
+      "available": ["north"],
+      "images": {
+        "north": "/tours/chini-ka-ruaza/2.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot1" }]
+      }
+    }
+  }
+}

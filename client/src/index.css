@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* ── Braj Design System — Colour Tokens ────────────────── */
+
+:root {
+  /* Core palette — Light mode */
+  --color-bg:             #FDFAF5;
+  --color-surface:        #FFFFFF;
+  --color-surface-alt:    #F5EDD6;
+  --color-text-primary:   #2C1810;
+  --color-text-secondary: #6B5744;
+  --color-border:         #E8D5B7;
+
+  /* Accent palette */
+  --color-saffron:        #C0622D;
+  --color-saffron-hover:  #A0521F;
+  --color-stone:          #4A3728;
+  --color-gold:           #D4A017;
+
+  /* Navbar (stays dark in both modes — it's always an overlay) */
+  --color-nav-bg:         rgba(0,0,0,0.90);
+  --color-nav-text:       #FFFFFF;
+}
+
+/* ── Dark mode ────────────────────────────────────────── */
+html.dark {
+  --color-bg:             #1A1208;
+  --color-surface:        #2C1F10;
+  --color-surface-alt:    #352818;
+  --color-text-primary:   #F5EDD6;
+  --color-text-secondary: #C4A882;
+  --color-border:         #4A3728;
+
+  --color-saffron:        #E07830;
+  --color-saffron-hover:  #C06020;
+  --color-stone:          #C4A882;
+  --color-gold:           #D4A017;
+}
+
+/* ── Base styles ──────────────────────────────────────── */
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── Button utilities ─────────────────────────────────── */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  background-color: var(--color-saffron);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background-color: var(--color-saffron-hover);
+  box-shadow: 0 4px 16px rgba(192,98,45,0.35);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  background-color: transparent;
+  color: var(--color-stone);
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  border: 1.5px solid var(--color-stone);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.btn-secondary:hover {
+  background-color: var(--color-stone);
+  color: #FFFFFF;
+}

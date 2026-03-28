@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Agra: the city of love",
+    "description": "Agra is not just about the Taj Mahal. It is about early morning walks, stories whispered by red sandstone walls, and sunsets that stay with you.",
+    "author": "Sunkanya Kumari",
+    "image": "agra.jpg",
+    "slug": "agra-beyond-taj"
+  },
+  {
+    "title": "Mathura: Krishna's birthplace",
+    "description": "Mathura breathes devotion. From temple bells to the Yamuna ghats, every corner tells a story of faith and time.",
+    "author": "Srishti Goyal",
+    "image": "mathura.jpg",
+    "slug": "mathura-krishna-trail"
+  },
+  {
+    "title": "Temple Mornings in Vrindavan",
+    "description": "From the first bell of Banke Bihari to the rising mist on Kesi Ghat — a dawn walk through India's most sacred town.",
+    "author": "Braj Explorer",
+    "image": "vrindavan.jpg",
+    "slug": "vrindavan-temple-mornings"
+  },
+  {
+    "title": "Gokul: A Quiet Pilgrim's Paradise",
+    "description": "Sand, silence, and the sound of conch shells — Gokul offers a Braj experience untouched by mass tourism.",
+    "author": "Braj Explorer",
+    "image": "gokul.jpg",
+    "slug": "gokul-quiet-pilgrim"
+  },
+  {
+    "title": "Barsana and the Spirit of Holi",
+    "description": "The hilltop temples of Barsana turn into a canvas of colour weeks before the rest of India even prepares for Holi.",
+    "author": "Braj Explorer",
+    "image": "barsana.jpg",
+    "slug": "barsana-holi-spirit"
+  },
+  {
+    "title": "Govardhan: The Sacred Parikrama Trail",
+    "description": "Walking the 21 km parikrama path around Giriraj — a journey of devotion, dust, and extraordinary stillness.",
+    "author": "Braj Explorer",
+    "image": "govardhan.jpg",
+    "slug": "govardhan-parikrama"
+  }
+]

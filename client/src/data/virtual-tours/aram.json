@@ -1,0 +1,237 @@
+{
+  "place": {
+    "id": "aram",
+    "name": "Aram Tomb",
+    "map": {
+      "image": "/tours/aram/map.png"
+    }
+  },
+
+  "spots": {
+    "spot1": {
+      "heading": "Spot 2",
+      "map": { "x": 50, "y": 95, "angleOffset": 0 },
+      "available": ["north"],
+      "images": {
+        "north": "/tours/aram/1.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot2" }]
+      }
+    },
+
+    "spot2": {"heading": "Spot 2",
+      "map": { "x": 50, "y": 85, "angleOffset": 0 },
+      "available": ["north", "east", "west", "south"],
+      "images": {
+        "north": "/tours/aram/2.1.jpg",
+        "east": "/tours/aram/2.2.jpg",
+        "west": "/tours/aram/2.3.jpg",
+        "south": "/tours/aram/2.4.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot3" }]
+      }
+    },
+
+    "spot3": {"heading": "Spot 3",
+      "map": { "x": 50, "y": 78, "angleOffset": 0 },
+      "available": ["north"],
+      "images": {
+        "north": "/tours/aram/3.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot4" }]
+      }
+    },
+
+    "spot4": {"heading": "Spot 4",
+      "map": { "x": 55, "y": 78, "angleOffset": 0 },
+      "available": ["north", "east", "west"],
+      "images": {
+        "north": "/tours/aram/4.1.jpg",
+        "east": "/tours/aram/4.2.jpg",
+        "west": "/tours/aram/4.3.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot5" }]
+      }
+    },
+
+    "spot5": {"heading": "Spot 5",
+      "map": { "x": 45, "y": 78, "angleOffset": 0 },
+      "available": ["north", "east", "west", "south"],
+      "images": {
+        "north": "/tours/aram/5.1.jpg",
+        "east": "/tours/aram/5.2.jpg",
+        "west": "/tours/aram/5.3.jpg",
+        "south": "/tours/aram/5.4.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot6" }]
+      }
+    },
+
+    "spot6": {"heading": "Spot 6",
+      "map": { "x": 50, "y": 70, "angleOffset": 0 },
+      "available": ["north", "east", "west", "south"],
+      "images": {
+        "north": "/tours/aram/6.1.jpg",
+        "east": "/tours/aram/6.2.jpg",
+        "west": "/tours/aram/6.3.jpg",
+        "south": "/tours/aram/6.4.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot7" }]
+      }
+    },
+
+    "spot7": {"heading": "Spot 7",
+      "map": { "x": 50, "y": 64, "angleOffset": 0 },
+      "available": ["north", "east", "west", "south"],
+      "images": {
+        "north": "/tours/aram/7.1.jpg",
+        "east": "/tours/aram/7.2.jpg",
+        "west": "/tours/aram/7.3.jpg",
+        "south": "/tours/aram/7.4.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot8" }]
+      }
+    },
+
+    "spot8": {"heading": "Spot 8",
+      "map": { "x": 50, "y": 58, "angleOffset": 0 },
+      "available": ["north", "east", "west", "south"],
+      "images": {
+        "north": "/tours/aram/8.1.jpg",
+        "east": "/tours/aram/8.2.jpg",
+        "west": "/tours/aram/8.3.jpg",
+        "south": "/tours/aram/8.4.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot9" }]
+      }
+    },
+
+    "spot9": {"heading": "Spot 9",
+      "map": { "x": 50, "y": 52, "angleOffset": 0 },
+      "available": ["north", "east", "west", "south"],
+      "images": {
+        "north": "/tours/aram/9.1.jpg",
+        "east": "/tours/aram/9.2.jpg",
+        "west": "/tours/aram/9.3.jpg",
+        "south": "/tours/aram/9.4.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot10" }]
+      }
+    },
+
+    "spot10": {"heading": "Spot 10",
+      "map": { "x": 50, "y": 46, "angleOffset": 0 },
+      "available": ["north", "east", "west", "south"],
+      "images": {
+        "north": "/tours/aram/10.1.jpg",
+        "east": "/tours/aram/10.2.jpg",
+        "west": "/tours/aram/10.3.jpg",
+        "south": "/tours/aram/10.4.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot11" }]
+      }
+    },
+
+    "spot11": {"heading": "Spot 11",
+      "map": { "x": 50, "y": 40, "angleOffset": 0 },
+      "available": ["north", "east", "west", "south"],
+      "images": {
+        "north": "/tours/aram/11.1.jpg",
+        "east": "/tours/aram/11.2.jpg",
+        "west": "/tours/aram/11.3.jpg",
+        "south": "/tours/aram/11.4.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot12" }]
+      }
+    },
+
+    "spot12": {"heading": "Spot 12",
+      "map": { "x": 50, "y": 34, "angleOffset": 0 },
+      "available": ["north", "south"],
+      "images": {
+        "north": "/tours/aram/12.1.jpg",
+        "south": "/tours/aram/12.4.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot13" }]
+      }
+    },
+
+    "spot13": {"heading": "Spot 13",
+      "map": { "x": 50, "y": 28, "angleOffset": 0 },
+      "available": ["north", "east", "west"],
+      "images": {
+        "north": "/tours/aram/13.1.jpg",
+        "east": "/tours/aram/13.2.jpg",
+        "west": "/tours/aram/13.3.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot14" }]
+      }
+    },
+
+    "spot14": {"heading": "Spot 14",
+      "map": { "x": 50, "y": 22, "angleOffset": 0 },
+      "available": ["north"],
+      "images": {
+        "north": "/tours/aram/14.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot15" }]
+      }
+    },
+
+    "spot15": {"heading": "Spot 15",
+      "map": { "x": 50, "y": 18, "angleOffset": 0 },
+      "available": ["north", "east", "west", "south"],
+      "images": {
+        "north": "/tours/aram/15.1.jpg",
+        "east": "/tours/aram/15.2.jpg",
+        "west": "/tours/aram/15.3.jpg",
+        "south": "/tours/aram/15.4.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot16" }]
+      }
+    },
+
+    "spot16": {"heading": "Spot 16",
+      "map": { "x": 50, "y": 14, "angleOffset": 0 },
+      "available": ["north", "east", "west", "south"],
+      "images": {
+        "north": "/tours/aram/16.1.jpg",
+        "east": "/tours/aram/16.2.jpg",
+        "west": "/tours/aram/16.3.jpg",
+        "south": "/tours/aram/16.4.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot17" }]
+      }
+    },
+
+    "spot17": {"heading": "Spot 17",
+      "map": { "x": 50, "y": 10, "angleOffset": 0 },
+      "available": ["north", "east", "west", "south"],
+      "images": {
+        "north": "/tours/aram/17.1.jpg",
+        "east": "/tours/aram/17.2.jpg",
+        "west": "/tours/aram/17.3.jpg",
+        "south": "/tours/aram/17.4.jpg"
+      },
+      "hotspots": {
+        "north": [{ "top": 60, "left": 50, "target": "spot1" }]
+      }
+    }
+  }
+}

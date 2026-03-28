@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Agra Fort",
+    "img": "/attractions/Agra-fort.jpeg",
+    "link": "/attractions/agra-fort"
+  },
+  {
+    "id": 2,
+    "name": "Fatehpur Sikri",
+    "img": "/attractions/Fatehpur-Sikri.jpeg",
+    "link": "/attractions/fatehpur-sikri"
+  },
+  {
+    "id": 3,
+    "name": "Saomi Bagh",
+    "img": "/attractions/saomi-bagh.jpeg",
+    "link": "/attractions/saomi-bagh"
+  },
+  {
+    "id": 4,
+    "name": "Red Taj Mahal",
+    "img": "/attractions/Red-taj.webp",
+    "link": "/attractions/red-taj"
+  }
+]

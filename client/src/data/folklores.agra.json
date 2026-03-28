@@ -1,0 +1,56 @@
+[
+  {
+    "sno": "1",
+    "img": "/folklores/1.JPG",
+    "link": "/folklores/1",
+    "title": "Taj Mahal’s hidden “water wall”",
+    "description": "A very specific superstition holds that if someone strikes the carved relief of the Taj on an interior wall exactly at the finial, water will gush out, a story that functions more as a local curiosity than a documented event.",
+    "source": "amyscript",
+    "sourcelink": "https://amyscrypt.com/taj-mahal-creepy-dark-stories/"
+  },
+  {
+    "sno": "2",
+    "img": "/folklores/2.webp",
+    "link": "/folklores/2",
+    "title": "Petha’s royal-kitchen origins",
+    "description": "Agra ka petha is widely believed to have been created in the Mughal royal kitchens, with stories linking it to Shah Jahan’s order for a sweet as “pure and white” as the Taj.",
+    "source": "tajpetha",
+    "sourcelink": "https://tajpetha.in/in/blog/history-agra-petha-heritage"
+  },
+  {
+    "sno": "3",
+    "img": "/folklores/3.JPG",
+    "link": "/folklores/3",
+    "title": "Secret rooms & chambers",
+    "description": "Visitors often talk about sealed or unexplored rooms under the Taj platform; speculation ranges from treasure to hidden burials, though official records just describe them as structural spaces.",
+    "source": "solitarytraveller",
+    "sourcelink": "https://www.solitarytraveller.com/history-and-myths-of-the-taj-mahal-facts-legends-and-secrets/"
+  },
+  {
+    "sno": "4",
+    "img": "/folklores/4.jpg",
+    "link": "/folklores/4",
+    "title": "Gyarah Sidi observatory",
+    "description": "Early Mughal structure on the Yamuna, probably built under Humayun as a modest astronomical observatory with eleven stone steps, near Mehtab Bagh and now a quiet Taj viewpoint.",
+    "source": "wanderboat",
+    "sourcelink": "https://wanderboat.ai/attractions/india/agra/gyarah-sidhi/i37yhNqtROGp5LZvI2_F2A"
+  },
+  {
+    "sno": "5",
+    "img": "/folklores/5.webp",
+    "link": "/folklores/5",
+    "title": "Zari–Zardozi heritage of Agra",
+    "description": "The city remains a major centre for zari–zardozi metal embroidery, a craft that peaked under Akbar and Shah Jahan using gold and silver thread for royal garments and tents.",
+    "source": "dsource",
+    "sourcelink": "https://www.dsource.in/resource/zari-zardosi-agra/introduction"
+  },
+  {
+    "sno": "6",
+    "img": "/folklores/6.jpeg",
+    "link": "/folklores/6",
+    "title": "A Living Legend in Red Stone",
+    "description": "Some travel writers call Agra Fort a “living legend in red stone”, because within one complex you get stories of rise (Akbar), zenith (Jahangir–Shah Jahan) and collapse (Aurangzeb imprisoning his father).",
+    "source": "hiistories",
+    "sourcelink": "https://hiistories.com/agra-fort-a-living-legend-in-history/"
+  }
+]

@@ -1,0 +1,133 @@
+/* ── Virtual Tours Design Tokens ──────────────────────────── */
+:root {
+  --color-charcoal:     #1a1a2e;
+  --color-deep-navy:    #16213e;
+  --color-midnight:     #0f0f23;
+  --color-cream:        #faf8f5;
+  --color-warm-stone:   #f0ebe3;
+  --color-stone-border: #e0d8cc;
+  --color-amber:        #c4923a;
+  --color-amber-light:  #d4a94e;
+  --color-amber-glow:   rgba(196, 146, 58, 0.35);
+  --color-text-primary: #2d2b2a;
+  --color-text-muted:   #7a7572;
+  --color-text-light:   #b0aaa4;
+
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-full: 9999px;
+
+  --shadow-soft:    0 2px 16px rgba(0, 0, 0, 0.06);
+  --shadow-medium:  0 4px 24px rgba(0, 0, 0, 0.10);
+  --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.14);
+  --shadow-glow:    0 0 20px var(--color-amber-glow);
+}
+
+/* ── Virtual Tour Animations ──────────────────────────────── */
+@keyframes hotspot-pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 0 0 rgba(196, 146, 58, 0.5);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    box-shadow: 0 0 0 12px rgba(196, 146, 58, 0);
+  }
+}
+
+@keyframes hotspot-ring {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes pointer-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
+}
+
+/* ── Virtual Tour Utility Classes ─────────────────────────── */
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .glass-light {
+    background: rgba(255, 255, 255, 0.70);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.40);
+  }
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .shadow-premium {
+    box-shadow: var(--shadow-elevated);
+  }
+  .shadow-glow-amber {
+    box-shadow: var(--shadow-glow);
+  }
+  .gradient-header {
+    background: linear-gradient(135deg, var(--color-charcoal) 0%, var(--color-deep-navy) 60%, #1b2a4a 100%);
+  }
+  .gradient-amber {
+    background: linear-gradient(135deg, var(--color-amber) 0%, var(--color-amber-light) 100%);
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.5s ease-out both;
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, var(--color-amber-light) 0%, #e8c87a 50%, var(--color-amber) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

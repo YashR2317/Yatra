@@ -1,0 +1,18 @@
+{
+  "name": "brajyatra-complete",
+  "version": "1.0.0",
+  "description": "Complete BrajYatra.AI — Sacred Braj Travel Planner with AI Agent, Auth, and Virtual Tours",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n agent,auth,client -c green,blue,magenta \"npm run dev:agent\" \"npm run dev:auth\" \"npm run dev:client\"",
+    "dev:agent": "cd server/agent && npm start",
+    "dev:auth": "cd server/auth && node index.js",
+    "dev:client": "cd client && npm run dev",
+    "build:client": "cd client && npm run build",
+    "install:all": "cd server/agent && npm install && cd ../auth && npm install && cd ../../client && npm install",
+    "seed": "cd server/agent && npm run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

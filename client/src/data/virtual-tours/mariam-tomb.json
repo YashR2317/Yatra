@@ -1,0 +1,336 @@
+{
+  "place": {
+    "id": "marium-tomb",
+    "name": "Mariam-uz-Zamani Tomb",
+    "map": {
+      "image": "/tours/mariam-tomb/map.png",
+      "northAngle": 0
+    }
+  },
+  "spots": {
+    "spot1": {
+      "heading": "Spot 1 Main Entrance",
+      "map": {
+        "x": 96.3,
+        "y": 48.27,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "images": {
+        "north": "/tours/mariam-tomb/1.1.jpg",
+        "east": "/tours/mariam-tomb/1.2.jpg",
+        "west": "/tours/mariam-tomb/1.3.jpg",
+        "south": "/tours/mariam-tomb/1.4.jpg"
+      },
+      "info": {},
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot2"
+          }
+        ],
+        "east": [],
+        "south": [],
+        "west": []
+      }
+    },
+    "spot2": {
+      "heading": "Spot 2",
+      "map": {
+        "x": 91.97,
+        "y": 48.49,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "images": {
+        "north": "/tours/mariam-tomb/2.1.jpg",
+        "east": "/tours/mariam-tomb/2.2.jpg",
+        "west": "/tours/mariam-tomb/2.3.jpg",
+        "south": "/tours/mariam-tomb/2.4.jpg"
+      },
+      "info": {},
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot3"
+          }
+        ],
+        "south": [
+          {
+            "top": 50,
+            "left": 50,
+            "target": "spot1"
+          }
+        ],
+        "east": [],
+        "west": []
+      }
+    },
+    "spot3": {
+      "heading": "Spot 3",
+      "map": {
+        "x": 66.13,
+        "y": 48.27,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/mariam-tomb/3.jpg"
+      },
+      "info": {},
+      "hotspots": {
+        "north": [
+          {
+            "top": 65,
+            "left": 50,
+            "target": "spot4"
+          }
+        ]
+      }
+    },
+    "spot4": {
+      "heading": "Spot 4",
+      "map": {
+        "x": 31.8,
+        "y": 48.49,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/mariam-tomb/4.jpg"
+      },
+      "info": {},
+      "hotspots": {
+        "north": [
+          {
+            "top": 65,
+            "left": 50,
+            "target": "spot5"
+          }
+        ]
+      }
+    },
+    "spot5": {
+      "heading": "Spot 5",
+      "map": {
+        "x": 27.97,
+        "y": 48.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/mariam-tomb/5.jpg"
+      },
+      "info": {},
+      "hotspots": {
+        "north": [
+          {
+            "top": 65,
+            "left": 50,
+            "target": "spot6"
+          }
+        ]
+      }
+    },
+    "spot6": {
+      "heading": "Spot 6",
+      "map": {
+        "x": 27.47,
+        "y": 55.38,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/mariam-tomb/6.jpg"
+      },
+      "info": {},
+      "hotspots": {
+        "north": [
+          {
+            "top": 65,
+            "left": 50,
+            "target": "spot7"
+          }
+        ]
+      }
+    },
+    "spot7": {
+      "heading": "Spot 7",
+      "map": {
+        "x": 23.13,
+        "y": 55.16,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/mariam-tomb/7.jpg"
+      },
+      "info": {},
+      "hotspots": {
+        "north": [
+          {
+            "top": 65,
+            "left": 50,
+            "target": "spot8"
+          }
+        ]
+      }
+    },
+    "spot8": {
+      "heading": "Spot 8",
+      "map": {
+        "x": 17.8,
+        "y": 54.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/mariam-tomb/8.jpg"
+      },
+      "info": {},
+      "hotspots": {
+        "north": [
+          {
+            "top": 65,
+            "left": 50,
+            "target": "spot9"
+          }
+        ]
+      }
+    },
+    "spot9": {
+      "heading": "Spot 9",
+      "map": {
+        "x": 17.97,
+        "y": 48.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/mariam-tomb/9.jpg"
+      },
+      "info": {},
+      "hotspots": {
+        "north": [
+          {
+            "top": 65,
+            "left": 50,
+            "target": "spot10"
+          }
+        ]
+      }
+    },
+    "spot10": {
+      "heading": "Spot 10",
+      "map": {
+        "x": 21.3,
+        "y": 48.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/mariam-tomb/10.jpg"
+      },
+      "info": {},
+      "hotspots": {
+        "north": [
+          {
+            "top": 65,
+            "left": 50,
+            "target": "spot11"
+          }
+        ]
+      }
+    },
+    "spot11": {
+      "heading": "Spot 11",
+      "map": {
+        "x": 13.13,
+        "y": 48.27,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/mariam-tomb/11.jpg"
+      },
+      "info": {},
+      "hotspots": {
+        "north": [
+          {
+            "top": 65,
+            "left": 50,
+            "target": "spot1"
+          }
+        ]
+      }
+    },
+    "spot12": {
+      "heading": "Spot 12",
+      "map": {
+        "x": 18.3,
+        "y": 42.04,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/mariam-tomb/12.jpg"
+      },
+      "info": {},
+      "hotspots": {
+        "north": []
+      }
+    },
+    "spot13": {
+      "heading": "Spot 13",
+      "map": {
+        "x": 27.47,
+        "y": 42.04,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/mariam-tomb/13.jpg"
+      },
+      "info": {},
+      "hotspots": {
+        "north": []
+      }
+    }
+  }
+}

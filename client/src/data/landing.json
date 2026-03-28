@@ -1,0 +1,38 @@
+[
+  {
+    "id":"1",
+    "img": "/landing/hero1.jpeg",
+    "name": "Iskon Temple",
+    "location": "Vrindavan, Uttar Pradesh"
+  },
+  {
+    "id":"2",
+    "img": "/landing/hero2.png",
+    "name": "Vishram Ghat",
+    "location": "Gokul, Uttar Pradesh"
+  },
+  {
+    "id":"3",
+    "img": "/landing/hero3.png",
+    "name": "Holi Festival",
+    "location": "Barsana, Uttar Pradesh"
+  },
+  {
+    "id":"4",
+    "img": "/landing/hero4.webp",
+    "name": "Agra Fort",
+    "location": "Agra, Uttar Pradesh"
+  },
+  {
+    "id":"5",
+    "img": "/landing/hero5.png",
+    "name": "Taj Mahal",
+    "location": "Agra, Uttar Pradesh"
+  },
+  {
+    "id":"6",
+    "img": "/landing/hero6.jpg",
+    "name": "Deewan-e-Khas",
+    "location": "Agra Fort, Agra, Uttar Pradesh"
+  }
+]

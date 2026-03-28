@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "2 Days in Agra",
+    "image": "/itineraries/agra.jpg",
+    "citySlug": "agra"
+  },
+  {
+    "id": 2,
+    "title": "3 Days in Mathura",
+    "image": "/destinations/mathura.jpg",
+    "citySlug": "mathura"
+  },
+  {
+    "id": 3,
+    "title": "2 Days in Vrindavan",
+    "image": "/destinations/vrindavan.webp",
+    "citySlug": "vrindavan"
+  },
+  {
+    "id": 4,
+    "title": "2 Days in Gokul",
+    "image": "/destinations/gokul.jpg",
+    "citySlug": "gokul"
+  },
+  {
+    "id": 5,
+    "title": "1 Day in Govardhan",
+    "image": "/destinations/govardhan.jpg",
+    "citySlug": "govardhan"
+  },
+  {
+    "id": 6,
+    "title": "1 Day in Barsana",
+    "image": "/destinations/barsana.jpeg",
+    "citySlug": "barsana"
+  }
+]

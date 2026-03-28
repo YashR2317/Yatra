@@ -1,0 +1,1140 @@
+{
+  "place": {
+    "id": "sikandra",
+    "name": "Tomb of Akbar the Great, Sikandra",
+    "map": {
+      "image": "/tours/sikandra/map.png"
+    }
+  },
+  "spots": {
+    "spot1": {
+      "map": {
+        "x": 61.8,
+        "y": 97.38,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "east",
+        "west",
+        "south"
+      ],
+      "images": {
+        "north": "/tours/sikandra/1.1.jpg",
+        "east": "/tours/sikandra/1.2.jpg",
+        "west": "/tours/sikandra/1.3.jpg",
+        "south": "/tours/sikandra/1.4.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot2"
+          }
+        ],
+        "east": [],
+        "west": [],
+        "south": []
+      }
+    },
+    "spot2": {
+      "map": {
+        "x": 61.63,
+        "y": 92.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/2.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot3"
+          }
+        ]
+      }
+    },
+    "spot3": {
+      "map": {
+        "x": 61.8,
+        "y": 81.82,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "east",
+        "west"
+      ],
+      "images": {
+        "north": "/tours/sikandra/3.1.jpg",
+        "east": "/tours/sikandra/3.2.jpg",
+        "west": "/tours/sikandra/3.3.jpg"
+      },
+      "hotspots": {
+        "east": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot4"
+          }
+        ],
+        "west": [
+          {
+            "top": 58,
+            "left": 50,
+            "target": "spot9"
+          }
+        ]
+      }
+    },
+    "spot4": {
+      "map": {
+        "x": 80.63,
+        "y": 80.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "east",
+        "west",
+        "south"
+      ],
+      "images": {
+        "north": "/tours/sikandra/4.1.jpg",
+        "east": "/tours/sikandra/4.2.jpg",
+        "west": "/tours/sikandra/4.3.jpg",
+        "south": "/tours/sikandra/4.4.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot5"
+          }
+        ],
+        "east": [],
+        "west": [],
+        "south": []
+      }
+    },
+    "spot5": {
+      "map": {
+        "x": 80.63,
+        "y": 84.04,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/5.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 50,
+            "target": "spot6"
+          }
+        ]
+      }
+    },
+    "spot6": {
+      "map": {
+        "x": 80.13,
+        "y": 86.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "south"
+      ],
+      "images": {
+        "north": "/tours/sikandra/6.1.jpg",
+        "south": "/tours/sikandra/6.4.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot7"
+          }
+        ],
+        "south": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot4"
+          }
+        ]
+      }
+    },
+    "spot7": {
+      "map": {
+        "x": 80.63,
+        "y": 90.93,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "east",
+        "west"
+      ],
+      "images": {
+        "north": "/tours/sikandra/7.1.jpg",
+        "east": "/tours/sikandra/7.2.jpg",
+        "west": "/tours/sikandra/7.3.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot8"
+          }
+        ],
+        "east": [],
+        "west": []
+      }
+    },
+    "spot8": {
+      "map": {
+        "x": 80.13,
+        "y": 96.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "south"
+      ],
+      "images": {
+        "north": "/tours/sikandra/8.1.jpg",
+        "south": "/tours/sikandra/8.4.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot8.1"
+          }
+        ],
+        "south": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot6"
+          }
+        ]
+      }
+    },
+    "spot8.1": {
+      "map": {
+        "x": 36.97,
+        "y": 93.82,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "south"
+      ],
+      "images": {
+        "north": "/tours/sikandra/6.4.jpg",
+        "south": "/tours/sikandra/6.1.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot3"
+          }
+        ],
+        "south": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot7"
+          }
+        ]
+      }
+    },
+    "spot9": {
+      "map": {
+        "x": 36.97,
+        "y": 84.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "east",
+        "west",
+        "south"
+      ],
+      "images": {
+        "north": "/tours/sikandra/9.1.jpg",
+        "east": "/tours/sikandra/9.2.jpg",
+        "west": "/tours/sikandra/9.3.jpg",
+        "south": "/tours/sikandra/9.4.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot10"
+          }
+        ],
+        "east": [],
+        "west": [],
+        "south": []
+      }
+    },
+    "spot10": {
+      "map": {
+        "x": 36.97,
+        "y": 78.49,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/10.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot11"
+          }
+        ]
+      }
+    },
+    "spot11": {
+      "map": {
+        "x": 36.8,
+        "y": 73.16,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "south"
+      ],
+      "images": {
+        "north": "/tours/sikandra/11.1.jpg",
+        "south": "/tours/sikandra/11.4.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot12"
+          }
+        ],
+        "south": []
+      }
+    },
+    "spot12": {
+      "map": {
+        "x": 37.63,
+        "y": 64.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "south"
+      ],
+      "images": {
+        "north": "/tours/sikandra/12.1.jpg",
+        "south": "/tours/sikandra/12.4.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot13"
+          }
+        ],
+        "south": []
+      }
+    },
+    "spot13": {
+      "map": {
+        "x": 37.63,
+        "y": 60.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "east",
+        "west",
+        "south"
+      ],
+      "images": {
+        "north": "/tours/sikandra/13.1.jpg",
+        "east": "/tours/sikandra/13.2.jpg",
+        "west": "/tours/sikandra/13.3.jpg",
+        "south": "/tours/sikandra/13.4.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot14"
+          }
+        ],
+        "east": [],
+        "west": [],
+        "south": []
+      }
+    },
+    "spot14": {
+      "map": {
+        "x": 37.63,
+        "y": 56.04,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/14.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot15"
+          }
+        ]
+      }
+    },
+    "spot15": {
+      "map": {
+        "x": 36.97,
+        "y": 50.93,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/15.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 60,
+            "left": 50,
+            "target": "spot16"
+          }
+        ]
+      }
+    },
+    "spot16": {
+      "map": {
+        "x": 36.97,
+        "y": 46.49,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "east"
+      ],
+      "images": {
+        "north": "/tours/sikandra/16.1.jpg",
+        "east": "/tours/sikandra/16.2.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot17"
+          }
+        ],
+        "east": []
+      }
+    },
+    "spot17": {
+      "map": {
+        "x": 37.13,
+        "y": 43.82,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/17.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot18"
+          }
+        ]
+      }
+    },
+    "spot18": {
+      "map": {
+        "x": 36.97,
+        "y": 40.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/18.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot19"
+          }
+        ]
+      }
+    },
+    "spot19": {
+      "map": {
+        "x": 34.97,
+        "y": 37.6,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/19.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot20"
+          }
+        ]
+      }
+    },
+    "spot20": {
+      "map": {
+        "x": 36.3,
+        "y": 34.04,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/20.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot21"
+          }
+        ]
+      }
+    },
+    "spot21": {
+      "map": {
+        "x": 38.63,
+        "y": 37.16,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/21.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot22"
+          }
+        ]
+      }
+    },
+    "spot22": {
+      "map": {
+        "x": 41.8,
+        "y": 46.04,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/22.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot23"
+          }
+        ]
+      }
+    },
+    "spot23": {
+      "map": {
+        "x": 43.13,
+        "y": 42.93,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/23.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot24"
+          }
+        ]
+      }
+    },
+    "spot24": {
+      "map": {
+        "x": 43.8,
+        "y": 46.49,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/24.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot25"
+          }
+        ]
+      }
+    },
+    "spot25": {
+      "map": {
+        "x": 42.63,
+        "y": 52.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/25.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot26"
+          }
+        ]
+      }
+    },
+    "spot26": {
+      "map": {
+        "x": 45.63,
+        "y": 51.16,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/26.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot27"
+          }
+        ]
+      }
+    },
+    "spot27": {
+      "map": {
+        "x": 45.8,
+        "y": 40.27,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/27.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot29"
+          }
+        ]
+      }
+    },
+    "spot29": {
+      "map": {
+        "x": 47.8,
+        "y": 40.27,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/29.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot30"
+          }
+        ]
+      }
+    },
+    "spot30": {
+      "map": {
+        "x": 52.63,
+        "y": 40.27,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/30.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot31"
+          }
+        ]
+      }
+    },
+    "spot31": {
+      "map": {
+        "x": 46.13,
+        "y": 40.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/31.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot32"
+          }
+        ]
+      }
+    },
+    "spot32": {
+      "map": {
+        "x": 46.13,
+        "y": 28.93,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/32.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot33"
+          }
+        ]
+      }
+    },
+    "spot33": {
+      "map": {
+        "x": 37.3,
+        "y": 28.93,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/33.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot34"
+          }
+        ]
+      }
+    },
+    "spot34": {
+      "map": {
+        "x": 37.13,
+        "y": 24.49,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/34.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot35"
+          }
+        ]
+      }
+    },
+    "spot35": {
+      "map": {
+        "x": 37.13,
+        "y": 18.04,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/35.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot36"
+          }
+        ]
+      }
+    },
+    "spot36": {
+      "map": {
+        "x": 37.47,
+        "y": 28.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/36.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot37"
+          }
+        ]
+      }
+    },
+    "spot37": {
+      "map": {
+        "x": 27.8,
+        "y": 28.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/37.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot38"
+          }
+        ]
+      }
+    },
+    "spot38": {
+      "map": {
+        "x": 28.13,
+        "y": 40.27,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/38.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot39"
+          }
+        ]
+      }
+    },
+    "spot39": {
+      "map": {
+        "x": 25.3,
+        "y": 41.16,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/39.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot40"
+          }
+        ]
+      }
+    },
+    "spot40": {
+      "map": {
+        "x": 19.8,
+        "y": 41.38,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/40.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot41"
+          }
+        ]
+      }
+    },
+    "spot41": {
+      "map": {
+        "x": 25.13,
+        "y": 41.16,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/41.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot42"
+          }
+        ]
+      }
+    },
+    "spot42": {
+      "map": {
+        "x": 27.3,
+        "y": 40.04,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/42.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot43"
+          }
+        ]
+      }
+    },
+    "spot43": {
+      "map": {
+        "x": 28.3,
+        "y": 52.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/43.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot44"
+          }
+        ]
+      }
+    },
+    "spot44": {
+      "map": {
+        "x": 31.63,
+        "y": 50.04,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/44.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot45"
+          }
+        ]
+      }
+    },
+    "spot45": {
+      "map": {
+        "x": 30.13,
+        "y": 46.71,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/45.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot46"
+          }
+        ]
+      }
+    },
+    "spot46": {
+      "map": {
+        "x": 31.8,
+        "y": 42.93,
+        "angleOffset": 0
+      },
+      "available": [
+        "north"
+      ],
+      "images": {
+        "north": "/tours/sikandra/46.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot47"
+          }
+        ]
+      }
+    },
+    "spot47": {
+      "map": {
+        "x": 32.13,
+        "y": 46.04,
+        "angleOffset": 0
+      },
+      "available": [
+        "north",
+        "east",
+        "west",
+        "south"
+      ],
+      "images": {
+        "north": "/tours/sikandra/47.1.jpg",
+        "east": "/tours/sikandra/47.2.jpg",
+        "west": "/tours/sikandra/47.3.jpg",
+        "south": "/tours/sikandra/47.4.jpg"
+      },
+      "hotspots": {
+        "north": [
+          {
+            "top": 62,
+            "left": 58,
+            "target": "spot10"
+          }
+        ]
+      }
+    }
+  }
+}
