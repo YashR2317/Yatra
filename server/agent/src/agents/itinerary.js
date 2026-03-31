@@ -114,10 +114,18 @@ async function plan(params) {
     for (let attempt = 1; attempt <= MAX_LLM_RETRIES; attempt++) {
         result = await llm.generateJSON(ITINERARY_PROMPT + langInstruction, userPrompt);
         if (result.success && result.data && result.data.days && Array.isArray(result.data.days)) {
-            console.log(`[Itinerary] LLM success on attempt ${attempt}`);
-            break;
+            const gotDays = result.data.days.length;
+            // Validate: must have the right number of days, each with at least 3 slots
+            const allDaysHaveSlots = result.data.days.every(d => (d.slots || []).length >= 3);
+            if (gotDays >= days && allDaysHaveSlots) {
+                console.log(`[Itinerary] LLM success on attempt ${attempt} (${gotDays} days, all have slots)`);
+                break;
+            }
+            console.warn(`[Itinerary] LLM attempt ${attempt}: got ${gotDays}/${days} days, slotsOK=${allDaysHaveSlots} — retrying`);
+            result = null; // reject incomplete result
+        } else {
+            console.warn(`[Itinerary] LLM attempt ${attempt}/${MAX_LLM_RETRIES} failed or returned invalid structure`);
         }
-        console.warn(`[Itinerary] LLM attempt ${attempt}/${MAX_LLM_RETRIES} failed or returned invalid structure`);
         if (attempt === MAX_LLM_RETRIES) {
             console.warn('[Itinerary] All LLM retries exhausted, using fallback');
         }
@@ -298,13 +306,19 @@ function generateFallbackItinerary(placesByCity, cities, days, weather, budgetLe
     };
 
     let dayNum = 1;
-    const daysPerCity = Math.max(1, Math.floor(days / cities.length));
+    const baseDaysPerCity = Math.max(1, Math.floor(days / cities.length));
+    const extraDays = days - (baseDaysPerCity * cities.length);
 
-    for (const city of cities) {
+    // Distribute days: each city gets baseDaysPerCity, first N cities get 1 extra
+    const cityDayAlloc = cities.map((city, i) => baseDaysPerCity + (i < extraDays ? 1 : 0));
+
+    for (let ci = 0; ci < cities.length; ci++) {
+        const city = cities[ci];
+        const daysForThisCity = cityDayAlloc[ci];
         const places = placesByCity[city] || [];
-        const placesPerDay = Math.ceil(places.length / daysPerCity);
+        const placesPerDay = Math.ceil(places.length / daysForThisCity);
 
-        for (let d = 0; d < daysPerCity && dayNum <= days; d++) {
+        for (let d = 0; d < daysForThisCity && dayNum <= days; d++) {
             const dayPlaces = places.slice(d * placesPerDay, (d + 1) * placesPerDay).slice(0, 5);
             const slots = [];
 

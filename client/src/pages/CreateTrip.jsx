@@ -4,15 +4,16 @@ import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import { useAuth } from "../contexts/AuthContext";
 
-const AGENT_URL = import.meta.env.VITE_AGENT_URL || "http://localhost:3000";
+const AGENT_URL = import.meta.env.VITE_AGENT_URL || "http://localhost:5000";
 
 const CreateTrip = () => {
     const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(true);
     const { token } = useAuth();
 
-    // Pass token to agent iframe so it shares the same auth session
-    const agentSrc = token ? `${AGENT_URL}?token=${token}` : AGENT_URL;
+    // Agent UI is served at /agent on the unified server
+    const agentBase = `${AGENT_URL}/agent`;
+    const agentSrc = token ? `${agentBase}?token=${token}` : agentBase;
 
     return (
         <div className="relative min-h-screen overflow-hidden bg-gray-950">

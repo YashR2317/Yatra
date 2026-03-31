@@ -519,33 +519,6 @@
     },
     {
       "id": "agra_020",
-      "name": "Agra Museum",
-      "category": "hidden_gem",
-      "address": "Agra Museum, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.171,
-        "lng": 78.021
-      },
-      "description": "Agra Museum is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 20,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Agra,Museum"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.171,78.021",
-      "tags": [
-        "heritage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_021",
       "name": "Mariam's Tomb",
       "category": "monument",
       "address": "Mariam's Tomb, Agra, Uttar Pradesh, India",
@@ -557,7 +530,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 21,
+      "popularity_rank": 20,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Mariam's,Tomb"
@@ -572,7 +545,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_022",
+      "id": "agra_021",
       "name": "Balkeshwar Temple",
       "category": "temple",
       "address": "Balkeshwar Temple, Agra, Uttar Pradesh, India",
@@ -584,7 +557,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 22,
+      "popularity_rank": 21,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Balkeshwar,Temple"
@@ -600,7 +573,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_023",
+      "id": "agra_022",
       "name": "Khatu Shyam Ji Temple",
       "category": "temple",
       "address": "Khatu Shyam Ji Temple, Agra, Uttar Pradesh, India",
@@ -612,7 +585,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 23,
+      "popularity_rank": 22,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Khatu,Shyam,Ji,Temple"
@@ -628,7 +601,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_024",
+      "id": "agra_023",
       "name": "Langde Ki Chowki Hanuman Mandir",
       "category": "temple",
       "address": "Langde Ki Chowki Hanuman Mandir, Agra, Uttar Pradesh, India",
@@ -640,7 +613,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 24,
+      "popularity_rank": 23,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Langde,Ki,Chowki,Hanuman,Mandir"
@@ -656,7 +629,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_025",
+      "id": "agra_024",
       "name": "Rawli Temple",
       "category": "temple",
       "address": "Rawli Temple, Agra, Uttar Pradesh, India",
@@ -668,7 +641,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 25,
+      "popularity_rank": 24,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Rawli,Temple"
@@ -684,61 +657,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_026",
-      "name": "Chausath Khamba",
-      "category": "hidden_gem",
-      "address": "Chausath Khamba, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.177,
-        "lng": 78.027
-      },
-      "description": "Chausath Khamba is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 26,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Chausath,Khamba"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.177,78.027",
-      "tags": [
-        "heritage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
       "id": "agra_027",
-      "name": "Gyarah Sidi",
-      "category": "hidden_gem",
-      "address": "Gyarah Sidi, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.178,
-        "lng": 78.028
-      },
-      "description": "Gyarah Sidi is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 27,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Gyarah,Sidi"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.178,78.028",
-      "tags": [
-        "heritage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_028",
       "name": "St. George's Cathedral",
       "category": "church",
       "address": "St. George's Cathedral, Agra, Uttar Pradesh, India",
@@ -750,7 +669,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 28,
+      "popularity_rank": 27,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?St.,George's,Cathedral"
@@ -766,34 +685,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_029",
-      "name": "Mother Teresa's Missionaries of Charity",
-      "category": "hidden_gem",
-      "address": "Mother Teresa's Missionaries of Charity, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.18,
-        "lng": 78.03
-      },
-      "description": "Mother Teresa's Missionaries of Charity is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 29,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Mother,Teresa's,Missionaries,of,Charity"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.18,78.03",
-      "tags": [
-        "heritage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_030",
+      "id": "agra_028",
       "name": "Fatehabad Road Market",
       "category": "market",
       "address": "Fatehabad Road Market, Agra, Uttar Pradesh, India",
@@ -805,7 +697,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 30,
+      "popularity_rank": 28,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Fatehabad,Road,Market"
@@ -820,7 +712,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_031",
+      "id": "agra_029",
       "name": "TDI Mall Food Court",
       "category": "market",
       "address": "TDI Mall Food Court, Agra, Uttar Pradesh, India",
@@ -832,7 +724,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 31,
+      "popularity_rank": 29,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?TDI,Mall,Food,Court"
@@ -847,7 +739,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_032",
+      "id": "agra_030",
       "name": "Cafe Coffee Day Tajganj",
       "category": "cafe",
       "address": "Cafe Coffee Day Tajganj, Agra, Uttar Pradesh, India",
@@ -859,7 +751,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 32,
+      "popularity_rank": 30,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Cafe,Coffee,Day,Tajganj"
@@ -874,7 +766,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_033",
+      "id": "agra_031",
       "name": "Joney's Place",
       "category": "hidden_gem",
       "address": "Joney's Place, Agra, Uttar Pradesh, India",
@@ -886,7 +778,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 33,
+      "popularity_rank": 31,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Joney's,Place"
@@ -901,34 +793,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_034",
-      "name": "Yamuna View Point",
-      "category": "hidden_gem",
-      "address": "Yamuna View Point, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.185,
-        "lng": 78.035
-      },
-      "description": "Yamuna View Point is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 34,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Yamuna,View,Point"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.185,78.035",
-      "tags": [
-        "heritage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_035",
+      "id": "agra_032",
       "name": "Kalakriti Cultural Center",
       "category": "hidden_gem",
       "address": "Kalakriti Cultural Center, Agra, Uttar Pradesh, India",
@@ -940,7 +805,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 35,
+      "popularity_rank": 32,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Kalakriti,Cultural,Center"
@@ -955,88 +820,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_036",
-      "name": "Anguri Bagh",
-      "category": "hidden_gem",
-      "address": "Anguri Bagh, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.187,
-        "lng": 78.037
-      },
-      "description": "Anguri Bagh is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 36,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Anguri,Bagh"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.187,78.037",
-      "tags": [
-        "heritage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_037",
-      "name": "Shah Jahan Garden",
-      "category": "park",
-      "address": "Shah Jahan Garden, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.188,
-        "lng": 78.038
-      },
-      "description": "Shah Jahan Garden is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 37,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Shah,Jahan,Garden"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.188,78.038",
-      "tags": [
-        "nature"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_038",
-      "name": "Sur Sarovar Lake Park",
-      "category": "park",
-      "address": "Sur Sarovar Lake Park, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.189,
-        "lng": 78.039
-      },
-      "description": "Sur Sarovar Lake Park is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 38,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Sur,Sarovar,Lake,Park"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.189,78.039",
-      "tags": [
-        "nature"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_039",
+      "id": "agra_033",
       "name": "Agra Cantt Market",
       "category": "market",
       "address": "Agra Cantt Market, Agra, Uttar Pradesh, India",
@@ -1048,7 +832,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 39,
+      "popularity_rank": 33,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Agra,Cantt,Market"
@@ -1063,7 +847,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_040",
+      "id": "agra_034",
       "name": "Bateshwar Temple Complex (Agra Region)",
       "category": "temple",
       "address": "Bateshwar Temple Complex (Agra Region), Agra, Uttar Pradesh, India",
@@ -1075,7 +859,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 40,
+      "popularity_rank": 34,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Bateshwar,Temple,Complex,(Agra,Region)"
@@ -1091,63 +875,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_041",
-      "name": "Shri Krishna Pranami Mandir",
-      "category": "temple",
-      "address": "Shri Krishna Pranami Mandir, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.192,
-        "lng": 78.042
-      },
-      "description": "Shri Krishna Pranami Mandir is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 41,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Shri,Krishna,Pranami,Mandir"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.192,78.042",
-      "tags": [
-        "heritage",
-        "pilgrimage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_042",
-      "name": "Dayal Bagh Temple",
-      "category": "temple",
-      "address": "Dayal Bagh Temple, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.193,
-        "lng": 78.043
-      },
-      "description": "Dayal Bagh Temple is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 42,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Dayal,Bagh,Temple"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.193,78.043",
-      "tags": [
-        "heritage",
-        "pilgrimage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_043",
+      "id": "agra_035",
       "name": "Radhasoami Samadhi",
       "category": "hidden_gem",
       "address": "Radhasoami Samadhi, Agra, Uttar Pradesh, India",
@@ -1159,7 +887,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 43,
+      "popularity_rank": 35,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Radhasoami,Samadhi"
@@ -1174,170 +902,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_044",
-      "name": "Moti Masjid Agra Fort",
-      "category": "mosque",
-      "address": "Moti Masjid Agra Fort, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.195,
-        "lng": 78.045
-      },
-      "description": "Moti Masjid Agra Fort is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 44,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Moti,Masjid,Agra,Fort"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.195,78.045",
-      "tags": [
-        "heritage",
-        "pilgrimage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_045",
-      "name": "Jehangir Mahal",
-      "category": "monument",
-      "address": "Jehangir Mahal, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.196,
-        "lng": 78.046
-      },
-      "description": "Jehangir Mahal is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 45,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Jehangir,Mahal"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.196,78.046",
-      "tags": [
-        "heritage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_046",
-      "name": "Musamman Burj",
-      "category": "hidden_gem",
-      "address": "Musamman Burj, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.197,
-        "lng": 78.047
-      },
-      "description": "Musamman Burj is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 46,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Musamman,Burj"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.197,78.047",
-      "tags": [
-        "heritage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_047",
-      "name": "Sheesh Mahal Agra Fort",
-      "category": "monument",
-      "address": "Sheesh Mahal Agra Fort, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.198,
-        "lng": 78.048
-      },
-      "description": "Sheesh Mahal Agra Fort is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 47,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Sheesh,Mahal,Agra,Fort"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.198,78.048",
-      "tags": [
-        "heritage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_048",
-      "name": "Jodha Bai Palace",
-      "category": "hidden_gem",
-      "address": "Jodha Bai Palace, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.199,
-        "lng": 78.049
-      },
-      "description": "Jodha Bai Palace is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 48,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Jodha,Bai,Palace"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.199,78.049",
-      "tags": [
-        "heritage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_049",
-      "name": "Tomb of Afzal Khan",
-      "category": "monument",
-      "address": "Tomb of Afzal Khan, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.2,
-        "lng": 78.05
-      },
-      "description": "Tomb of Afzal Khan is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 49,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Tomb,of,Afzal,Khan"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.2,78.05",
-      "tags": [
-        "heritage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_050",
+      "id": "agra_036",
       "name": "Sikandra Market",
       "category": "market",
       "address": "Sikandra Market, Agra, Uttar Pradesh, India",
@@ -1349,7 +914,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 50,
+      "popularity_rank": 36,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Sikandra,Market"
@@ -1364,7 +929,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_051",
+      "id": "agra_037",
       "name": "Raja Ki Mandi Market",
       "category": "market",
       "address": "Raja Ki Mandi Market, Agra, Uttar Pradesh, India",
@@ -1376,7 +941,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 51,
+      "popularity_rank": 37,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Raja,Ki,Mandi,Market"
@@ -1391,7 +956,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_052",
+      "id": "agra_038",
       "name": "Tajganj Market",
       "category": "market",
       "address": "Tajganj Market, Agra, Uttar Pradesh, India",
@@ -1403,7 +968,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 52,
+      "popularity_rank": 38,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Tajganj,Market"
@@ -1418,115 +983,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_053",
-      "name": "Green Park Agra",
-      "category": "park",
-      "address": "Green Park Agra, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.204,
-        "lng": 78.054
-      },
-      "description": "Green Park Agra is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 53,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Green,Park,Agra"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.204,78.054",
-      "tags": [
-        "nature"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_054",
-      "name": "Civil Lines Park",
-      "category": "park",
-      "address": "Civil Lines Park, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.205,
-        "lng": 78.055
-      },
-      "description": "Civil Lines Park is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 54,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Civil,Lines,Park"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.205,78.055",
-      "tags": [
-        "nature"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_055",
-      "name": "Khandari Park",
-      "category": "park",
-      "address": "Khandari Park, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.206,
-        "lng": 78.056
-      },
-      "description": "Khandari Park is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 55,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Khandari,Park"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.206,78.056",
-      "tags": [
-        "nature"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_056",
-      "name": "Yamuna Riverfront Walk",
-      "category": "hidden_gem",
-      "address": "Yamuna Riverfront Walk, Agra, Uttar Pradesh, India",
-      "coordinates": {
-        "lat": 27.207,
-        "lng": 78.057
-      },
-      "description": "Yamuna Riverfront Walk is a notable place of interest in Agra known for its cultural and historical significance.",
-      "opening_hours": "Varies; generally 6:00\u201320:00",
-      "entry_fee": null,
-      "highlight": false,
-      "popularity_rank": 56,
-      "source": "Compiled from ASI, Tourism Board, and local listings",
-      "images": [
-        "https://source.unsplash.com/800x600/?Yamuna,Riverfront,Walk"
-      ],
-      "google_maps_link": "https://maps.google.com/?q=27.207,78.057",
-      "tags": [
-        "heritage"
-      ],
-      "estimated_visit_duration": 45,
-      "crowd_level": "medium",
-      "best_time_to_visit": "Morning or Late Afternoon",
-      "nearby_places": []
-    },
-    {
-      "id": "agra_057",
+      "id": "agra_039",
       "name": "Fatehpur Sikri Road Market",
       "category": "market",
       "address": "Fatehpur Sikri Road Market, Agra, Uttar Pradesh, India",
@@ -1538,7 +995,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 57,
+      "popularity_rank": 39,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Fatehpur,Sikri,Road,Market"
@@ -1553,7 +1010,7 @@
       "nearby_places": []
     },
     {
-      "id": "agra_058",
+      "id": "agra_040",
       "name": "Agra Marble Market",
       "category": "market",
       "address": "Agra Marble Market, Agra, Uttar Pradesh, India",
@@ -1565,7 +1022,7 @@
       "opening_hours": "Varies; generally 6:00\u201320:00",
       "entry_fee": null,
       "highlight": false,
-      "popularity_rank": 58,
+      "popularity_rank": 40,
       "source": "Compiled from ASI, Tourism Board, and local listings",
       "images": [
         "https://source.unsplash.com/800x600/?Agra,Marble,Market"

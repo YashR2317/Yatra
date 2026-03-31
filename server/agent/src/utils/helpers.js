@@ -4,20 +4,18 @@ function parseTags(tagsStr) {
 }
 
 function formatPlaceForLLM(place) {
+    // Slim format — reduces token count by ~40% per place
     return {
         id: place.id,
         name: place.name,
         city: place.city,
         category: place.category,
-        description: place.description,
-        coordinates: { lat: place.lat, lng: place.lng },
-        opening_hours: place.opening_hours,
-        estimated_visit_duration: place.estimated_visit_duration,
-        crowd_level: place.crowd_level,
+        description: (place.description || '').substring(0, 120),
+        hours: place.opening_hours || '',
+        duration: place.estimated_visit_duration || 60,
+        crowd: place.crowd_level || 'medium',
         highlight: !!place.highlight,
-        tags: parseTags(place.tags),
-        best_time_to_visit: place.best_time_to_visit || '',
-        google_maps_link: place.google_maps_link || '',
+        best_time: place.best_time_to_visit || '',
         entry_fee: parseFloat(place.entry_fee) || 0
     };
 }

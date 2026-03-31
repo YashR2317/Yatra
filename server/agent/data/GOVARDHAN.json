@@ -233,14 +233,14 @@
         },
         {
         "id": "govardhan_012",
-        "name": "Aniyor Village Temple",
-        "category": "temple",
-        "address": "Aniyor Village Temple, Govardhan, Uttar Pradesh, India",
+        "name": "Rudra Kund",
+        "category": "ghat",
+        "address": "Rudra Kund, Govardhan, Uttar Pradesh, India",
         "coordinates": {
-            "lat": 27.494,
-            "lng": 77.48
+            "lat": 27.489,
+            "lng": 77.473
         },
-        "description": "Aniyor Village Temple is a notable place in Govardhan.",
+        "description": "Rudra Kund is a notable place in Govardhan.",
         "opening_hours": "Varies",
         "entry_fee": null,
         "highlight": false,
@@ -254,14 +254,14 @@
         },
         {
         "id": "govardhan_013",
-        "name": "Rudra Kund",
+        "name": "Sankarshan Kund",
         "category": "ghat",
-        "address": "Rudra Kund, Govardhan, Uttar Pradesh, India",
+        "address": "Sankarshan Kund, Govardhan, Uttar Pradesh, India",
         "coordinates": {
-            "lat": 27.489,
-            "lng": 77.473
+            "lat": 27.4905,
+            "lng": 77.469
         },
-        "description": "Rudra Kund is a notable place in Govardhan.",
+        "description": "Sankarshan Kund is a notable place in Govardhan.",
         "opening_hours": "Varies",
         "entry_fee": null,
         "highlight": false,
@@ -275,14 +275,14 @@
         },
         {
         "id": "govardhan_014",
-        "name": "Sankarshan Kund",
-        "category": "ghat",
-        "address": "Sankarshan Kund, Govardhan, Uttar Pradesh, India",
+        "name": "Daan Ghati Market",
+        "category": "market",
+        "address": "Daan Ghati Market, Govardhan, Uttar Pradesh, India",
         "coordinates": {
-            "lat": 27.4905,
-            "lng": 77.469
+            "lat": 27.499,
+            "lng": 77.463
         },
-        "description": "Sankarshan Kund is a notable place in Govardhan.",
+        "description": "Daan Ghati Market is a notable place in Govardhan.",
         "opening_hours": "Varies",
         "entry_fee": null,
         "highlight": false,
@@ -296,14 +296,14 @@
         },
         {
         "id": "govardhan_015",
-        "name": "Daan Ghati Market",
+        "name": "Radha Kund Bazaar",
         "category": "market",
-        "address": "Daan Ghati Market, Govardhan, Uttar Pradesh, India",
+        "address": "Radha Kund Bazaar, Govardhan, Uttar Pradesh, India",
         "coordinates": {
-            "lat": 27.499,
-            "lng": 77.463
+            "lat": 27.4875,
+            "lng": 77.472
         },
-        "description": "Daan Ghati Market is a notable place in Govardhan.",
+        "description": "Radha Kund Bazaar is a notable place in Govardhan.",
         "opening_hours": "Varies",
         "entry_fee": null,
         "highlight": false,
@@ -317,14 +317,14 @@
         },
         {
         "id": "govardhan_016",
-        "name": "Radha Kund Bazaar",
-        "category": "market",
-        "address": "Radha Kund Bazaar, Govardhan, Uttar Pradesh, India",
+        "name": "ISKCON Govardhan",
+        "category": "temple",
+        "address": "ISKCON Govardhan, Govardhan, Uttar Pradesh, India",
         "coordinates": {
-            "lat": 27.4875,
-            "lng": 77.472
+            "lat": 27.497,
+            "lng": 77.465
         },
-        "description": "Radha Kund Bazaar is a notable place in Govardhan.",
+        "description": "ISKCON Govardhan is a notable place in Govardhan.",
         "opening_hours": "Varies",
         "entry_fee": null,
         "highlight": false,
@@ -338,14 +338,14 @@
         },
         {
         "id": "govardhan_017",
-        "name": "ISKCON Govardhan",
-        "category": "temple",
-        "address": "ISKCON Govardhan, Govardhan, Uttar Pradesh, India",
+        "name": "Parikrama Food Stalls",
+        "category": "restaurant",
+        "address": "Parikrama Food Stalls, Govardhan, Uttar Pradesh, India",
         "coordinates": {
-            "lat": 27.497,
-            "lng": 77.465
+            "lat": 27.4985,
+            "lng": 77.4635
         },
-        "description": "ISKCON Govardhan is a notable place in Govardhan.",
+        "description": "Parikrama Food Stalls is a notable place in Govardhan.",
         "opening_hours": "Varies",
         "entry_fee": null,
         "highlight": false,
@@ -359,14 +359,14 @@
         },
         {
         "id": "govardhan_018",
-        "name": "Govardhan Gaushala",
-        "category": "other",
-        "address": "Govardhan Gaushala, Govardhan, Uttar Pradesh, India",
+        "name": "Chakleshwar Mahadev",
+        "category": "temple",
+        "address": "Chakleshwar Mahadev, Govardhan, Uttar Pradesh, India",
         "coordinates": {
-            "lat": 27.498,
-            "lng": 77.461
+            "lat": 27.501,
+            "lng": 77.463
         },
-        "description": "Govardhan Gaushala is a notable place in Govardhan.",
+        "description": "Chakleshwar Mahadev is a notable place in Govardhan.",
         "opening_hours": "Varies",
         "entry_fee": null,
         "highlight": false,
@@ -380,48 +380,6 @@
         },
         {
         "id": "govardhan_019",
-        "name": "Parikrama Food Stalls",
-        "category": "restaurant",
-        "address": "Parikrama Food Stalls, Govardhan, Uttar Pradesh, India",
-        "coordinates": {
-            "lat": 27.4985,
-            "lng": 77.4635
-        },
-        "description": "Parikrama Food Stalls is a notable place in Govardhan.",
-        "opening_hours": "Varies",
-        "entry_fee": null,
-        "highlight": false,
-        "popularity_rank": 19,
-        "tags": [
-            "pilgrimage",
-            "heritage"
-        ],
-        "estimated_visit_duration": 60,
-        "crowd_level": "medium"
-        },
-        {
-        "id": "govardhan_020",
-        "name": "Chakleshwar Mahadev",
-        "category": "temple",
-        "address": "Chakleshwar Mahadev, Govardhan, Uttar Pradesh, India",
-        "coordinates": {
-            "lat": 27.501,
-            "lng": 77.463
-        },
-        "description": "Chakleshwar Mahadev is a notable place in Govardhan.",
-        "opening_hours": "Varies",
-        "entry_fee": null,
-        "highlight": false,
-        "popularity_rank": 20,
-        "tags": [
-            "pilgrimage",
-            "heritage"
-        ],
-        "estimated_visit_duration": 60,
-        "crowd_level": "medium"
-        },
-        {
-        "id": "govardhan_021",
         "name": "Govardhan Parikrama Marg",
         "category": "parikrama_route",
         "address": "Govardhan Parikrama Marg, Govardhan, Uttar Pradesh, India",
@@ -433,7 +391,7 @@
         "opening_hours": "Varies",
         "entry_fee": null,
         "highlight": false,
-        "popularity_rank": 21,
+        "popularity_rank": 19,
         "tags": [
             "pilgrimage",
             "heritage"

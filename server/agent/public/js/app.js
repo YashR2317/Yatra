@@ -2,9 +2,9 @@
 
     const TRANSLATIONS = {
         en: {
-            logo_sub: 'Hare Krishna · AI Tirth Companion',
+            logo_sub: 'Hare Krishna Â· AI Tirth Companion',
             new_chat: 'New Chat',
-            quick_actions: '🪷 Quick Actions',
+            quick_actions: 'ðŸª· Quick Actions',
             plan_yatra: 'Plan Yatra (Questionnaire)',
             darshan_guide: 'Temple Darshan Guide',
             weather: 'Weather',
@@ -14,7 +14,7 @@
             connecting: 'Connecting...',
             welcome_title: 'BRAJYATRA.AI',
             welcome_tagline: 'Where Travel meets Tradition',
-            welcome_desc: 'Your AI-powered Tirth Companion for the sacred Braj Dham — walk the land where Shri Krishna performed His divine leelas.',
+            welcome_desc: 'Your AI-powered Tirth Companion for the sacred Braj Dham â€” walk the land where Shri Krishna performed His divine leelas.',
             card_plan: 'Plan Your Yatra',
             card_plan_desc: 'Custom itinerary with preferences',
             card_darshan: 'Temple Darshan',
@@ -24,72 +24,72 @@
             card_parikrama: 'Parikrama Guide',
             card_parikrama_desc: 'Sacred circumambulation routes',
             input_placeholder: 'Ask about Braj Dham, plan a Yatra...',
-            input_hint: 'BrajYatra · Plan Yatra · Darshan Guide · Weather · Krishna Leelas',
+            input_hint: 'BrajYatra Â· Plan Yatra Â· Darshan Guide Â· Weather Â· Krishna Leelas',
             modal_title: 'Plan Your Sacred Yatra',
             modal_desc: 'Tell us your preferences for a personalized itinerary',
-            q1_title: '🙏 Yatra Type',
+            q1_title: 'ðŸ™ Yatra Type',
             q1_desc: 'What kind of journey calls to your soul?',
             q1_opt1: 'Tirth Yatra',
             q1_opt1_desc: 'Sacred pilgrimage & temple darshan',
             q1_opt2: 'Cultural Tour',
             q1_opt2_desc: 'Culture, heritage & monuments',
             q1_opt3: 'Complete Braj Yatra',
-            q1_opt3_desc: 'Complete tour — temples, heritage & nature',
+            q1_opt3_desc: 'Complete tour â€” temples, heritage & nature',
             q1_opt4: 'Custom Mix',
             q1_opt4_desc: "I'll pick my own interests",
-            q2_title: '📅 Yatra Duration',
+            q2_title: 'ðŸ“… Yatra Duration',
             q2_desc: 'How many days for your sacred journey?',
-            q3_title: '📍 Sacred Destinations',
+            q3_title: 'ðŸ“ Sacred Destinations',
             q3_desc: 'Select the holy cities you wish to visit',
-            q4_title: '🪷 Your Interests',
+            q4_title: 'ðŸª· Your Interests',
             q4_desc: 'What experiences are you seeking? (Select multiple)',
-            int_temple: '🛕 Temple Darshan',
-            int_ghat: '🌊 Ghat & Holy Bath',
-            int_food: '🍛 Prasadam & Food',
-            int_heritage: '🏛️ Heritage & Monuments',
-            int_market: '🛍️ Bazaar & Shopping',
-            int_nature: '🌿 Nature & Parikrama',
-            int_aarti: '🪔 Aarti & Kirtan',
-            int_festival: '🎉 Festivals & Events',
-            q5_title: '🚶 Pace & Group',
+            int_temple: 'ðŸ›• Temple Darshan',
+            int_ghat: 'ðŸŒŠ Ghat & Holy Bath',
+            int_food: 'ðŸ› Prasadam & Food',
+            int_heritage: 'ðŸ›ï¸ Heritage & Monuments',
+            int_market: 'ðŸ›ï¸ Bazaar & Shopping',
+            int_nature: 'ðŸŒ¿ Nature & Parikrama',
+            int_aarti: 'ðŸª” Aarti & Kirtan',
+            int_festival: 'ðŸŽ‰ Festivals & Events',
+            q5_title: 'ðŸš¶ Pace & Group',
             q5_pace: 'Your preferred pace:',
-            pace_relaxed: '🧘 Relaxed',
+            pace_relaxed: 'ðŸ§˜ Relaxed',
             pace_relaxed_desc: 'Fewer places, more time at each',
-            pace_moderate: '⚖️ Moderate',
+            pace_moderate: 'âš–ï¸ Moderate',
             pace_moderate_desc: 'Balanced pace',
-            pace_intensive: '🏃 Intensive',
+            pace_intensive: 'ðŸƒ Intensive',
             pace_intensive_desc: 'Cover maximum places',
             q5_group: 'Travelling as:',
-            grp_solo: '🧑 Solo',
-            grp_couple: '💑 Couple',
-            grp_family: '👨‍👩‍👧 Family',
-            grp_group: '👥 Group',
-            btn_back: '← Back',
-            btn_next: 'Next →',
-            btn_submit: '🙏 Plan My Yatra',
-            error_msg: "I'm having trouble connecting. Please try again. 🙏",
-            edit_itinerary: '✏️ Edit',
-            done_editing: '✅ Done',
+            grp_solo: 'ðŸ§‘ Solo',
+            grp_couple: 'ðŸ’‘ Couple',
+            grp_family: 'ðŸ‘¨â€ðŸ‘©â€ðŸ‘§ Family',
+            grp_group: 'ðŸ‘¥ Group',
+            btn_back: 'â† Back',
+            btn_next: 'Next â†’',
+            btn_submit: 'ðŸ™ Plan My Yatra',
+            error_msg: "I'm having trouble connecting. Please try again. ðŸ™",
+            edit_itinerary: 'âœï¸ Edit',
+            done_editing: 'âœ… Done',
             add_place: '+ Add Place',
-            view_day_route: '📍 View Day Route on Maps',
-            view_full_route: '📍 View Full Route on Google Maps →',
-            view_city_route: '📍 View {city} Route on Maps',
+            view_day_route: 'ðŸ“ View Day Route on Maps',
+            view_full_route: 'ðŸ“ View Full Route on Google Maps â†’',
+            view_city_route: 'ðŸ“ View {city} Route on Maps',
             online_status: 'Online',
             server_offline: 'Server Offline',
             llm_offline: 'LLM Offline',
             back_home: 'Back to Home',
-            q3b_title: '📍 Select Places',
+            q3b_title: 'ðŸ“ Select Places',
             q3b_desc: 'Pick the specific places you want to visit',
-            q6_title: '📍 Starting Point & Time',
+            q6_title: 'ðŸ“ Starting Point & Time',
             q6_desc: 'Where are you starting from and when do you arrive?',
             q6_from_label: 'Starting from (city, station, or airport):',
             q6_from_placeholder: 'e.g. Delhi, Agra Cantt Station, Mathura Junction',
             q6_first_city: 'Which city do you want to visit first?',
             q6_time_label: 'Arrival / Start time:',
-            time_morning: '🌅 Early Morning (5-7 AM)',
-            time_forenoon: '☀️ Forenoon (8-10 AM)',
-            time_afternoon: '🌤️ Afternoon (12-2 PM)',
-            time_evening: '🌇 Evening (4-6 PM)',
+            time_morning: 'ðŸŒ… Early Morning (5-7 AM)',
+            time_forenoon: 'â˜€ï¸ Forenoon (8-10 AM)',
+            time_afternoon: 'ðŸŒ¤ï¸ Afternoon (12-2 PM)',
+            time_evening: 'ðŸŒ‡ Evening (4-6 PM)',
             query_darshan: 'Recommend the best temples for darshan in Vrindavan',
             query_weather: "What's the weather like in Mathura today?",
             query_krishna: "Tell me about the significance of Braj Dham and Lord Krishna's leelas",
@@ -105,107 +105,107 @@
             city_picker_weather: 'Select city for Weather'
         },
         hi: {
-            logo_sub: 'हरे कृष्ण · AI तीर्थ साथी',
-            new_chat: 'नई वार्ता',
-            quick_actions: '🪷 त्वरित विकल्प',
-            plan_yatra: 'यात्रा योजना (प्रश्नावली)',
-            darshan_guide: 'मंदिर दर्शन गाइड',
-            weather: 'मौसम',
-            krishna_leela: 'कृष्ण लीला एवं इतिहास',
-            prasadam: 'प्रसादम एवं भोजन',
-            parikrama: 'ब्रज परिक्रमा',
-            connecting: 'कनेक्ट हो रहा है...',
+            logo_sub: 'à¤¹à¤°à¥‡ à¤•à¥ƒà¤·à¥à¤£ Â· AI à¤¤à¥€à¤°à¥à¤¥ à¤¸à¤¾à¤¥à¥€',
+            new_chat: 'à¤¨à¤ˆ à¤µà¤¾à¤°à¥à¤¤à¤¾',
+            quick_actions: 'ðŸª· à¤¤à¥à¤µà¤°à¤¿à¤¤ à¤µà¤¿à¤•à¤²à¥à¤ª',
+            plan_yatra: 'à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤¯à¥‹à¤œà¤¨à¤¾ (à¤ªà¥à¤°à¤¶à¥à¤¨à¤¾à¤µà¤²à¥€)',
+            darshan_guide: 'à¤®à¤‚à¤¦à¤¿à¤° à¤¦à¤°à¥à¤¶à¤¨ à¤—à¤¾à¤‡à¤¡',
+            weather: 'à¤®à¥Œà¤¸à¤®',
+            krishna_leela: 'à¤•à¥ƒà¤·à¥à¤£ à¤²à¥€à¤²à¤¾ à¤à¤µà¤‚ à¤‡à¤¤à¤¿à¤¹à¤¾à¤¸',
+            prasadam: 'à¤ªà¥à¤°à¤¸à¤¾à¤¦à¤® à¤à¤µà¤‚ à¤­à¥‹à¤œà¤¨',
+            parikrama: 'à¤¬à¥à¤°à¤œ à¤ªà¤°à¤¿à¤•à¥à¤°à¤®à¤¾',
+            connecting: 'à¤•à¤¨à¥‡à¤•à¥à¤Ÿ à¤¹à¥‹ à¤°à¤¹à¤¾ à¤¹à¥ˆ...',
             welcome_title: 'BRAJYATRA.AI',
-            welcome_tagline: 'जहाँ यात्रा परंपरा से मिलती है',
-            welcome_desc: 'पवित्र ब्रज धाम के लिए आपका AI तीर्थ साथी — उस भूमि पर चलें जहाँ श्री कृष्ण ने अपनी दिव्य लीलाएँ कीं।',
-            card_plan: 'अपनी यात्रा की योजना बनाएं',
-            card_plan_desc: 'अपनी पसंद के अनुसार यात्रा कार्यक्रम',
-            card_darshan: 'मंदिर दर्शन',
-            card_darshan_desc: 'पवित्र मंदिर एवं दिव्य दर्शन',
-            card_festivals: 'उत्सव एवं पर्व',
-            card_festivals_desc: 'पवित्र त्यौहार एवं उत्सव',
-            card_parikrama: 'परिक्रमा गाइड',
-            card_parikrama_desc: 'पवित्र परिक्रमा मार्ग',
-            input_placeholder: 'ब्रज धाम के बारे में पूछें, यात्रा की योजना बनाएं...',
-            input_hint: 'ब्रजयात्रा · यात्रा योजना · दर्शन गाइड · मौसम · कृष्ण लीला',
-            modal_title: 'अपनी पवित्र यात्रा की योजना बनाएं',
-            modal_desc: 'व्यक्तिगत यात्रा कार्यक्रम के लिए अपनी प्राथमिकताएँ बताएं',
-            q1_title: '🙏 यात्रा प्रकार',
-            q1_desc: 'आपकी आत्मा किस प्रकार की यात्रा चाहती है?',
-            q1_opt1: 'तीर्थ यात्रा',
-            q1_opt1_desc: 'पवित्र तीर्थयात्रा एवं मंदिर दर्शन',
-            q1_opt2: 'सांस्कृतिक दर्शन',
-            q1_opt2_desc: 'संस्कृति, विरासत एवं स्मारक',
-            q1_opt3: 'पूर्ण ब्रज यात्रा',
-            q1_opt3_desc: 'संपूर्ण दौरा — मंदिर, विरासत एवं प्रकृति',
-            q1_opt4: 'कस्टम मिक्स',
-            q1_opt4_desc: 'मैं अपनी रुचियाँ चुनूँगा',
-            q2_title: '📅 यात्रा अवधि',
-            q2_desc: 'आपकी पवित्र यात्रा कितने दिनों की?',
-            q3_title: '📍 पवित्र गंतव्य',
-            q3_desc: 'उन पवित्र शहरों का चयन करें जिनकी आप यात्रा करना चाहते हैं',
-            q4_title: '🪷 आपकी रुचियाँ',
-            q4_desc: 'आप किन अनुभवों की तलाश में हैं? (एक से अधिक चुनें)',
-            int_temple: '🛕 मंदिर दर्शन',
-            int_ghat: '🌊 घाट एवं स्नान',
-            int_food: '🍛 प्रसादम एवं भोजन',
-            int_heritage: '🏛️ विरासत एवं स्मारक',
-            int_market: '🛍️ बाज़ार एवं खरीदारी',
-            int_nature: '🌿 प्रकृति एवं परिक्रमा',
-            int_aarti: '🪔 आरती एवं कीर्तन',
-            int_festival: '🎉 उत्सव एवं त्यौहार',
-            q5_title: '🚶 गति एवं समूह',
-            q5_pace: 'आपकी पसंदीदा गति:',
-            pace_relaxed: '🧘 सहज',
-            pace_relaxed_desc: 'कम स्थान, प्रत्येक पर अधिक समय',
-            pace_moderate: '⚖️ मध्यम',
-            pace_moderate_desc: 'संतुलित गति',
-            pace_intensive: '🏃 उत्साही',
-            pace_intensive_desc: 'अधिकतम स्थानों पर जाएं',
-            q5_group: 'यात्रा किसके साथ:',
-            grp_solo: '🧑 अकेले',
-            grp_couple: '💑 जोड़ा',
-            grp_family: '👨‍👩‍👧 परिवार',
-            grp_group: '👥 समूह',
-            btn_back: '← पीछे',
-            btn_next: 'आगे →',
-            btn_submit: '🙏 मेरी यात्रा की योजना बनाएं',
-            error_msg: 'कृपया पुनः प्रयास करें 🙏 कनेक्ट करने में समस्या हो रही है।',
-            edit_itinerary: '✏️ संपादित करें',
-            done_editing: '✅ पूर्ण',
-            add_place: '+ स्थान जोड़ें',
-            view_day_route: '📍 दिन का मार्ग मानचित्र पर देखें',
-            view_full_route: '📍 पूरा मार्ग Google Maps पर देखें →',
-            view_city_route: '📍 {city} का मार्ग मानचित्र पर देखें',
-            online_status: 'ऑनलाइन',
-            server_offline: 'सर्वर ऑफ़लाइन',
-            llm_offline: 'LLM ऑफ़लाइन',
-            back_home: 'वापस होम पर',
-            q3b_title: '📍 स्थान चुनें',
-            q3b_desc: 'वे विशिष्ट स्थान चुनें जिन्हें आप देखना चाहते हैं',
-            q6_title: '📍 प्रारंभ स्थान एवं समय',
-            q6_desc: 'आप कहाँ से आ रहे हैं और कब पहुँचेंगे?',
-            q6_from_label: 'प्रारंभ स्थान (शहर, स्टेशन, या हवाई अड्डा):',
-            q6_from_placeholder: 'जैसे दिल्ली, आगरा कैंट स्टेशन, मथुरा जंक्शन',
-            q6_first_city: 'पहले कौन सा शहर देखना चाहेंगे?',
-            q6_time_label: 'आगमन / प्रारंभ समय:',
-            time_morning: '🌅 सुबह जल्दी (5-7 AM)',
-            time_forenoon: '☀️ सुबह (8-10 AM)',
-            time_afternoon: '🌤️ दोपहर (12-2 PM)',
-            time_evening: '🌇 शाम (4-6 PM)',
-            query_darshan: 'वृन्दावन में दर्शन के लिए सर्वश्रेष्ठ मंदिरों की सिफारिश करें',
-            query_weather: 'आज मथुरा में मौसम कैसा है?',
-            query_krishna: 'ब्रज धाम और भगवान श्री कृष्ण की लीलाओं के बारे में बताएं',
-            query_prasadam: 'मथुरा और वृन्दावन में जरूर खाने वाले प्रसादम और स्थानीय भोजन की सिफारिश करें',
-            query_parikrama: 'सभी पवित्र स्थलों को कवर करते हुए पूर्ण ब्रज 84 कोस परिक्रमा की योजना बनाएं',
-            query_plan: 'अपनी यात्रा की योजना बनाएं',
-            query_festivals: 'ब्रज धाम में आने वाले त्यौहारों और उत्सवों के बारे में बताएं',
-            query_darshan_city: '{city} में दर्शन के लिए सर्वश्रेष्ठ मंदिरों की सिफारिश करें',
-            query_prasadam_city: '{city} में जरूर खाने वाले प्रसादम और स्थानीय भोजन की सिफारिश करें',
-            query_weather_city: 'आज {city} में मौसम कैसा है?',
-            city_picker_darshan: 'मंदिर दर्शन गाइड के लिए शहर चुनें',
-            city_picker_prasadam: 'प्रसादम एवं भोजन के लिए शहर चुनें',
-            city_picker_weather: 'मौसम के लिए शहर चुनें'
+            welcome_tagline: 'à¤œà¤¹à¤¾à¤ à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤ªà¤°à¤‚à¤ªà¤°à¤¾ à¤¸à¥‡ à¤®à¤¿à¤²à¤¤à¥€ à¤¹à¥ˆ',
+            welcome_desc: 'à¤ªà¤µà¤¿à¤¤à¥à¤° à¤¬à¥à¤°à¤œ à¤§à¤¾à¤® à¤•à¥‡ à¤²à¤¿à¤ à¤†à¤ªà¤•à¤¾ AI à¤¤à¥€à¤°à¥à¤¥ à¤¸à¤¾à¤¥à¥€ â€” à¤‰à¤¸ à¤­à¥‚à¤®à¤¿ à¤ªà¤° à¤šà¤²à¥‡à¤‚ à¤œà¤¹à¤¾à¤ à¤¶à¥à¤°à¥€ à¤•à¥ƒà¤·à¥à¤£ à¤¨à¥‡ à¤…à¤ªà¤¨à¥€ à¤¦à¤¿à¤µà¥à¤¯ à¤²à¥€à¤²à¤¾à¤à¤ à¤•à¥€à¤‚à¥¤',
+            card_plan: 'à¤…à¤ªà¤¨à¥€ à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤•à¥€ à¤¯à¥‹à¤œà¤¨à¤¾ à¤¬à¤¨à¤¾à¤à¤‚',
+            card_plan_desc: 'à¤…à¤ªà¤¨à¥€ à¤ªà¤¸à¤‚à¤¦ à¤•à¥‡ à¤…à¤¨à¥à¤¸à¤¾à¤° à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤•à¤¾à¤°à¥à¤¯à¤•à¥à¤°à¤®',
+            card_darshan: 'à¤®à¤‚à¤¦à¤¿à¤° à¤¦à¤°à¥à¤¶à¤¨',
+            card_darshan_desc: 'à¤ªà¤µà¤¿à¤¤à¥à¤° à¤®à¤‚à¤¦à¤¿à¤° à¤à¤µà¤‚ à¤¦à¤¿à¤µà¥à¤¯ à¤¦à¤°à¥à¤¶à¤¨',
+            card_festivals: 'à¤‰à¤¤à¥à¤¸à¤µ à¤à¤µà¤‚ à¤ªà¤°à¥à¤µ',
+            card_festivals_desc: 'à¤ªà¤µà¤¿à¤¤à¥à¤° à¤¤à¥à¤¯à¥Œà¤¹à¤¾à¤° à¤à¤µà¤‚ à¤‰à¤¤à¥à¤¸à¤µ',
+            card_parikrama: 'à¤ªà¤°à¤¿à¤•à¥à¤°à¤®à¤¾ à¤—à¤¾à¤‡à¤¡',
+            card_parikrama_desc: 'à¤ªà¤µà¤¿à¤¤à¥à¤° à¤ªà¤°à¤¿à¤•à¥à¤°à¤®à¤¾ à¤®à¤¾à¤°à¥à¤—',
+            input_placeholder: 'à¤¬à¥à¤°à¤œ à¤§à¤¾à¤® à¤•à¥‡ à¤¬à¤¾à¤°à¥‡ à¤®à¥‡à¤‚ à¤ªà¥‚à¤›à¥‡à¤‚, à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤•à¥€ à¤¯à¥‹à¤œà¤¨à¤¾ à¤¬à¤¨à¤¾à¤à¤‚...',
+            input_hint: 'à¤¬à¥à¤°à¤œà¤¯à¤¾à¤¤à¥à¤°à¤¾ Â· à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤¯à¥‹à¤œà¤¨à¤¾ Â· à¤¦à¤°à¥à¤¶à¤¨ à¤—à¤¾à¤‡à¤¡ Â· à¤®à¥Œà¤¸à¤® Â· à¤•à¥ƒà¤·à¥à¤£ à¤²à¥€à¤²à¤¾',
+            modal_title: 'à¤…à¤ªà¤¨à¥€ à¤ªà¤µà¤¿à¤¤à¥à¤° à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤•à¥€ à¤¯à¥‹à¤œà¤¨à¤¾ à¤¬à¤¨à¤¾à¤à¤‚',
+            modal_desc: 'à¤µà¥à¤¯à¤•à¥à¤¤à¤¿à¤—à¤¤ à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤•à¤¾à¤°à¥à¤¯à¤•à¥à¤°à¤® à¤•à¥‡ à¤²à¤¿à¤ à¤…à¤ªà¤¨à¥€ à¤ªà¥à¤°à¤¾à¤¥à¤®à¤¿à¤•à¤¤à¤¾à¤à¤ à¤¬à¤¤à¤¾à¤à¤‚',
+            q1_title: 'ðŸ™ à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤ªà¥à¤°à¤•à¤¾à¤°',
+            q1_desc: 'à¤†à¤ªà¤•à¥€ à¤†à¤¤à¥à¤®à¤¾ à¤•à¤¿à¤¸ à¤ªà¥à¤°à¤•à¤¾à¤° à¤•à¥€ à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤šà¤¾à¤¹à¤¤à¥€ à¤¹à¥ˆ?',
+            q1_opt1: 'à¤¤à¥€à¤°à¥à¤¥ à¤¯à¤¾à¤¤à¥à¤°à¤¾',
+            q1_opt1_desc: 'à¤ªà¤µà¤¿à¤¤à¥à¤° à¤¤à¥€à¤°à¥à¤¥à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤à¤µà¤‚ à¤®à¤‚à¤¦à¤¿à¤° à¤¦à¤°à¥à¤¶à¤¨',
+            q1_opt2: 'à¤¸à¤¾à¤‚à¤¸à¥à¤•à¥ƒà¤¤à¤¿à¤• à¤¦à¤°à¥à¤¶à¤¨',
+            q1_opt2_desc: 'à¤¸à¤‚à¤¸à¥à¤•à¥ƒà¤¤à¤¿, à¤µà¤¿à¤°à¤¾à¤¸à¤¤ à¤à¤µà¤‚ à¤¸à¥à¤®à¤¾à¤°à¤•',
+            q1_opt3: 'à¤ªà¥‚à¤°à¥à¤£ à¤¬à¥à¤°à¤œ à¤¯à¤¾à¤¤à¥à¤°à¤¾',
+            q1_opt3_desc: 'à¤¸à¤‚à¤ªà¥‚à¤°à¥à¤£ à¤¦à¥Œà¤°à¤¾ â€” à¤®à¤‚à¤¦à¤¿à¤°, à¤µà¤¿à¤°à¤¾à¤¸à¤¤ à¤à¤µà¤‚ à¤ªà¥à¤°à¤•à¥ƒà¤¤à¤¿',
+            q1_opt4: 'à¤•à¤¸à¥à¤Ÿà¤® à¤®à¤¿à¤•à¥à¤¸',
+            q1_opt4_desc: 'à¤®à¥ˆà¤‚ à¤…à¤ªà¤¨à¥€ à¤°à¥à¤šà¤¿à¤¯à¤¾à¤ à¤šà¥à¤¨à¥‚à¤à¤—à¤¾',
+            q2_title: 'ðŸ“… à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤…à¤µà¤§à¤¿',
+            q2_desc: 'à¤†à¤ªà¤•à¥€ à¤ªà¤µà¤¿à¤¤à¥à¤° à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤•à¤¿à¤¤à¤¨à¥‡ à¤¦à¤¿à¤¨à¥‹à¤‚ à¤•à¥€?',
+            q3_title: 'ðŸ“ à¤ªà¤µà¤¿à¤¤à¥à¤° à¤—à¤‚à¤¤à¤µà¥à¤¯',
+            q3_desc: 'à¤‰à¤¨ à¤ªà¤µà¤¿à¤¤à¥à¤° à¤¶à¤¹à¤°à¥‹à¤‚ à¤•à¤¾ à¤šà¤¯à¤¨ à¤•à¤°à¥‡à¤‚ à¤œà¤¿à¤¨à¤•à¥€ à¤†à¤ª à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤•à¤°à¤¨à¤¾ à¤šà¤¾à¤¹à¤¤à¥‡ à¤¹à¥ˆà¤‚',
+            q4_title: 'ðŸª· à¤†à¤ªà¤•à¥€ à¤°à¥à¤šà¤¿à¤¯à¤¾à¤',
+            q4_desc: 'à¤†à¤ª à¤•à¤¿à¤¨ à¤…à¤¨à¥à¤­à¤µà¥‹à¤‚ à¤•à¥€ à¤¤à¤²à¤¾à¤¶ à¤®à¥‡à¤‚ à¤¹à¥ˆà¤‚? (à¤à¤• à¤¸à¥‡ à¤…à¤§à¤¿à¤• à¤šà¥à¤¨à¥‡à¤‚)',
+            int_temple: 'ðŸ›• à¤®à¤‚à¤¦à¤¿à¤° à¤¦à¤°à¥à¤¶à¤¨',
+            int_ghat: 'ðŸŒŠ à¤˜à¤¾à¤Ÿ à¤à¤µà¤‚ à¤¸à¥à¤¨à¤¾à¤¨',
+            int_food: 'ðŸ› à¤ªà¥à¤°à¤¸à¤¾à¤¦à¤® à¤à¤µà¤‚ à¤­à¥‹à¤œà¤¨',
+            int_heritage: 'ðŸ›ï¸ à¤µà¤¿à¤°à¤¾à¤¸à¤¤ à¤à¤µà¤‚ à¤¸à¥à¤®à¤¾à¤°à¤•',
+            int_market: 'ðŸ›ï¸ à¤¬à¤¾à¤œà¤¼à¤¾à¤° à¤à¤µà¤‚ à¤–à¤°à¥€à¤¦à¤¾à¤°à¥€',
+            int_nature: 'ðŸŒ¿ à¤ªà¥à¤°à¤•à¥ƒà¤¤à¤¿ à¤à¤µà¤‚ à¤ªà¤°à¤¿à¤•à¥à¤°à¤®à¤¾',
+            int_aarti: 'ðŸª” à¤†à¤°à¤¤à¥€ à¤à¤µà¤‚ à¤•à¥€à¤°à¥à¤¤à¤¨',
+            int_festival: 'ðŸŽ‰ à¤‰à¤¤à¥à¤¸à¤µ à¤à¤µà¤‚ à¤¤à¥à¤¯à¥Œà¤¹à¤¾à¤°',
+            q5_title: 'ðŸš¶ à¤—à¤¤à¤¿ à¤à¤µà¤‚ à¤¸à¤®à¥‚à¤¹',
+            q5_pace: 'à¤†à¤ªà¤•à¥€ à¤ªà¤¸à¤‚à¤¦à¥€à¤¦à¤¾ à¤—à¤¤à¤¿:',
+            pace_relaxed: 'ðŸ§˜ à¤¸à¤¹à¤œ',
+            pace_relaxed_desc: 'à¤•à¤® à¤¸à¥à¤¥à¤¾à¤¨, à¤ªà¥à¤°à¤¤à¥à¤¯à¥‡à¤• à¤ªà¤° à¤…à¤§à¤¿à¤• à¤¸à¤®à¤¯',
+            pace_moderate: 'âš–ï¸ à¤®à¤§à¥à¤¯à¤®',
+            pace_moderate_desc: 'à¤¸à¤‚à¤¤à¥à¤²à¤¿à¤¤ à¤—à¤¤à¤¿',
+            pace_intensive: 'ðŸƒ à¤‰à¤¤à¥à¤¸à¤¾à¤¹à¥€',
+            pace_intensive_desc: 'à¤…à¤§à¤¿à¤•à¤¤à¤® à¤¸à¥à¤¥à¤¾à¤¨à¥‹à¤‚ à¤ªà¤° à¤œà¤¾à¤à¤‚',
+            q5_group: 'à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤•à¤¿à¤¸à¤•à¥‡ à¤¸à¤¾à¤¥:',
+            grp_solo: 'ðŸ§‘ à¤…à¤•à¥‡à¤²à¥‡',
+            grp_couple: 'ðŸ’‘ à¤œà¥‹à¤¡à¤¼à¤¾',
+            grp_family: 'ðŸ‘¨â€ðŸ‘©â€ðŸ‘§ à¤ªà¤°à¤¿à¤µà¤¾à¤°',
+            grp_group: 'ðŸ‘¥ à¤¸à¤®à¥‚à¤¹',
+            btn_back: 'â† à¤ªà¥€à¤›à¥‡',
+            btn_next: 'à¤†à¤—à¥‡ â†’',
+            btn_submit: 'ðŸ™ à¤®à¥‡à¤°à¥€ à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤•à¥€ à¤¯à¥‹à¤œà¤¨à¤¾ à¤¬à¤¨à¤¾à¤à¤‚',
+            error_msg: 'à¤•à¥ƒà¤ªà¤¯à¤¾ à¤ªà¥à¤¨à¤ƒ à¤ªà¥à¤°à¤¯à¤¾à¤¸ à¤•à¤°à¥‡à¤‚ ðŸ™ à¤•à¤¨à¥‡à¤•à¥à¤Ÿ à¤•à¤°à¤¨à¥‡ à¤®à¥‡à¤‚ à¤¸à¤®à¤¸à¥à¤¯à¤¾ à¤¹à¥‹ à¤°à¤¹à¥€ à¤¹à¥ˆà¥¤',
+            edit_itinerary: 'âœï¸ à¤¸à¤‚à¤ªà¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¥‡à¤‚',
+            done_editing: 'âœ… à¤ªà¥‚à¤°à¥à¤£',
+            add_place: '+ à¤¸à¥à¤¥à¤¾à¤¨ à¤œà¥‹à¤¡à¤¼à¥‡à¤‚',
+            view_day_route: 'ðŸ“ à¤¦à¤¿à¤¨ à¤•à¤¾ à¤®à¤¾à¤°à¥à¤— à¤®à¤¾à¤¨à¤šà¤¿à¤¤à¥à¤° à¤ªà¤° à¤¦à¥‡à¤–à¥‡à¤‚',
+            view_full_route: 'ðŸ“ à¤ªà¥‚à¤°à¤¾ à¤®à¤¾à¤°à¥à¤— Google Maps à¤ªà¤° à¤¦à¥‡à¤–à¥‡à¤‚ â†’',
+            view_city_route: 'ðŸ“ {city} à¤•à¤¾ à¤®à¤¾à¤°à¥à¤— à¤®à¤¾à¤¨à¤šà¤¿à¤¤à¥à¤° à¤ªà¤° à¤¦à¥‡à¤–à¥‡à¤‚',
+            online_status: 'à¤‘à¤¨à¤²à¤¾à¤‡à¤¨',
+            server_offline: 'à¤¸à¤°à¥à¤µà¤° à¤‘à¤«à¤¼à¤²à¤¾à¤‡à¤¨',
+            llm_offline: 'LLM à¤‘à¤«à¤¼à¤²à¤¾à¤‡à¤¨',
+            back_home: 'à¤µà¤¾à¤ªà¤¸ à¤¹à¥‹à¤® à¤ªà¤°',
+            q3b_title: 'ðŸ“ à¤¸à¥à¤¥à¤¾à¤¨ à¤šà¥à¤¨à¥‡à¤‚',
+            q3b_desc: 'à¤µà¥‡ à¤µà¤¿à¤¶à¤¿à¤·à¥à¤Ÿ à¤¸à¥à¤¥à¤¾à¤¨ à¤šà¥à¤¨à¥‡à¤‚ à¤œà¤¿à¤¨à¥à¤¹à¥‡à¤‚ à¤†à¤ª à¤¦à¥‡à¤–à¤¨à¤¾ à¤šà¤¾à¤¹à¤¤à¥‡ à¤¹à¥ˆà¤‚',
+            q6_title: 'ðŸ“ à¤ªà¥à¤°à¤¾à¤°à¤‚à¤­ à¤¸à¥à¤¥à¤¾à¤¨ à¤à¤µà¤‚ à¤¸à¤®à¤¯',
+            q6_desc: 'à¤†à¤ª à¤•à¤¹à¤¾à¤ à¤¸à¥‡ à¤† à¤°à¤¹à¥‡ à¤¹à¥ˆà¤‚ à¤”à¤° à¤•à¤¬ à¤ªà¤¹à¥à¤à¤šà¥‡à¤‚à¤—à¥‡?',
+            q6_from_label: 'à¤ªà¥à¤°à¤¾à¤°à¤‚à¤­ à¤¸à¥à¤¥à¤¾à¤¨ (à¤¶à¤¹à¤°, à¤¸à¥à¤Ÿà¥‡à¤¶à¤¨, à¤¯à¤¾ à¤¹à¤µà¤¾à¤ˆ à¤…à¤¡à¥à¤¡à¤¾):',
+            q6_from_placeholder: 'à¤œà¥ˆà¤¸à¥‡ à¤¦à¤¿à¤²à¥à¤²à¥€, à¤†à¤—à¤°à¤¾ à¤•à¥ˆà¤‚à¤Ÿ à¤¸à¥à¤Ÿà¥‡à¤¶à¤¨, à¤®à¤¥à¥à¤°à¤¾ à¤œà¤‚à¤•à¥à¤¶à¤¨',
+            q6_first_city: 'à¤ªà¤¹à¤²à¥‡ à¤•à¥Œà¤¨ à¤¸à¤¾ à¤¶à¤¹à¤° à¤¦à¥‡à¤–à¤¨à¤¾ à¤šà¤¾à¤¹à¥‡à¤‚à¤—à¥‡?',
+            q6_time_label: 'à¤†à¤—à¤®à¤¨ / à¤ªà¥à¤°à¤¾à¤°à¤‚à¤­ à¤¸à¤®à¤¯:',
+            time_morning: 'ðŸŒ… à¤¸à¥à¤¬à¤¹ à¤œà¤²à¥à¤¦à¥€ (5-7 AM)',
+            time_forenoon: 'â˜€ï¸ à¤¸à¥à¤¬à¤¹ (8-10 AM)',
+            time_afternoon: 'ðŸŒ¤ï¸ à¤¦à¥‹à¤ªà¤¹à¤° (12-2 PM)',
+            time_evening: 'ðŸŒ‡ à¤¶à¤¾à¤® (4-6 PM)',
+            query_darshan: 'à¤µà¥ƒà¤¨à¥à¤¦à¤¾à¤µà¤¨ à¤®à¥‡à¤‚ à¤¦à¤°à¥à¤¶à¤¨ à¤•à¥‡ à¤²à¤¿à¤ à¤¸à¤°à¥à¤µà¤¶à¥à¤°à¥‡à¤·à¥à¤  à¤®à¤‚à¤¦à¤¿à¤°à¥‹à¤‚ à¤•à¥€ à¤¸à¤¿à¤«à¤¾à¤°à¤¿à¤¶ à¤•à¤°à¥‡à¤‚',
+            query_weather: 'à¤†à¤œ à¤®à¤¥à¥à¤°à¤¾ à¤®à¥‡à¤‚ à¤®à¥Œà¤¸à¤® à¤•à¥ˆà¤¸à¤¾ à¤¹à¥ˆ?',
+            query_krishna: 'à¤¬à¥à¤°à¤œ à¤§à¤¾à¤® à¤”à¤° à¤­à¤—à¤µà¤¾à¤¨ à¤¶à¥à¤°à¥€ à¤•à¥ƒà¤·à¥à¤£ à¤•à¥€ à¤²à¥€à¤²à¤¾à¤“à¤‚ à¤•à¥‡ à¤¬à¤¾à¤°à¥‡ à¤®à¥‡à¤‚ à¤¬à¤¤à¤¾à¤à¤‚',
+            query_prasadam: 'à¤®à¤¥à¥à¤°à¤¾ à¤”à¤° à¤µà¥ƒà¤¨à¥à¤¦à¤¾à¤µà¤¨ à¤®à¥‡à¤‚ à¤œà¤°à¥‚à¤° à¤–à¤¾à¤¨à¥‡ à¤µà¤¾à¤²à¥‡ à¤ªà¥à¤°à¤¸à¤¾à¤¦à¤® à¤”à¤° à¤¸à¥à¤¥à¤¾à¤¨à¥€à¤¯ à¤­à¥‹à¤œà¤¨ à¤•à¥€ à¤¸à¤¿à¤«à¤¾à¤°à¤¿à¤¶ à¤•à¤°à¥‡à¤‚',
+            query_parikrama: 'à¤¸à¤­à¥€ à¤ªà¤µà¤¿à¤¤à¥à¤° à¤¸à¥à¤¥à¤²à¥‹à¤‚ à¤•à¥‹ à¤•à¤µà¤° à¤•à¤°à¤¤à¥‡ à¤¹à¥à¤ à¤ªà¥‚à¤°à¥à¤£ à¤¬à¥à¤°à¤œ 84 à¤•à¥‹à¤¸ à¤ªà¤°à¤¿à¤•à¥à¤°à¤®à¤¾ à¤•à¥€ à¤¯à¥‹à¤œà¤¨à¤¾ à¤¬à¤¨à¤¾à¤à¤‚',
+            query_plan: 'à¤…à¤ªà¤¨à¥€ à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤•à¥€ à¤¯à¥‹à¤œà¤¨à¤¾ à¤¬à¤¨à¤¾à¤à¤‚',
+            query_festivals: 'à¤¬à¥à¤°à¤œ à¤§à¤¾à¤® à¤®à¥‡à¤‚ à¤†à¤¨à¥‡ à¤µà¤¾à¤²à¥‡ à¤¤à¥à¤¯à¥Œà¤¹à¤¾à¤°à¥‹à¤‚ à¤”à¤° à¤‰à¤¤à¥à¤¸à¤µà¥‹à¤‚ à¤•à¥‡ à¤¬à¤¾à¤°à¥‡ à¤®à¥‡à¤‚ à¤¬à¤¤à¤¾à¤à¤‚',
+            query_darshan_city: '{city} à¤®à¥‡à¤‚ à¤¦à¤°à¥à¤¶à¤¨ à¤•à¥‡ à¤²à¤¿à¤ à¤¸à¤°à¥à¤µà¤¶à¥à¤°à¥‡à¤·à¥à¤  à¤®à¤‚à¤¦à¤¿à¤°à¥‹à¤‚ à¤•à¥€ à¤¸à¤¿à¤«à¤¾à¤°à¤¿à¤¶ à¤•à¤°à¥‡à¤‚',
+            query_prasadam_city: '{city} à¤®à¥‡à¤‚ à¤œà¤°à¥‚à¤° à¤–à¤¾à¤¨à¥‡ à¤µà¤¾à¤²à¥‡ à¤ªà¥à¤°à¤¸à¤¾à¤¦à¤® à¤”à¤° à¤¸à¥à¤¥à¤¾à¤¨à¥€à¤¯ à¤­à¥‹à¤œà¤¨ à¤•à¥€ à¤¸à¤¿à¤«à¤¾à¤°à¤¿à¤¶ à¤•à¤°à¥‡à¤‚',
+            query_weather_city: 'à¤†à¤œ {city} à¤®à¥‡à¤‚ à¤®à¥Œà¤¸à¤® à¤•à¥ˆà¤¸à¤¾ à¤¹à¥ˆ?',
+            city_picker_darshan: 'à¤®à¤‚à¤¦à¤¿à¤° à¤¦à¤°à¥à¤¶à¤¨ à¤—à¤¾à¤‡à¤¡ à¤•à¥‡ à¤²à¤¿à¤ à¤¶à¤¹à¤° à¤šà¥à¤¨à¥‡à¤‚',
+            city_picker_prasadam: 'à¤ªà¥à¤°à¤¸à¤¾à¤¦à¤® à¤à¤µà¤‚ à¤­à¥‹à¤œà¤¨ à¤•à¥‡ à¤²à¤¿à¤ à¤¶à¤¹à¤° à¤šà¥à¤¨à¥‡à¤‚',
+            city_picker_weather: 'à¤®à¥Œà¤¸à¤® à¤•à¥‡ à¤²à¤¿à¤ à¤¶à¤¹à¤° à¤šà¥à¤¨à¥‡à¤‚'
         }
     };
 
@@ -220,7 +220,7 @@
     let pendingCityPickerQueryKey = null;
     let pendingWeatherPrefData = null;
 
-    // ── Auth Token (read from URL param passed by main app iframe) ──
+    // â”€â”€ Auth Token (read from URL param passed by main app iframe) â”€â”€
     const urlParams = new URLSearchParams(window.location.search);
     const authToken = urlParams.get('token') || null;
 
@@ -244,47 +244,53 @@
     };
 
     const CITY_IMAGES = {
-        'Mathura': '/assets/images/krishna_janmabhoomi.png',
-        'Vrindavan': '/assets/images/banke_bihari.png',
-        'Agra': '/assets/images/taj_mahal.png',
-        'Govardhan': '/assets/images/govardhan_hill.png',
-        'Barsana': '/assets/images/radha_rani_temple.png',
-        'Gokul': '/assets/images/nand_bhavan.png'
+        'Mathura': `${STATIC_BASE}/assets/images/krishna_janmabhoomi.png`,
+        'Vrindavan': `${STATIC_BASE}/assets/images/banke_bihari.png`,
+        'Agra': `${STATIC_BASE}/assets/images/taj_mahal.png`,
+        'Govardhan': `${STATIC_BASE}/assets/images/govardhan_hill.png`,
+        'Barsana': `${STATIC_BASE}/assets/images/radha_rani_temple.png`,
+        'Gokul': `${STATIC_BASE}/assets/images/nand_bhavan.png`
     };
 
     const PLACE_IMAGES = {
-        'krishna_janmabhoomi': '/assets/images/krishna_janmabhoomi.png',
-        'janmabhoomi': '/assets/images/krishna_janmabhoomi.png',
-        'janmasthan': '/assets/images/krishna_janmabhoomi.png',
-        'dwarkadhish': '/assets/images/krishna_janmabhoomi.png',
-        'banke bihari': '/assets/images/banke_bihari.png',
-        'prem mandir': '/assets/images/prem_mandir.png',
-        'iskcon': '/assets/images/prem_mandir.png',
-        'taj mahal': '/assets/images/taj_mahal.png',
-        'agra fort': '/assets/images/taj_mahal.png',
-        'govardhan': '/assets/images/govardhan_hill.png',
-        'parikrama': '/assets/images/govardhan_hill.png',
-        'manasi ganga': '/assets/images/govardhan_hill.png',
-        'radha rani': '/assets/images/radha_rani_temple.png',
-        'barsana': '/assets/images/radha_rani_temple.png',
-        'nand bhavan': '/assets/images/nand_bhavan.png',
-        'raman reti': '/assets/images/nand_bhavan.png',
-        'gokul': '/assets/images/nand_bhavan.png',
-        'vishram ghat': '/assets/images/vishram_ghat.png',
-        'yamuna': '/assets/images/vishram_ghat.png',
+        'krishna_janmabhoomi': `${STATIC_BASE}/assets/images/krishna_janmabhoomi.png`,
+        'janmabhoomi': `${STATIC_BASE}/assets/images/krishna_janmabhoomi.png`,
+        'janmasthan': `${STATIC_BASE}/assets/images/krishna_janmabhoomi.png`,
+        'dwarkadhish': `${STATIC_BASE}/assets/images/krishna_janmabhoomi.png`,
+        'banke bihari': `${STATIC_BASE}/assets/images/banke_bihari.png`,
+        'prem mandir': `${STATIC_BASE}/assets/images/prem_mandir.png`,
+        'iskcon': `${STATIC_BASE}/assets/images/prem_mandir.png`,
+        'taj mahal': `${STATIC_BASE}/assets/images/taj_mahal.png`,
+        'agra fort': `${STATIC_BASE}/assets/images/taj_mahal.png`,
+        'govardhan': `${STATIC_BASE}/assets/images/govardhan_hill.png`,
+        'parikrama': `${STATIC_BASE}/assets/images/govardhan_hill.png`,
+        'manasi ganga': `${STATIC_BASE}/assets/images/govardhan_hill.png`,
+        'radha rani': `${STATIC_BASE}/assets/images/radha_rani_temple.png`,
+        'barsana': `${STATIC_BASE}/assets/images/radha_rani_temple.png`,
+        'nand bhavan': `${STATIC_BASE}/assets/images/nand_bhavan.png`,
+        'raman reti': `${STATIC_BASE}/assets/images/nand_bhavan.png`,
+        'gokul': `${STATIC_BASE}/assets/images/nand_bhavan.png`,
+        'vishram ghat': `${STATIC_BASE}/assets/images/vishram_ghat.png`,
+        'yamuna': `${STATIC_BASE}/assets/images/vishram_ghat.png`,
     };
 
     const CATEGORY_IMAGES = {
-        'temple': '/assets/images/krishna_janmabhoomi.png',
-        'ghat': '/assets/images/vishram_ghat.png',
-        'monument': '/assets/images/taj_mahal.png',
-        'market': '/assets/images/banke_bihari.png',
-        'nature': '/assets/images/govardhan_hill.png',
-        'heritage': '/assets/images/taj_mahal.png',
-        'religious': '/assets/images/prem_mandir.png',
+        'temple': `${STATIC_BASE}/assets/images/krishna_janmabhoomi.png`,
+        'ghat': `${STATIC_BASE}/assets/images/vishram_ghat.png`,
+        'monument': `${STATIC_BASE}/assets/images/taj_mahal.png`,
+        'market': `${STATIC_BASE}/assets/images/banke_bihari.png`,
+        'nature': `${STATIC_BASE}/assets/images/govardhan_hill.png`,
+        'heritage': `${STATIC_BASE}/assets/images/taj_mahal.png`,
+        'religious': `${STATIC_BASE}/assets/images/prem_mandir.png`,
     };
 
-    const CLIENT_ORIGIN = window.location.port === '3000'
+    // Detect if running inside the unified server (served at /agent/*)
+    const IS_UNIFIED = window.location.pathname.startsWith('/agent');
+    const API_BASE = IS_UNIFIED ? '/api/agent' : '/api';
+    const USER_API_BASE = '/api/user';
+    const STATIC_BASE = IS_UNIFIED ? '/agent' : '';
+
+    const CLIENT_ORIGIN = (window.location.port === '3000' || window.location.port === '5000')
         ? 'http://localhost:5173'
         : window.location.origin;
 
@@ -346,9 +352,9 @@
         const descEl = document.querySelector('[data-i18n="welcome_desc"]');
         if (descEl) {
             if (lang === 'en') {
-                descEl.innerHTML = 'Your AI-powered <em>Tirth Companion</em> for the sacred <strong>Braj Dham</strong> — walk the land where <strong>Shri Krishna</strong> performed His divine leelas.';
+                descEl.innerHTML = 'Your AI-powered <em>Tirth Companion</em> for the sacred <strong>Braj Dham</strong> â€” walk the land where <strong>Shri Krishna</strong> performed His divine leelas.';
             } else {
-                descEl.innerHTML = 'पवित्र <strong>ब्रज धाम</strong> के लिए आपका AI <em>तीर्थ साथी</em> — उस भूमि पर चलें जहाँ <strong>श्री कृष्ण</strong> ने अपनी दिव्य लीलाएँ कीं।';
+                descEl.innerHTML = 'à¤ªà¤µà¤¿à¤¤à¥à¤° <strong>à¤¬à¥à¤°à¤œ à¤§à¤¾à¤®</strong> à¤•à¥‡ à¤²à¤¿à¤ à¤†à¤ªà¤•à¤¾ AI <em>à¤¤à¥€à¤°à¥à¤¥ à¤¸à¤¾à¤¥à¥€</em> â€” à¤‰à¤¸ à¤­à¥‚à¤®à¤¿ à¤ªà¤° à¤šà¤²à¥‡à¤‚ à¤œà¤¹à¤¾à¤ <strong>à¤¶à¥à¤°à¥€ à¤•à¥ƒà¤·à¥à¤£</strong> à¤¨à¥‡ à¤…à¤ªà¤¨à¥€ à¤¦à¤¿à¤µà¥à¤¯ à¤²à¥€à¤²à¤¾à¤à¤ à¤•à¥€à¤‚à¥¤';
             }
         }
     }
@@ -369,7 +375,7 @@
         if (btn) {
             const icon = btn.querySelector('.theme-icon');
             const label = btn.querySelector('.theme-label');
-            if (icon) icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+            if (icon) icon.textContent = theme === 'dark' ? 'â˜€ï¸' : 'ðŸŒ™';
             if (label) label.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
         }
     }
@@ -475,7 +481,7 @@
 
     async function loadCities() {
         try {
-            const res = await fetch('/api/cities');
+            const res = await fetch(`${API_BASE}/cities`);
             const cities = await res.json();
             renderWelcomeCities(cities);
             renderQuestionnaireCities(cities);
@@ -490,7 +496,7 @@
 
     async function loadChatHistory(sid) {
         try {
-            const res = await fetch(`/api/session/${sid}/history`);
+            const res = await fetch(`${API_BASE}/session/${sid}/history`);
             if (!res.ok) return;
             const history = await res.json();
             if (!history || history.length === 0) return;
@@ -550,13 +556,13 @@
 
     async function checkHealth() {
         try {
-            const res = await fetch('/api/health');
+            const res = await fetch(`${API_BASE}/health`);
             const data = await res.json();
             const dot = llmStatus.querySelector('.status-dot');
             const text = llmStatus.querySelector('.status-text');
             if (data.llm && data.llm.available) {
                 dot.className = 'status-dot online';
-                text.textContent = `${t('online_status')} · ${data.places} tirth sthals`;
+                text.textContent = `${t('online_status')} Â· ${data.places} tirth sthals`;
             } else {
                 dot.className = 'status-dot offline';
                 text.textContent = t('llm_offline');
@@ -749,17 +755,17 @@
         let html = '';
         for (const city of selectedCities) {
             try {
-                const res = await fetch(`/api/places?city=${encodeURIComponent(city)}`);
+                const res = await fetch(`${API_BASE}/places?city=${encodeURIComponent(city)}`);
                 const places = await res.json();
                 if (!places || places.length === 0) continue;
 
                 html += `<div class="q-place-city-group">`;
-                html += `<h4 class="q-place-city-title">📍 ${city}</h4>`;
+                html += `<h4 class="q-place-city-title">ðŸ“ ${city}</h4>`;
                 html += `<div class="q-place-list">`;
                 for (const p of places) {
                     const isSelected = prefs.selectedPlaces.includes(p.name) ? ' selected' : '';
                     html += `<div class="q-place-item${isSelected}" data-place-name="${p.name}" data-city="${city}">`;
-                    html += `<span class="q-place-check">${isSelected ? '✓' : ''}</span>`;
+                    html += `<span class="q-place-check">${isSelected ? 'âœ“' : ''}</span>`;
                     html += `<span class="q-place-name">${p.name}</span>`;
                     html += `<span class="q-place-cat-badge">${p.category || ''}</span>`;
                     html += `</div>`;
@@ -776,7 +782,7 @@
             item.addEventListener('click', () => {
                 item.classList.toggle('selected');
                 const check = item.querySelector('.q-place-check');
-                if (check) check.textContent = item.classList.contains('selected') ? '✓' : '';
+                if (check) check.textContent = item.classList.contains('selected') ? 'âœ“' : '';
                 updatePrefs();
             });
         });
@@ -821,12 +827,12 @@
 
         let msg;
         if (currentLanguage === 'hi') {
-            if (prefs.firstCity) cityOrder = ` यात्रा ${prefs.firstCity} से शुरू करें।`;
-            if (prefs.startLocation) startInfo = ` मैं ${prefs.startLocation} से यात्रा कर रहा/रही हूँ।`;
+            if (prefs.firstCity) cityOrder = ` à¤¯à¤¾à¤¤à¥à¤°à¤¾ ${prefs.firstCity} à¤¸à¥‡ à¤¶à¥à¤°à¥‚ à¤•à¤°à¥‡à¤‚à¥¤`;
+            if (prefs.startLocation) startInfo = ` à¤®à¥ˆà¤‚ ${prefs.startLocation} à¤¸à¥‡ à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤•à¤° à¤°à¤¹à¤¾/à¤°à¤¹à¥€ à¤¹à¥‚à¤à¥¤`;
             if (isCustomMix && selectedPlacesStr) {
-                msg = `${cities} को कवर करते हुए ${prefs.days}-दिन की ${yatraType} यात्रा की योजना बनाएं। मैं विशेष रूप से इन स्थानों पर जाना चाहता/चाहती हूँ: ${selectedPlacesStr}। गति: ${paceNames[prefs.pace] || 'मध्यम'}। यात्रा समूह: ${prefs.group || 'परिवार'}।${startInfo}${cityOrder} मैं ${startTimeStr} में पहुँचूँगा/शुरू करूँगा। प्रत्येक शहर के लिए अलग Google Maps मार्ग बनाएं। दर्शन के लिए सर्वश्रेष्ठ मंदिर, स्थानीय प्रसादम की सिफारिशें, और व्यावहारिक सुझाव शामिल करें।`;
+                msg = `${cities} à¤•à¥‹ à¤•à¤µà¤° à¤•à¤°à¤¤à¥‡ à¤¹à¥à¤ ${prefs.days}-à¤¦à¤¿à¤¨ à¤•à¥€ ${yatraType} à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤•à¥€ à¤¯à¥‹à¤œà¤¨à¤¾ à¤¬à¤¨à¤¾à¤à¤‚à¥¤ à¤®à¥ˆà¤‚ à¤µà¤¿à¤¶à¥‡à¤· à¤°à¥‚à¤ª à¤¸à¥‡ à¤‡à¤¨ à¤¸à¥à¤¥à¤¾à¤¨à¥‹à¤‚ à¤ªà¤° à¤œà¤¾à¤¨à¤¾ à¤šà¤¾à¤¹à¤¤à¤¾/à¤šà¤¾à¤¹à¤¤à¥€ à¤¹à¥‚à¤: ${selectedPlacesStr}à¥¤ à¤—à¤¤à¤¿: ${paceNames[prefs.pace] || 'à¤®à¤§à¥à¤¯à¤®'}à¥¤ à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤¸à¤®à¥‚à¤¹: ${prefs.group || 'à¤ªà¤°à¤¿à¤µà¤¾à¤°'}à¥¤${startInfo}${cityOrder} à¤®à¥ˆà¤‚ ${startTimeStr} à¤®à¥‡à¤‚ à¤ªà¤¹à¥à¤à¤šà¥‚à¤à¤—à¤¾/à¤¶à¥à¤°à¥‚ à¤•à¤°à¥‚à¤à¤—à¤¾à¥¤ à¤ªà¥à¤°à¤¤à¥à¤¯à¥‡à¤• à¤¶à¤¹à¤° à¤•à¥‡ à¤²à¤¿à¤ à¤…à¤²à¤— Google Maps à¤®à¤¾à¤°à¥à¤— à¤¬à¤¨à¤¾à¤à¤‚à¥¤ à¤¦à¤°à¥à¤¶à¤¨ à¤•à¥‡ à¤²à¤¿à¤ à¤¸à¤°à¥à¤µà¤¶à¥à¤°à¥‡à¤·à¥à¤  à¤®à¤‚à¤¦à¤¿à¤°, à¤¸à¥à¤¥à¤¾à¤¨à¥€à¤¯ à¤ªà¥à¤°à¤¸à¤¾à¤¦à¤® à¤•à¥€ à¤¸à¤¿à¤«à¤¾à¤°à¤¿à¤¶à¥‡à¤‚, à¤”à¤° à¤µà¥à¤¯à¤¾à¤µà¤¹à¤¾à¤°à¤¿à¤• à¤¸à¥à¤à¤¾à¤µ à¤¶à¤¾à¤®à¤¿à¤² à¤•à¤°à¥‡à¤‚à¥¤`;
             } else {
-                msg = `${cities} को कवर करते हुए ${prefs.days}-दिन की ${yatraType} यात्रा की योजना बनाएं। मेरी रुचियाँ: ${interests}। गति: ${paceNames[prefs.pace] || 'मध्यम'}। यात्रा समूह: ${prefs.group || 'परिवार'}।${startInfo}${cityOrder} मैं ${startTimeStr} में पहुँचूँगा/शुरू करूँगा। प्रत्येक शहर के लिए अलग Google Maps मार्ग बनाएं। दर्शन के लिए सर्वश्रेष्ठ मंदिर, स्थानीय प्रसादम की सिफारिशें, और व्यावहारिक सुझाव शामिल करें।`;
+                msg = `${cities} à¤•à¥‹ à¤•à¤µà¤° à¤•à¤°à¤¤à¥‡ à¤¹à¥à¤ ${prefs.days}-à¤¦à¤¿à¤¨ à¤•à¥€ ${yatraType} à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤•à¥€ à¤¯à¥‹à¤œà¤¨à¤¾ à¤¬à¤¨à¤¾à¤à¤‚à¥¤ à¤®à¥‡à¤°à¥€ à¤°à¥à¤šà¤¿à¤¯à¤¾à¤: ${interests}à¥¤ à¤—à¤¤à¤¿: ${paceNames[prefs.pace] || 'à¤®à¤§à¥à¤¯à¤®'}à¥¤ à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤¸à¤®à¥‚à¤¹: ${prefs.group || 'à¤ªà¤°à¤¿à¤µà¤¾à¤°'}à¥¤${startInfo}${cityOrder} à¤®à¥ˆà¤‚ ${startTimeStr} à¤®à¥‡à¤‚ à¤ªà¤¹à¥à¤à¤šà¥‚à¤à¤—à¤¾/à¤¶à¥à¤°à¥‚ à¤•à¤°à¥‚à¤à¤—à¤¾à¥¤ à¤ªà¥à¤°à¤¤à¥à¤¯à¥‡à¤• à¤¶à¤¹à¤° à¤•à¥‡ à¤²à¤¿à¤ à¤…à¤²à¤— Google Maps à¤®à¤¾à¤°à¥à¤— à¤¬à¤¨à¤¾à¤à¤‚à¥¤ à¤¦à¤°à¥à¤¶à¤¨ à¤•à¥‡ à¤²à¤¿à¤ à¤¸à¤°à¥à¤µà¤¶à¥à¤°à¥‡à¤·à¥à¤  à¤®à¤‚à¤¦à¤¿à¤°, à¤¸à¥à¤¥à¤¾à¤¨à¥€à¤¯ à¤ªà¥à¤°à¤¸à¤¾à¤¦à¤® à¤•à¥€ à¤¸à¤¿à¤«à¤¾à¤°à¤¿à¤¶à¥‡à¤‚, à¤”à¤° à¤µà¥à¤¯à¤¾à¤µà¤¹à¤¾à¤°à¤¿à¤• à¤¸à¥à¤à¤¾à¤µ à¤¶à¤¾à¤®à¤¿à¤² à¤•à¤°à¥‡à¤‚à¥¤`;
             }
         } else {
             if (prefs.firstCity) cityOrder = ` Start the itinerary from ${prefs.firstCity} first.`;
@@ -860,7 +866,7 @@
         currentAbortController = new AbortController();
 
         try {
-            const res = await fetch('/api/chat', {
+            const res = await fetch(`${API_BASE}/chat`, {
                 method: 'POST',
                 headers: getAuthHeaders(),
                 body: JSON.stringify({ message: text, sessionId, language: currentLanguage }),
@@ -925,7 +931,7 @@
             'travel to', 'travel from', 'transit', 'drive to', 'walk to', 'commute',
             'rest', 'leisure', 'break', 'check-in', 'check in', 'checkout', 'check out',
             'lunch', 'breakfast', 'dinner', 'snack', 'prasadam break', 'food break',
-            '🍛'
+            'ðŸ›'
         ];
         return !skipPatterns.some(pattern => lower.includes(pattern));
     }
@@ -935,7 +941,7 @@
         if (slot.is_meal) return true;
         const lower = slot.place.toLowerCase();
         return lower.includes('lunch') || lower.includes('breakfast') || lower.includes('dinner') ||
-            lower.includes('prasadam break') || lower.includes('food break') || lower.includes('🍛');
+            lower.includes('prasadam break') || lower.includes('food break') || lower.includes('ðŸ›');
     }
 
     function buildPlaceMapUrl(placeName, city) {
@@ -984,7 +990,7 @@
         div.className = `message ${role}`;
         const avatar = document.createElement('div');
         avatar.className = 'message-avatar';
-        avatar.textContent = role === 'user' ? '🙏' : 'ॐ';
+        avatar.textContent = role === 'user' ? 'ðŸ™' : 'à¥';
 
         const content = document.createElement('div');
         content.className = 'message-content';
@@ -1000,12 +1006,12 @@
     }
 
     const BOOKING_PLATFORMS = [
-        { name: 'MakeMyTrip', icon: '🔶', url: 'https://www.makemytrip.com/hotels/hotel-listing', color: '#0057a8' },
-        { name: 'Booking.com', icon: '🟦', url: 'https://www.booking.com/searchresults.html', color: '#003580' },
-        { name: 'OYO', icon: '🔴', url: 'https://www.oyorooms.com/search', color: '#d32f2f' },
-        { name: 'Goibibo', icon: '🟠', url: 'https://www.goibibo.com/hotels', color: '#ec5b24' },
-        { name: 'Agoda', icon: '🟣', url: 'https://www.agoda.com', color: '#5c2d91' },
-        { name: 'Trivago', icon: '🔵', url: 'https://www.trivago.in', color: '#007faf' }
+        { name: 'MakeMyTrip', icon: 'ðŸ”¶', url: 'https://www.makemytrip.com/hotels/hotel-listing', color: '#0057a8' },
+        { name: 'Booking.com', icon: 'ðŸŸ¦', url: 'https://www.booking.com/searchresults.html', color: '#003580' },
+        { name: 'OYO', icon: 'ðŸ”´', url: 'https://www.oyorooms.com/search', color: '#d32f2f' },
+        { name: 'Goibibo', icon: 'ðŸŸ ', url: 'https://www.goibibo.com/hotels', color: '#ec5b24' },
+        { name: 'Agoda', icon: 'ðŸŸ£', url: 'https://www.agoda.com', color: '#5c2d91' },
+        { name: 'Trivago', icon: 'ðŸ”µ', url: 'https://www.trivago.in', color: '#007faf' }
     ];
 
     function renderBookingLinks(searchQuery) {
@@ -1016,7 +1022,7 @@
         const sourcesDiv = document.createElement('div');
         sourcesDiv.className = 'booking-platforms';
         sourcesDiv.innerHTML = `
-            <div class="booking-header">🏨 Book Hotels On</div>
+            <div class="booking-header">ðŸ¨ Book Hotels On</div>
             <div class="booking-links">
                 ${BOOKING_PLATFORMS.map(p =>
             `<a href="${p.url}?q=${encodedQuery}" target="_blank" rel="noopener" class="booking-link" style="--platform-color: ${p.color}" title="Search on ${escapeHtml(p.name)}">
@@ -1035,7 +1041,7 @@
 
         const weather = data.weather;
         const options = data.options;
-        const weatherEmoji = weather.is_rainy ? '🌧️' : weather.temp > 32 ? '🔥' : weather.temp < 15 ? '🥶' : '🌤️';
+        const weatherEmoji = weather.is_rainy ? 'ðŸŒ§ï¸' : weather.temp > 32 ? 'ðŸ”¥' : weather.temp < 15 ? 'ðŸ¥¶' : 'ðŸŒ¤ï¸';
 
         const card = document.createElement('div');
         card.className = 'weather-pref-card';
@@ -1044,9 +1050,9 @@
                 <div class="weather-pref-current">
                     <span class="weather-pref-emoji">${weatherEmoji}</span>
                     <div class="weather-pref-info">
-                        <div class="weather-pref-temp">${weather.temp}°C</div>
+                        <div class="weather-pref-temp">${weather.temp}Â°C</div>
                         <div class="weather-pref-desc">${escapeHtml(weather.description)} in ${escapeHtml(weather.city)}</div>
-                        <div class="weather-pref-detail">Feels like ${weather.feels_like}°C · 💧 ${weather.humidity}% · 💨 ${weather.wind_speed} m/s</div>
+                        <div class="weather-pref-detail">Feels like ${weather.feels_like}Â°C Â· ðŸ’§ ${weather.humidity}% Â· ðŸ’¨ ${weather.wind_speed} m/s</div>
                     </div>
                 </div>
                 <div class="weather-pref-message">${escapeHtml(options.message)}</div>
@@ -1094,7 +1100,7 @@
         currentAbortController = new AbortController();
 
         try {
-            const res = await fetch('/api/chat', {
+            const res = await fetch(`${API_BASE}/chat`, {
                 method: 'POST',
                 headers: getAuthHeaders(),
                 body: JSON.stringify({
@@ -1140,9 +1146,9 @@
         searchMsg.className = 'message user';
         searchMsg.innerHTML = `
             <div class="message-content" style="display:flex;justify-content:flex-end">
-                <div class="message-bubble">🔍 Search: ${escapeHtml(placeName)}${city ? ', ' + escapeHtml(city) : ''}</div>
+                <div class="message-bubble">ðŸ” Search: ${escapeHtml(placeName)}${city ? ', ' + escapeHtml(city) : ''}</div>
             </div>
-            <div class="message-avatar" style="background:var(--gradient-maroon);color:#fff">🙏</div>
+            <div class="message-avatar" style="background:var(--gradient-maroon);color:#fff">ðŸ™</div>
         `;
         messagesContainer.appendChild(searchMsg);
 
@@ -1150,7 +1156,7 @@
         scrollToBottom();
 
         try {
-            const res = await fetch('/api/search', {
+            const res = await fetch(`${API_BASE}/search`, {
                 method: 'POST',
                 headers: getAuthHeaders(),
                 body: JSON.stringify({ placeName, city })
@@ -1159,14 +1165,14 @@
             removeTyping(typingEl);
 
             if (data.error) {
-                appendMessage('assistant', '❌ ' + data.error);
+                appendMessage('assistant', 'âŒ ' + data.error);
                 return;
             }
 
             renderSearchResult(placeName, city, data.text, data.groundingMetadata);
         } catch (err) {
             removeTyping(typingEl);
-            appendMessage('assistant', '❌ Search failed. Please try again.');
+            appendMessage('assistant', 'âŒ Search failed. Please try again.');
         }
     }
 
@@ -1178,18 +1184,18 @@
         card.className = 'search-result-card';
         card.innerHTML = `
             <div class="search-result-header">
-                <span class="search-result-icon">🔍</span>
+                <span class="search-result-icon">ðŸ”</span>
                 <span class="search-result-title">Search: ${escapeHtml(placeName)}</span>
                 <div class="search-result-header-links">
-                    <a href="${mapsUrl}" target="_blank" rel="noopener" class="search-header-link" title="View on Google Maps">📍 Maps</a>
+                    <a href="${mapsUrl}" target="_blank" rel="noopener" class="search-header-link" title="View on Google Maps">ðŸ“ Maps</a>
                 </div>
             </div>
             <div class="search-result-body">${renderMarkdown(text)}</div>
             <div class="search-result-footer">
-                <a href="${mapsUrl}" target="_blank" rel="noopener" class="rec-map-btn">📍 View on Maps</a>
-                <a href="https://www.makemytrip.com/hotels/hotel-listing?q=${encodeURIComponent(searchQuery)}" target="_blank" rel="noopener" class="booking-footer-btn" style="background:linear-gradient(135deg,#0057a8,#003580)">🔶 MakeMyTrip</a>
-                <a href="https://www.booking.com/searchresults.html?q=${encodeURIComponent(searchQuery)}" target="_blank" rel="noopener" class="booking-footer-btn" style="background:linear-gradient(135deg,#003580,#00224f)">🟦 Booking.com</a>
-                <a href="https://www.oyorooms.com/search?q=${encodeURIComponent(searchQuery)}" target="_blank" rel="noopener" class="booking-footer-btn" style="background:linear-gradient(135deg,#d32f2f,#b71c1c)">🔴 OYO</a>
+                <a href="${mapsUrl}" target="_blank" rel="noopener" class="rec-map-btn">ðŸ“ View on Maps</a>
+                <a href="https://www.makemytrip.com/hotels/hotel-listing?q=${encodeURIComponent(searchQuery)}" target="_blank" rel="noopener" class="booking-footer-btn" style="background:linear-gradient(135deg,#0057a8,#003580)">ðŸ”¶ MakeMyTrip</a>
+                <a href="https://www.booking.com/searchresults.html?q=${encodeURIComponent(searchQuery)}" target="_blank" rel="noopener" class="booking-footer-btn" style="background:linear-gradient(135deg,#003580,#00224f)">ðŸŸ¦ Booking.com</a>
+                <a href="https://www.oyorooms.com/search?q=${encodeURIComponent(searchQuery)}" target="_blank" rel="noopener" class="booking-footer-btn" style="background:linear-gradient(135deg,#d32f2f,#b71c1c)">ðŸ”´ OYO</a>
             </div>
         `;
         messagesContainer.appendChild(card);
@@ -1211,14 +1217,14 @@
         header.className = 'itinerary-header';
         header.innerHTML = `
             <div class="itinerary-header-top">
-                <h2>🛕 ${escapeHtml(itinerary.title || 'Your Sacred Yatra')}</h2>
+                <h2>ðŸ›• ${escapeHtml(itinerary.title || 'Your Sacred Yatra')}</h2>
                 <button class="edit-toggle-btn" id="edit-toggle-${card.id}">${t('edit_itinerary')}</button>
             </div>
             <p>${escapeHtml(itinerary.summary || '')}</p>
             <div class="itinerary-meta">
-                ${itinerary.days ? `<span class="meta-badge">📅 ${itinerary.days.length} Day${itinerary.days.length > 1 ? 's' : ''}</span>` : ''}
-                ${itinerary.best_season ? `<span class="meta-badge">🌸 ${escapeHtml(itinerary.best_season)}</span>` : ''}
-                ${itinerary.total_estimated_hours ? `<span class="meta-badge">⏱️ ~${Math.round(itinerary.total_estimated_hours)}h total</span>` : ''}
+                ${itinerary.days ? `<span class="meta-badge">ðŸ“… ${itinerary.days.length} Day${itinerary.days.length > 1 ? 's' : ''}</span>` : ''}
+                ${itinerary.best_season ? `<span class="meta-badge">ðŸŒ¸ ${escapeHtml(itinerary.best_season)}</span>` : ''}
+                ${itinerary.total_estimated_hours ? `<span class="meta-badge">â±ï¸ ~${Math.round(itinerary.total_estimated_hours)}h total</span>` : ''}
             </div>
         `;
         card.appendChild(header);
@@ -1227,19 +1233,19 @@
         if (weather) {
             const weatherDiv = document.createElement('div');
             weatherDiv.className = 'weather-banner';
-            const weatherEmoji = weather.is_rainy ? '🌧️' : weather.is_hot ? '☀️' : weather.is_cold ? '🥶' : '🌤️';
+            const weatherEmoji = weather.is_rainy ? 'ðŸŒ§ï¸' : weather.is_hot ? 'â˜€ï¸' : weather.is_cold ? 'ðŸ¥¶' : 'ðŸŒ¤ï¸';
             weatherDiv.innerHTML = `
                 <span class="weather-icon">${weatherEmoji}</span>
                 <div class="weather-info">
-                    <span class="weather-temp">${weather.temp}°C</span>
-                    <span class="weather-desc"> · ${escapeHtml(weather.description)} in ${escapeHtml(weather.city)}</span>
+                    <span class="weather-temp">${weather.temp}Â°C</span>
+                    <span class="weather-desc"> Â· ${escapeHtml(weather.description)} in ${escapeHtml(weather.city)}</span>
                 </div>
                 <div class="weather-details">
-                    <span class="weather-detail">💧 ${weather.humidity}%</span>
-                    <span class="weather-detail">💨 ${weather.wind_speed} m/s</span>
-                    <span class="weather-detail">🌡️ Feels ${weather.feels_like}°C</span>
+                    <span class="weather-detail">ðŸ’§ ${weather.humidity}%</span>
+                    <span class="weather-detail">ðŸ’¨ ${weather.wind_speed} m/s</span>
+                    <span class="weather-detail">ðŸŒ¡ï¸ Feels ${weather.feels_like}Â°C</span>
                 </div>
-                ${itinerary.weather_notes ? `<div class="weather-warning">⚠️ ${escapeHtml(itinerary.weather_notes)}</div>` : ''}
+                ${itinerary.weather_notes ? `<div class="weather-warning">âš ï¸ ${escapeHtml(itinerary.weather_notes)}</div>` : ''}
             `;
             card.appendChild(weatherDiv);
         }
@@ -1283,7 +1289,7 @@
                 cityBtn.href = url;
                 cityBtn.target = '_blank';
                 cityBtn.rel = 'noopener';
-                cityBtn.innerHTML = `📍 ${escapeHtml(city)} Route on Maps`;
+                cityBtn.innerHTML = `ðŸ“ ${escapeHtml(city)} Route on Maps`;
                 cityRoutesDiv.appendChild(cityBtn);
             }
             card.appendChild(cityRoutesDiv);
@@ -1358,7 +1364,7 @@
             const tipsSection = document.createElement('div');
             tipsSection.className = 'itinerary-tips';
             tipsSection.innerHTML = `
-                <h3>🪔 Yatra Tips</h3>
+                <h3>ðŸª” Yatra Tips</h3>
                 <ul>${tips.map(tip => `<li>${escapeHtml(tip)}</li>`).join('')}</ul>
             `;
             card.appendChild(tipsSection);
@@ -1369,41 +1375,41 @@
             const budgetSection = document.createElement('div');
             budgetSection.className = 'budget-section';
 
-            const levelLabels = { low: '💰 Budget', medium: '💸 Moderate', high: '💎 Premium' };
-            const levelLabel = levelLabels[budget.budget_level] || '💸 Moderate';
+            const levelLabels = { low: 'ðŸ’° Budget', medium: 'ðŸ’¸ Moderate', high: 'ðŸ’Ž Premium' };
+            const levelLabel = levelLabels[budget.budget_level] || 'ðŸ’¸ Moderate';
             const total = budget.total;
             const parts = [
-                { label: 'Entry Fees', value: budget.entry_fees, color: '#e67e22', icon: '🎫' },
-                { label: 'Food', value: budget.food, color: '#27ae60', icon: '🍛' },
-                { label: 'Transport', value: budget.transport, color: '#3498db', icon: '🚗' },
-                { label: 'Accommodation', value: budget.accommodation, color: '#9b59b6', icon: '🏨' }
+                { label: 'Entry Fees', value: budget.entry_fees, color: '#e67e22', icon: 'ðŸŽ«' },
+                { label: 'Food', value: budget.food, color: '#27ae60', icon: 'ðŸ›' },
+                { label: 'Transport', value: budget.transport, color: '#3498db', icon: 'ðŸš—' },
+                { label: 'Accommodation', value: budget.accommodation, color: '#9b59b6', icon: 'ðŸ¨' }
             ].filter(p => p.value > 0);
 
             const barSegments = parts.map(p =>
-                `<div class="budget-bar-segment" style="width:${(p.value / total * 100).toFixed(1)}%;background:${p.color}" title="${p.label}: ₹${p.value.toLocaleString('en-IN')}"></div>`
+                `<div class="budget-bar-segment" style="width:${(p.value / total * 100).toFixed(1)}%;background:${p.color}" title="${p.label}: â‚¹${p.value.toLocaleString('en-IN')}"></div>`
             ).join('');
 
             const breakdownRows = parts.map(p =>
                 `<div class="budget-row">
                     <span class="budget-row-label"><span style="color:${p.color}">${p.icon}</span> ${p.label}</span>
-                    <span class="budget-row-value">₹${p.value.toLocaleString('en-IN')}</span>
+                    <span class="budget-row-value">â‚¹${p.value.toLocaleString('en-IN')}</span>
                 </div>`
             ).join('');
 
             budgetSection.innerHTML = `
-                <h3>💰 Estimated Budget</h3>
+                <h3>ðŸ’° Estimated Budget</h3>
                 <div class="budget-header-info">
                     <span class="budget-level-badge">${levelLabel}</span>
-                    <span class="budget-people">${budget.people || 2} people · ${budget.days} day${budget.days > 1 ? 's' : ''}</span>
+                    <span class="budget-people">${budget.people || 2} people Â· ${budget.days} day${budget.days > 1 ? 's' : ''}</span>
                 </div>
                 <div class="budget-total">
                     <span class="budget-total-label">Total Estimated Cost</span>
-                    <span class="budget-total-value">₹${total.toLocaleString('en-IN')}</span>
-                    <span class="budget-per-person">₹${(budget.per_person || 0).toLocaleString('en-IN')} per person</span>
+                    <span class="budget-total-value">â‚¹${total.toLocaleString('en-IN')}</span>
+                    <span class="budget-per-person">â‚¹${(budget.per_person || 0).toLocaleString('en-IN')} per person</span>
                 </div>
                 <div class="budget-bar">${barSegments}</div>
                 <div class="budget-breakdown">${breakdownRows}</div>
-                ${budget.breakdown_note ? `<p class="budget-note">💡 ${escapeHtml(budget.breakdown_note)}</p>` : ''}
+                ${budget.breakdown_note ? `<p class="budget-note">ðŸ’¡ ${escapeHtml(budget.breakdown_note)}</p>` : ''}
             `;
             card.appendChild(budgetSection);
         }
@@ -1413,7 +1419,7 @@
             const altSection = document.createElement('div');
             altSection.className = 'alternates-section';
             altSection.innerHTML = `
-                <h3>🌧️ Indoor Alternatives (if weather turns bad)</h3>
+                <h3>ðŸŒ§ï¸ Indoor Alternatives (if weather turns bad)</h3>
                 <ul>${alternates.map(a => `<li>${escapeHtml(a)}</li>`).join('')}</ul>
             `;
             card.appendChild(altSection);
@@ -1427,16 +1433,14 @@
         }
 
         scrollToBottom();
-        setTimeout(scrollToBottom, 100);
-        setTimeout(scrollToBottom, 500);
 
-        // ── Save Itinerary Button (for logged-in users) ──
+        // â”€â”€ Save Itinerary Button (for logged-in users) â”€â”€
         if (authToken) {
             const saveWrap = document.createElement('div');
             saveWrap.className = 'save-itinerary-wrap';
             saveWrap.innerHTML = `
                 <button class="save-itinerary-btn" id="save-itin-${card.id}">
-                    💾 Save Itinerary
+                    ðŸ’¾ Save Itinerary
                 </button>
                 <span class="save-status" id="save-status-${card.id}"></span>
             `;
@@ -1445,10 +1449,10 @@
             const saveBtn = card.querySelector('.save-itinerary-btn');
             saveBtn.addEventListener('click', async () => {
                 saveBtn.disabled = true;
-                saveBtn.textContent = '⏳ Saving...';
+                saveBtn.textContent = 'â³ Saving...';
                 const statusEl = card.querySelector('.save-status');
                 try {
-                    const sRes = await fetch('/api/user/itineraries', {
+                    const sRes = await fetch(`${USER_API_BASE}/itineraries`, {
                         method: 'POST',
                         headers: getAuthHeaders(),
                         body: JSON.stringify({
@@ -1466,16 +1470,16 @@
                     });
                     const sData = await sRes.json();
                     if (sData.success) {
-                        saveBtn.textContent = '✅ Saved!';
+                        saveBtn.textContent = 'âœ… Saved!';
                         saveBtn.classList.add('saved');
                         statusEl.textContent = 'Saved to your profile';
                     } else {
                         throw new Error(sData.error);
                     }
                 } catch (err) {
-                    saveBtn.textContent = '❌ Failed';
+                    saveBtn.textContent = 'âŒ Failed';
                     statusEl.textContent = err.message || 'Could not save';
-                    setTimeout(() => { saveBtn.textContent = '💾 Save Itinerary'; saveBtn.disabled = false; }, 2000);
+                    setTimeout(() => { saveBtn.textContent = 'ðŸ’¾ Save Itinerary'; saveBtn.disabled = false; }, 2000);
                 }
             });
         }
@@ -1509,7 +1513,7 @@
 
         const mapUrl = isPlace ? (slot.google_maps_url || buildPlaceMapUrl(slot.place, city)) : '';
 
-        const travelIcon = isTravel ? '🚗 ' : '';
+        const travelIcon = isTravel ? 'ðŸš— ' : '';
 
         const vrTourUrl = isPlace ? getVirtualTourUrl(slot.place) : null;
 
@@ -1521,17 +1525,17 @@
         <div class="slot-info">
             <div class="slot-name">
                 ${mapUrl
-                ? `<a href="${mapUrl}" target="_blank" rel="noopener" class="place-map-link" title="View on Google Maps">📍 ${escapeHtml(slot.place || '')}</a>`
+                ? `<a href="${mapUrl}" target="_blank" rel="noopener" class="place-map-link" title="View on Google Maps">ðŸ“ ${escapeHtml(slot.place || '')}</a>`
                 : `${travelIcon}${escapeHtml(slot.place || '')}`}
-                ${vrTourUrl ? `<a href="${vrTourUrl}" target="_blank" rel="noopener" class="vr-tour-link" title="Take a 360° Virtual Tour">🔮 360° Tour</a>` : ''}
+                ${vrTourUrl ? `<a href="${vrTourUrl}" target="_blank" rel="noopener" class="vr-tour-link" title="Take a 360Â° Virtual Tour">ðŸ”® 360Â° Tour</a>` : ''}
             </div>
             <div class="slot-desc">${escapeHtml(slot.description || '')}</div>
-            ${slot.duration_mins ? `<span class="rec-badge" style="margin-top:6px;display:inline-block">⏱️ ${slot.duration_mins} min</span>` : ''}
-            ${isPlace ? `<span class="rec-badge" style="margin-top:6px;display:inline-block;margin-left:4px">🎫 ${slot.entry_fee > 0 ? '₹' + slot.entry_fee : 'Free'}</span>` : ''}
-            ${slot.travel_cost_from_previous > 0 ? `<span class="rec-badge" style="margin-top:6px;display:inline-block;margin-left:4px">🚗 ~₹${slot.travel_cost_from_previous}</span>` : ''}
-            ${slot.tip ? `<span class="slot-tip">💡 ${escapeHtml(slot.tip)}</span>` : ''}
+            ${slot.duration_mins ? `<span class="rec-badge" style="margin-top:6px;display:inline-block">â±ï¸ ${slot.duration_mins} min</span>` : ''}
+            ${isPlace ? `<span class="rec-badge" style="margin-top:6px;display:inline-block;margin-left:4px">ðŸŽ« ${slot.entry_fee > 0 ? 'â‚¹' + slot.entry_fee : 'Free'}</span>` : ''}
+            ${slot.travel_cost_from_previous > 0 ? `<span class="rec-badge" style="margin-top:6px;display:inline-block;margin-left:4px">ðŸš— ~â‚¹${slot.travel_cost_from_previous}</span>` : ''}
+            ${slot.tip ? `<span class="slot-tip">ðŸ’¡ ${escapeHtml(slot.tip)}</span>` : ''}
         </div>
-        <button class="slot-remove-btn edit-only" title="Remove this place" data-slot="${slotIdx}" data-day="${dayIdx}">✕</button>
+        <button class="slot-remove-btn edit-only" title="Remove this place" data-slot="${slotIdx}" data-day="${dayIdx}">âœ•</button>
     `;
 
         const removeBtn = slotEl.querySelector('.slot-remove-btn');
@@ -1592,8 +1596,8 @@
         panel.className = 'replacement-panel';
         panel.innerHTML = `
             <div class="replacement-panel-header">
-                <h4>✨ Replace "${escapeHtml(removedSlot.place || '')}" with:</h4>
-                <button class="replacement-panel-close">✕</button>
+                <h4>âœ¨ Replace "${escapeHtml(removedSlot.place || '')}" with:</h4>
+                <button class="replacement-panel-close">âœ•</button>
             </div>
             <div class="replacement-loading">
                 <div class="spinner"></div>
@@ -1627,11 +1631,11 @@
                 sCard.className = 'suggestion-card';
                 sCard.innerHTML = `
                     <div class="suggestion-card-info">
-                        <div class="suggestion-card-name">📍 ${escapeHtml(place.name || '')}</div>
+                        <div class="suggestion-card-name">ðŸ“ ${escapeHtml(place.name || '')}</div>
                         <div class="suggestion-card-meta">
                             <span>${escapeHtml(place.category || '')}</span>
-                            ${place.estimated_visit_duration ? `<span>⏱️ ${place.estimated_visit_duration} min</span>` : ''}
-                            ${place.crowd_level ? `<span>👥 ${escapeHtml(place.crowd_level)}</span>` : ''}
+                            ${place.estimated_visit_duration ? `<span>â±ï¸ ${place.estimated_visit_duration} min</span>` : ''}
+                            ${place.crowd_level ? `<span>ðŸ‘¥ ${escapeHtml(place.crowd_level)}</span>` : ''}
                         </div>
                     </div>
                     <button class="suggestion-add-btn">+ Add</button>
@@ -1649,7 +1653,7 @@
                         place_id: place.id,
                         duration_mins: place.estimated_visit_duration || 60,
                         description: place.description || `Visit ${place.name} in ${city}.`,
-                        tip: place.highlight ? '⭐ Must-visit highlight!' : `Crowd: ${place.crowd_level || 'moderate'}`,
+                        tip: place.highlight ? 'â­ Must-visit highlight!' : `Crowd: ${place.crowd_level || 'moderate'}`,
                         google_maps_url: buildPlaceMapUrl(place.name, city)
                     };
 
@@ -1697,8 +1701,8 @@
         form.className = 'add-place-form';
         form.innerHTML = `
             <input type="text" class="add-place-input" placeholder="Place name (e.g. Prem Mandir)" />
-            <input type="text" class="add-place-time" placeholder="Time (e.g. 16:00–17:00)" />
-            <button class="add-place-confirm">Add →</button>
+            <input type="text" class="add-place-time" placeholder="Time (e.g. 16:00â€“17:00)" />
+            <button class="add-place-confirm">Add â†’</button>
             <button class="add-place-cancel">Cancel</button>
         `;
 
@@ -1750,20 +1754,20 @@
                 <img class="rec-card-img" src="${imgUrl}" alt="${escapeHtml(rec.name || '')}" loading="lazy" onerror="this.style.display='none'">
                 <div class="rec-card-body">
                     <div class="rec-card-header">
-                        <h4><a href="${mapUrl}" target="_blank" rel="noopener" class="place-map-link" title="View on Google Maps">📍 ${escapeHtml(rec.name || '')}</a>${vrTourUrl ? ` <a href="${vrTourUrl}" target="_blank" rel="noopener" class="vr-tour-link" title="Take a 360° Virtual Tour">🔮 360° Tour</a>` : ''}</h4>
+                        <h4><a href="${mapUrl}" target="_blank" rel="noopener" class="place-map-link" title="View on Google Maps">ðŸ“ ${escapeHtml(rec.name || '')}</a>${vrTourUrl ? ` <a href="${vrTourUrl}" target="_blank" rel="noopener" class="vr-tour-link" title="Take a 360Â° Virtual Tour">ðŸ”® 360Â° Tour</a>` : ''}</h4>
                         <span class="rec-category">${escapeHtml(rec.category || '')}</span>
                     </div>
-                    <p class="rec-city">📍 ${escapeHtml(rec.city || '')}</p>
+                    <p class="rec-city">ðŸ“ ${escapeHtml(rec.city || '')}</p>
                     <p class="rec-why">${escapeHtml(rec.why || '')}</p>
                     <div class="rec-meta">
-                        ${rec.best_time ? `<span class="rec-badge">🕐 ${escapeHtml(rec.best_time)}</span>` : ''}
-                        ${rec.duration ? `<span class="rec-badge">⏱️ ${escapeHtml(rec.duration)}</span>` : ''}
-                        ${rec.crowd_level ? `<span class="rec-badge">👥 ${escapeHtml(rec.crowd_level)}</span>` : ''}
+                        ${rec.best_time ? `<span class="rec-badge">ðŸ• ${escapeHtml(rec.best_time)}</span>` : ''}
+                        ${rec.duration ? `<span class="rec-badge">â±ï¸ ${escapeHtml(rec.duration)}</span>` : ''}
+                        ${rec.crowd_level ? `<span class="rec-badge">ðŸ‘¥ ${escapeHtml(rec.crowd_level)}</span>` : ''}
                     </div>
-                    ${rec.insider_tip ? `<p class="slot-tip" style="margin-top:10px">💡 ${escapeHtml(rec.insider_tip)}</p>` : ''}
+                    ${rec.insider_tip ? `<p class="slot-tip" style="margin-top:10px">ðŸ’¡ ${escapeHtml(rec.insider_tip)}</p>` : ''}
                     <div class="rec-card-actions">
-                        <a href="${mapUrl}" target="_blank" rel="noopener" class="rec-map-btn">📍 View on Maps</a>
-                        ${vrTourUrl ? `<a href="${vrTourUrl}" target="_blank" rel="noopener" class="rec-vr-btn">🔮 360° Virtual Tour</a>` : ''}
+                        <a href="${mapUrl}" target="_blank" rel="noopener" class="rec-map-btn">ðŸ“ View on Maps</a>
+                        ${vrTourUrl ? `<a href="${vrTourUrl}" target="_blank" rel="noopener" class="rec-vr-btn">ðŸ”® 360Â° Virtual Tour</a>` : ''}
                     </div>
                 </div>
             `;
@@ -1784,7 +1788,7 @@
         const div = document.createElement('div');
         div.className = 'typing-indicator';
         div.innerHTML = `
-            <div class="message-avatar" style="background: var(--gradient-saffron); font-family: var(--font-deva);">ॐ</div>
+            <div class="message-avatar" style="background: var(--gradient-saffron); font-family: var(--font-deva);">à¥</div>
             <div class="typing-dots"><span></span><span></span><span></span></div>
         `;
         messagesContainer.appendChild(div);
@@ -1794,7 +1798,7 @@
 
     function removeTyping(el) { if (el && el.parentNode) el.parentNode.removeChild(el); }
 
-    // ── Chat History Loading (for logged-in users) ──
+    // â”€â”€ Chat History Loading (for logged-in users) â”€â”€
     async function loadChatHistory() {
         if (!authToken) return;
 
@@ -1803,7 +1807,7 @@
         if (!section || !list) return;
 
         try {
-            const res = await fetch('/api/user/sessions', { headers: getAuthHeaders() });
+            const res = await fetch(`${USER_API_BASE}/sessions`, { headers: getAuthHeaders() });
             const data = await res.json();
 
             if (data.sessions && data.sessions.length > 0) {
@@ -1832,7 +1836,7 @@
 
     async function loadSession(sid) {
         try {
-            const res = await fetch(`/api/user/sessions/${sid}`, { headers: getAuthHeaders() });
+            const res = await fetch(`${USER_API_BASE}/sessions/${sid}`, { headers: getAuthHeaders() });
             const data = await res.json();
 
             sessionId = sid;
@@ -1885,7 +1889,14 @@
     if (authToken) loadChatHistory();
 
     function scrollToBottom() {
-        requestAnimationFrame(() => { messagesContainer.scrollTop = messagesContainer.scrollHeight; });
+        // Use instant scroll for programmatic scrolling (CSS smooth causes lag)
+        requestAnimationFrame(() => {
+            messagesContainer.scrollTo({ top: messagesContainer.scrollHeight, behavior: 'instant' });
+            // Retry after a short delay to handle dynamic content (images, etc.)
+            setTimeout(() => {
+                messagesContainer.scrollTo({ top: messagesContainer.scrollHeight, behavior: 'instant' });
+            }, 50);
+        });
     }
 
     function startNewChat() {
@@ -1909,7 +1920,7 @@
         html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
         html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
         html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
-        html = html.replace(/^[-•] (.+)$/gm, '<li>$1</li>');
+        html = html.replace(/^[-â€¢] (.+)$/gm, '<li>$1</li>');
         html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
         html = html.replace(/^\d+\. (.+)$/gm, '<li>$1</li>');
         html = html.replace(/^---$/gm, '<hr>');

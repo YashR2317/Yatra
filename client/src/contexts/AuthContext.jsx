@@ -52,6 +52,15 @@ export function AuthProvider({ children }) {
         setUser(null);
     }, []);
 
+    const updateUser = useCallback((updatedData) => {
+        setUser(prev => prev ? { ...prev, ...updatedData } : prev);
+    }, []);
+
+    const updateToken = useCallback((newToken) => {
+        localStorage.setItem("brajyatra-token", newToken);
+        setToken(newToken);
+    }, []);
+
     const value = {
         user,
         token,
@@ -59,6 +68,8 @@ export function AuthProvider({ children }) {
         isLoggedIn: !!user,
         login,
         logout,
+        updateUser,
+        updateToken,
     };
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

@@ -877,14 +877,13 @@ a:hover {
 
 .messages-container {
     flex: 1 1 0%;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     min-height: 0;
-    scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: rgba(218, 165, 32, 0.3) rgba(218, 165, 32, 0.05);
 }
@@ -2216,10 +2215,12 @@ a:hover {
     max-width: 560px;
     width: 100%;
     max-height: 85vh;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     padding: 28px;
     position: relative;
     box-shadow: var(--shadow-deep), var(--shadow-saffron);
+    overflow: hidden;
 }
 
 .modal-close {
@@ -2248,6 +2249,7 @@ a:hover {
 .modal-header {
     text-align: center;
     margin-bottom: 20px;
+    flex-shrink: 0;
 }
 
 .modal-icon {
@@ -2275,6 +2277,7 @@ a:hover {
 /* Stepper */
 .stepper {
     margin-bottom: 24px;
+    flex-shrink: 0;
 }
 
 .step-indicators {
@@ -2320,6 +2323,9 @@ a:hover {
 /* Steps */
 .q-step {
     animation: fadeIn 0.3s ease;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    min-height: 0;
 }
 
 .q-step.hidden {
@@ -2539,8 +2545,11 @@ a:hover {
 .modal-footer {
     display: flex;
     justify-content: space-between;
-    margin-top: 24px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
     gap: 12px;
+    flex-shrink: 0;
 }
 
 .btn-back,
@@ -3834,7 +3843,6 @@ a:hover {
     background: var(--bg-card);
     border: 1.5px solid rgba(245, 158, 11, 0.2);
     border-radius: var(--radius-xl);
-    overflow: hidden;
     animation: messageIn 0.4s ease;
     box-shadow: 0 4px 20px rgba(245, 158, 11, 0.08);
 }
@@ -3901,7 +3909,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 16px 20px 20px;
+    padding: 16px 20px 24px;
 }
 
 .weather-pref-btn {

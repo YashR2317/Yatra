@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate, Link, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useAuth } from "../contexts/AuthContext";
+import { useToast } from "../components/Toast";
+import GoogleSignInButton from "../components/GoogleSignInButton";
 
 const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
@@ -9,6 +11,7 @@ const Login = () => {
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
     const { login } = useAuth();
+    const { addToast } = useToast();
     const [email, setEmail] = useState(searchParams.get("email") || "");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -34,6 +37,7 @@ const Login = () => {
             }
 
             login(data.token, data.user);
+            addToast(`Welcome back, ${data.user.name}!`, "success");
             const redirect = searchParams.get("redirect") || "/home";
             navigate(redirect, { replace: true });
         } catch {
@@ -108,7 +112,32 @@ const Login = () => {
                         </motion.button>
                     </form>
 
-                    <p className="text-gray-500 text-center text-sm mt-8">
+                    {/* Divider */}
+                    <div className="flex items-center gap-4 my-6">
+                        <div className="flex-1 h-px bg-white/10" />
+                        <span className="text-gray-500 text-xs tracking-wider uppercase">or</span>
+                        <div className="flex-1 h-px bg-white/10" />
+                    </div>
+
+                    {/* Google Sign-In */}
+                    <GoogleSignInButton
+                        disabled={loading}
+                        onSuccess={(data) => {
+                            login(data.user, data.token);
+                            addToast(data.message, "success");
+                            const redirect = searchParams.get("redirect") || "/home";
+                            navigate(redirect, { replace: true });
+                        }}
+                        onError={(msg) => setError(msg)}
+                    />
+
+                    <div className="text-center mt-4">
+                        <Link to="/forgot-password" className="text-gray-500 hover:text-amber-400 text-xs tracking-wide transition">
+                            Forgot your password?
+                        </Link>
+                    </div>
+
+                    <p className="text-gray-500 text-center text-sm mt-6">
                         Don't have an account?{" "}
                         <Link to="/signup" className="text-amber-400 hover:text-amber-300 transition">
                             Sign Up

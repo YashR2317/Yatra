@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useAuth } from "../contexts/AuthContext";
+import { useToast } from "../components/Toast";
+import GoogleSignInButton from "../components/GoogleSignInButton";
 
 const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 const Signup = () => {
     const navigate = useNavigate();
     const { login } = useAuth();
+    const { addToast } = useToast();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -52,6 +55,7 @@ const Signup = () => {
             }
 
             login(data.token, data.user);
+            addToast(`Welcome to BrajYatra, ${data.user.name}! 🙏`, "success");
             navigate("/home", { replace: true });
         } catch {
             setError("Could not connect to server. Please try again.");
@@ -142,6 +146,24 @@ const Signup = () => {
                             {loading ? "Creating account..." : "Create Account"}
                         </motion.button>
                     </form>
+
+                    {/* Divider */}
+                    <div className="flex items-center gap-4 my-6">
+                        <div className="flex-1 h-px bg-white/10" />
+                        <span className="text-gray-500 text-xs tracking-wider uppercase">or</span>
+                        <div className="flex-1 h-px bg-white/10" />
+                    </div>
+
+                    {/* Google Sign-In */}
+                    <GoogleSignInButton
+                        disabled={loading}
+                        onSuccess={(data) => {
+                            login(data.user, data.token);
+                            addToast(data.message || `Welcome to BrajYatra! 🙏`, "success");
+                            navigate("/home", { replace: true });
+                        }}
+                        onError={(msg) => setError(msg)}
+                    />
 
                     <p className="text-gray-500 text-center text-sm mt-8">
                         Already have an account?{" "}

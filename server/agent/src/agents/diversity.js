@@ -1,3 +1,6 @@
+
+
+
 function enforceDiversity(rankedPlaces, options = {}) {
     const {
         maxPerCategory = 4,
@@ -11,6 +14,7 @@ function enforceDiversity(rankedPlaces, options = {}) {
     const cityCounts = {};
     const selected = [];
     const selectedIds = new Set();
+
 
     const CITY_CATEGORY_MINIMUMS = {
         'agra': { 'monument': 2 }
@@ -92,6 +96,7 @@ function enforceDiversity(rankedPlaces, options = {}) {
     return selected;
 }
 
+
 function getCategoryStats(places) {
     const stats = {};
     for (const p of places) {
@@ -101,6 +106,7 @@ function getCategoryStats(places) {
     return stats;
 }
 
+
 function getCityStats(places) {
     const stats = {};
     for (const p of places) {
@@ -109,6 +115,7 @@ function getCityStats(places) {
     }
     return stats;
 }
+
 
 function normCategory(cat) {
     return (cat || 'Other').toLowerCase().trim();

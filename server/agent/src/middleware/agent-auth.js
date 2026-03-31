@@ -5,6 +5,17 @@
  */
 const jwt = require('jsonwebtoken');
 
+const getJwtSecret = () => {
+    const secret = process.env.JWT_SECRET;
+    if (!secret) {
+        if (process.env.NODE_ENV === 'production') {
+            throw new Error('FATAL: JWT_SECRET is not set');
+        }
+        return 'brajyatra-dev-secret-do-not-use-in-production';
+    }
+    return secret;
+};
+
 function agentAuth(req, res, next) {
     req.userId = null;
     req.userName = null;
@@ -16,12 +27,13 @@ function agentAuth(req, res, next) {
     if (!token) return next();
 
     try {
-        const secret = process.env.JWT_SECRET || 'dev-secret';
-        const decoded = jwt.verify(token, secret);
+        const decoded = jwt.verify(token, getJwtSecret(), {
+            issuer: process.env.JWT_ISSUER || 'brajyatra.ai'
+        });
         req.userId = decoded.id || null;
         req.userName = decoded.name || null;
     } catch (e) {
-        // Invalid token — continue as anonymous
+        // Invalid/expired token — continue as anonymous
     }
 
     next();

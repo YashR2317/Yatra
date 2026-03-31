@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema(
       enum: ["local", "google"],
       default: "local",
     },
+    googleId: {
+      type: String,
+      sparse: true,
+    },
     avatar: {
       type: String,
       default: "",

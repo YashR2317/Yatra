@@ -1,8 +1,11 @@
 import { Routes, Route, Navigate, useParams } from "react-router-dom";
 import Home from "./pages/Home";
 import Landing from "./pages/Landing";
+import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 import CreateTrip from "./pages/CreateTrip";
 import AccountPage from "./pages/AccountPage";
 
@@ -58,6 +61,8 @@ function App() {
         <Route path="/home" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/create-trip" element={<CreateTrip />} />
 
         {/* Protected Routes */}
@@ -95,6 +100,9 @@ function App() {
         <Route path="/virtual-tours/itmad" element={<Itmad />} />
         <Route path="/virtual-tours/aram" element={<Aram />} />
         <Route path="/virtual-tours/chini-ka-rauza" element={<Chini />} />
+
+        {/* 404 Catch-all — must be last */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

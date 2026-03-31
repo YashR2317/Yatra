@@ -5,17 +5,25 @@ const COST_ESTIMATES = {
         high: { perMeal: 500, mealsPerDay: 3 }
     },
     transport: {
-        low: { perDay: 200 },   
-        medium: { perDay: 600 },   
-        high: { perDay: 1500 }   
+        low: { perDay: 200 },
+        medium: { perDay: 600 },
+        high: { perDay: 1500 }
     },
     accommodation: {
-        low: { perNight: 500 },   
-        medium: { perNight: 1500 },  
-        high: { perNight: 4000 }   
+        low: { perNight: 500 },
+        medium: { perNight: 1500 },
+        high: { perNight: 4000 }
     }
 };
 
+/**
+ * @param {Object} params
+ * @param {Array}  params.places      
+ * @param {number} params.days       
+ * @param {string} params.budgetLevel
+ * @param {number} [params.people=2] 
+ * @returns {Object}
+ */
 function estimateBudget({ places = [], days = 1, budgetLevel = 'medium', people = 2 }) {
     const level = budgetLevel.toLowerCase();
     const costs = {
@@ -53,6 +61,7 @@ function estimateBudget({ places = [], days = 1, budgetLevel = 'medium', people 
         breakdown_note: getBudgetNote(level)
     };
 }
+
 
 function getBudgetNote(level) {
     switch (level) {

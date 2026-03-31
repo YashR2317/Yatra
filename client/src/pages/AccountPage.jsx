@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "../contexts/AuthContext";
+import { useToast } from "../components/Toast";
 
-const AGENT_API = import.meta.env.VITE_AGENT_URL || "http://localhost:3000";
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 const AccountPage = () => {
-    const { user, token, logout } = useAuth();
+    const { user, token, logout, updateUser, updateToken } = useAuth();
+    const { addToast } = useToast();
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState("profile");
     const [itineraries, setItineraries] = useState([]);
@@ -16,20 +18,39 @@ const AccountPage = () => {
     const [selectedSession, setSelectedSession] = useState(null);
     const [loading, setLoading] = useState(false);
 
+    // ── Profile Editing State ──
+    const [isEditingProfile, setIsEditingProfile] = useState(false);
+    const [editName, setEditName] = useState("");
+    const [editAvatar, setEditAvatar] = useState("");
+    const [profileSaving, setProfileSaving] = useState(false);
+
+    // ── Change Password State ──
+    const [currentPassword, setCurrentPassword] = useState("");
+    const [newPassword, setNewPassword] = useState("");
+    const [confirmNewPassword, setConfirmNewPassword] = useState("");
+    const [passwordSaving, setPasswordSaving] = useState(false);
+
+    // ── Account Deletion State ──
+    const [deletePassword, setDeletePassword] = useState("");
+    const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+    const [deleteTyped, setDeleteTyped] = useState("");
+    const [deleting, setDeleting] = useState(false);
+
     const handleLogout = () => {
         logout();
+        addToast("Logged out successfully.", "info");
         navigate("/", { replace: true });
     };
 
-    // Fetch itinerary count on mount (for profile tab display)
+    // Fetch itinerary count on mount
     useEffect(() => {
         if (token) {
-            fetch(`${AGENT_API}/api/user/itineraries/count`, {
+            fetch(`${API_BASE}/user/itineraries/count`, {
                 headers: { Authorization: `Bearer ${token}` },
             })
                 .then((r) => r.json())
                 .then((d) => setItineraryCount(d.count || 0))
-                .catch((e) => console.error("Failed to fetch itinerary count:", e));
+                .catch(() => {});
         }
     }, [token]);
 
@@ -37,7 +58,7 @@ const AccountPage = () => {
     useEffect(() => {
         if (token && activeTab === "itineraries") {
             setLoading(true);
-            fetch(`${AGENT_API}/api/user/itineraries`, {
+            fetch(`${API_BASE}/user/itineraries`, {
                 headers: { Authorization: `Bearer ${token}` },
             })
                 .then((r) => r.json())
@@ -46,10 +67,7 @@ const AccountPage = () => {
                     setItineraries(list);
                     setItineraryCount(list.length);
                 })
-                .catch((e) => {
-                    console.error("Failed to fetch itineraries:", e);
-                    setItineraries([]);
-                })
+                .catch(() => setItineraries([]))
                 .finally(() => setLoading(false));
         }
     }, [token, activeTab]);
@@ -58,31 +76,131 @@ const AccountPage = () => {
     useEffect(() => {
         if (token && activeTab === "chats") {
             setLoading(true);
-            fetch(`${AGENT_API}/api/user/sessions`, {
+            fetch(`${API_BASE}/user/sessions`, {
                 headers: { Authorization: `Bearer ${token}` },
             })
                 .then((r) => r.json())
                 .then((d) => setSessions(d.sessions || []))
-                .catch((e) => {
-                    console.error("Failed to fetch sessions:", e);
-                    setSessions([]);
-                })
+                .catch(() => setSessions([]))
                 .finally(() => setLoading(false));
         }
     }, [token, activeTab]);
 
+    // ── Profile Update Handler ──
+    const handleProfileSave = async () => {
+        setProfileSaving(true);
+        try {
+            const body = {};
+            if (editName && editName !== user.name) body.name = editName;
+            if (editAvatar !== (user.avatar || "")) body.avatar = editAvatar;
+
+            if (Object.keys(body).length === 0) {
+                setIsEditingProfile(false);
+                setProfileSaving(false);
+                return;
+            }
+
+            const res = await fetch(`${API_BASE}/auth/profile`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`,
+                },
+                body: JSON.stringify(body),
+            });
+            const data = await res.json();
+
+            if (data.success) {
+                updateUser(data.user);
+                addToast("Profile updated successfully! ✨", "success");
+                setIsEditingProfile(false);
+            } else {
+                addToast(data.message || "Failed to update profile.", "error");
+            }
+        } catch {
+            addToast("Could not connect to server.", "error");
+        } finally {
+            setProfileSaving(false);
+        }
+    };
+
+    // ── Change Password Handler ──
+    const handleChangePassword = async (e) => {
+        e.preventDefault();
+
+        if (newPassword !== confirmNewPassword) {
+            addToast("New passwords do not match.", "error");
+            return;
+        }
+        if (newPassword.length < 6) {
+            addToast("New password must be at least 6 characters.", "error");
+            return;
+        }
+
+        setPasswordSaving(true);
+        try {
+            const res = await fetch(`${API_BASE}/auth/change-password`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`,
+                },
+                body: JSON.stringify({ currentPassword, newPassword }),
+            });
+            const data = await res.json();
+
+            if (data.success) {
+                if (data.token) updateToken(data.token);
+                addToast("Password changed successfully! 🔑", "success");
+                setCurrentPassword("");
+                setNewPassword("");
+                setConfirmNewPassword("");
+            } else {
+                addToast(data.message || "Failed to change password.", "error");
+            }
+        } catch {
+            addToast("Could not connect to server.", "error");
+        } finally {
+            setPasswordSaving(false);
+        }
+    };
+
+    // ── Delete Account Handler ──
+    const handleDeleteAccount = async () => {
+        setDeleting(true);
+        try {
+            const res = await fetch(`${API_BASE}/auth/account`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`,
+                },
+                body: JSON.stringify({ password: deletePassword }),
+            });
+            const data = await res.json();
+
+            if (data.success) {
+                addToast("Account deleted. We're sorry to see you go. 🙏", "info");
+                logout();
+                navigate("/", { replace: true });
+            } else {
+                addToast(data.message || "Failed to delete account.", "error");
+                setDeleting(false);
+            }
+        } catch {
+            addToast("Could not connect to server.", "error");
+            setDeleting(false);
+        }
+    };
+
     // Load itinerary details
     const viewItinerary = async (id) => {
         try {
-            const res = await fetch(`${AGENT_API}/api/user/itineraries/${id}`, {
+            const res = await fetch(`${API_BASE}/user/itineraries/${id}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             const data = await res.json();
-            if (data.itinerary) {
-                setSelectedItinerary(data.itinerary);
-            } else {
-                console.error("No itinerary in response:", data);
-            }
+            if (data.itinerary) setSelectedItinerary(data.itinerary);
         } catch (e) {
             console.error("Failed to load itinerary:", e);
         }
@@ -91,7 +209,7 @@ const AccountPage = () => {
     // Load session messages
     const viewSession = async (id) => {
         try {
-            const res = await fetch(`${AGENT_API}/api/user/sessions/${id}`, {
+            const res = await fetch(`${API_BASE}/user/sessions/${id}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             const data = await res.json();
@@ -101,19 +219,19 @@ const AccountPage = () => {
         }
     };
 
-    // Parse message content for display (handles JSON itineraries & recommendations)
+    // Parse message content for display
     const getMessageDisplay = (msg) => {
         if (msg.role === "user") return msg.content;
         try {
             const parsed = JSON.parse(msg.content);
-            if (parsed && parsed.days && Array.isArray(parsed.days)) {
+            if (parsed?.days && Array.isArray(parsed.days)) {
                 return `🛕 ${parsed.title || "Itinerary"} — ${parsed.days.length} day(s)`;
             }
-            if (parsed && parsed.recommendations) {
+            if (parsed?.recommendations) {
                 return `📍 ${parsed.recommendations.length} recommendations${parsed.summary ? ": " + parsed.summary : ""}`;
             }
             return msg.content;
-        } catch (e) {
+        } catch {
             return msg.content;
         }
     };
@@ -122,15 +240,16 @@ const AccountPage = () => {
     const deleteItinerary = async (id) => {
         if (!window.confirm("Delete this itinerary?")) return;
         try {
-            await fetch(`${AGENT_API}/api/user/itineraries/${id}`, {
+            await fetch(`${API_BASE}/user/itineraries/${id}`, {
                 method: "DELETE",
                 headers: { Authorization: `Bearer ${token}` },
             });
             setItineraries((prev) => prev.filter((i) => i.id !== id));
             setItineraryCount((prev) => Math.max(0, prev - 1));
             if (selectedItinerary?.id === id) setSelectedItinerary(null);
-        } catch (e) {
-            console.error("Failed to delete itinerary:", e);
+            addToast("Itinerary deleted.", "info");
+        } catch {
+            addToast("Failed to delete itinerary.", "error");
         }
     };
 
@@ -145,10 +264,24 @@ const AccountPage = () => {
         : "Recently";
 
     const tabs = [
-        { id: "profile", label: "👤 Profile", icon: "👤" },
-        { id: "itineraries", label: "🗺️ My Itineraries", icon: "🗺️" },
-        { id: "chats", label: "💬 Chat History", icon: "💬" },
+        { id: "profile", label: "👤 Profile" },
+        { id: "itineraries", label: "🗺️ Itineraries" },
+        { id: "chats", label: "💬 Chats" },
+        { id: "settings", label: "⚙️ Settings" },
     ];
+
+    // Password strength indicator
+    const getStrength = (pw) => {
+        if (!pw) return { label: "", color: "", width: "0%" };
+        if (pw.length < 6) return { label: "Too short", color: "bg-red-500", width: "25%" };
+        if (pw.length < 8) return { label: "Weak", color: "bg-orange-500", width: "50%" };
+        const hasUpper = /[A-Z]/.test(pw);
+        const hasNumber = /[0-9]/.test(pw);
+        const hasSpecial = /[^A-Za-z0-9]/.test(pw);
+        const score = [hasUpper, hasNumber, hasSpecial].filter(Boolean).length;
+        if (score >= 2) return { label: "Strong", color: "bg-green-500", width: "100%" };
+        return { label: "Fair", color: "bg-yellow-500", width: "75%" };
+    };
 
     return (
         <div className="min-h-screen bg-[#0a0a0a]">
@@ -196,19 +329,88 @@ const AccountPage = () => {
                         <motion.div key="profile" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
                             <div className="bg-black/70 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
                                 <div className="flex flex-col items-center mb-8">
-                                    {user.avatar ? (
-                                        <img src={user.avatar} alt={user.name} className="w-24 h-24 rounded-full border-4 border-amber-500/30 object-cover" />
+                                    {/* Avatar */}
+                                    {isEditingProfile ? (
+                                        <>
+                                            {editAvatar ? (
+                                                <img src={editAvatar} alt="Preview" className="w-24 h-24 rounded-full border-4 border-amber-500/30 object-cover"
+                                                    onError={(e) => { e.target.style.display = 'none'; }} />
+                                            ) : (
+                                                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white text-3xl font-bold">
+                                                    {editName ? editName.split(" ").map(n => n[0]).join("").toUpperCase().slice(0, 2) : initials}
+                                                </div>
+                                            )}
+                                        </>
                                     ) : (
-                                        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white text-3xl font-bold">
-                                            {initials}
-                                        </div>
+                                        <>
+                                            {user.avatar ? (
+                                                <img src={user.avatar} alt={user.name} className="w-24 h-24 rounded-full border-4 border-amber-500/30 object-cover" />
+                                            ) : (
+                                                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white text-3xl font-bold">
+                                                    {initials}
+                                                </div>
+                                            )}
+                                        </>
                                     )}
-                                    <h2 className="text-white text-2xl font-bold mt-4">{user.name}</h2>
-                                    <p className="text-gray-400 text-sm">{user.email}</p>
-                                    <span className="mt-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-xs uppercase tracking-widest">
-                                        {user.authProvider === "google" ? "Google Account" : "Email Account"}
-                                    </span>
+
+                                    {/* Name & Email */}
+                                    {isEditingProfile ? (
+                                        <div className="mt-4 w-full max-w-sm space-y-3">
+                                            <div>
+                                                <label className="block text-gray-400 text-xs tracking-widest uppercase mb-1">Name</label>
+                                                <input
+                                                    type="text"
+                                                    value={editName}
+                                                    onChange={(e) => setEditName(e.target.value)}
+                                                    className="w-full bg-white/5 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400/60 transition text-center"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="block text-gray-400 text-xs tracking-widest uppercase mb-1">Avatar URL</label>
+                                                <input
+                                                    type="url"
+                                                    value={editAvatar}
+                                                    onChange={(e) => setEditAvatar(e.target.value)}
+                                                    placeholder="https://example.com/photo.jpg"
+                                                    className="w-full bg-white/5 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400/60 transition text-center text-sm"
+                                                />
+                                            </div>
+                                            <div className="flex gap-2 pt-2">
+                                                <motion.button
+                                                    whileHover={{ scale: 1.02 }}
+                                                    whileTap={{ scale: 0.98 }}
+                                                    onClick={handleProfileSave}
+                                                    disabled={profileSaving}
+                                                    className="flex-1 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg text-sm disabled:opacity-60"
+                                                >
+                                                    {profileSaving ? "Saving..." : "Save Changes"}
+                                                </motion.button>
+                                                <button
+                                                    onClick={() => setIsEditingProfile(false)}
+                                                    className="flex-1 py-2 bg-white/5 border border-white/10 text-gray-400 rounded-lg text-sm hover:text-white transition"
+                                                >
+                                                    Cancel
+                                                </button>
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <>
+                                            <h2 className="text-white text-2xl font-bold mt-4">{user.name}</h2>
+                                            <p className="text-gray-400 text-sm">{user.email}</p>
+                                            <span className="mt-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-xs uppercase tracking-widest">
+                                                {user.authProvider === "google" ? "Google Account" : "Email Account"}
+                                            </span>
+                                            <button
+                                                onClick={() => { setIsEditingProfile(true); setEditName(user.name); setEditAvatar(user.avatar || ""); }}
+                                                className="mt-4 px-5 py-2 bg-white/5 border border-white/10 text-gray-300 rounded-lg text-sm hover:bg-amber-500/10 hover:border-amber-500/30 hover:text-amber-400 transition-all"
+                                            >
+                                                ✏️ Edit Profile
+                                            </button>
+                                        </>
+                                    )}
                                 </div>
+
+                                {/* Stats */}
                                 <div className="grid grid-cols-3 gap-4 mb-8">
                                     <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
                                         <p className="text-gray-400 text-xs uppercase tracking-widest mb-1">Member Since</p>
@@ -223,6 +425,7 @@ const AccountPage = () => {
                                         <p className="text-green-400 font-semibold">Active Yatri</p>
                                     </div>
                                 </div>
+
                                 <motion.button onClick={handleLogout} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
                                     className="w-full py-3 bg-white/5 border border-white/10 text-gray-300 rounded-lg hover:bg-red-500/10 hover:border-red-500/30 hover:text-red-400 transition-all">
                                     Log Out
@@ -255,9 +458,7 @@ const AccountPage = () => {
                                             <h3 className="text-amber-400 font-semibold mb-3 text-lg">
                                                 📍 {day.title || `Day ${di + 1}`}
                                             </h3>
-                                            {day.overview && (
-                                                <p className="text-gray-400 text-sm mb-3">{day.overview}</p>
-                                            )}
+                                            {day.overview && <p className="text-gray-400 text-sm mb-3">{day.overview}</p>}
                                             <div className="space-y-3">
                                                 {(day.slots || day.places || []).map((item, pi) => (
                                                     <div key={pi} className="bg-white/5 border border-white/10 rounded-xl p-4">
@@ -391,6 +592,158 @@ const AccountPage = () => {
                                     )}
                                 </div>
                             )}
+                        </motion.div>
+                    )}
+
+                    {/* ── Settings Tab ── */}
+                    {activeTab === "settings" && (
+                        <motion.div key="settings" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
+                            className="space-y-6">
+
+                            {/* Change Password Section */}
+                            {user.authProvider !== "google" && (
+                                <div className="bg-black/70 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+                                    <h3 className="text-white text-lg font-semibold mb-1">🔑 Change Password</h3>
+                                    <p className="text-gray-500 text-sm mb-6">Update your password to keep your account secure.</p>
+
+                                    <form onSubmit={handleChangePassword} className="space-y-4 max-w-md">
+                                        <div>
+                                            <label className="block text-gray-400 text-xs tracking-widest uppercase mb-1.5">Current Password</label>
+                                            <input
+                                                type="password"
+                                                value={currentPassword}
+                                                onChange={(e) => setCurrentPassword(e.target.value)}
+                                                required
+                                                className="w-full bg-white/5 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400/60 transition"
+                                                placeholder="••••••••"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="block text-gray-400 text-xs tracking-widest uppercase mb-1.5">New Password</label>
+                                            <input
+                                                type="password"
+                                                value={newPassword}
+                                                onChange={(e) => setNewPassword(e.target.value)}
+                                                required
+                                                className="w-full bg-white/5 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400/60 transition"
+                                                placeholder="Min 6 characters"
+                                            />
+                                            {newPassword && (
+                                                <div className="mt-2">
+                                                    <div className="h-1 bg-white/10 rounded-full overflow-hidden">
+                                                        <div
+                                                            className={`h-full ${getStrength(newPassword).color} transition-all duration-300`}
+                                                            style={{ width: getStrength(newPassword).width }}
+                                                        />
+                                                    </div>
+                                                    <p className="text-xs text-gray-400 mt-1">{getStrength(newPassword).label}</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div>
+                                            <label className="block text-gray-400 text-xs tracking-widest uppercase mb-1.5">Confirm New Password</label>
+                                            <input
+                                                type="password"
+                                                value={confirmNewPassword}
+                                                onChange={(e) => setConfirmNewPassword(e.target.value)}
+                                                required
+                                                className="w-full bg-white/5 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400/60 transition"
+                                                placeholder="Re-enter new password"
+                                            />
+                                            {confirmNewPassword && newPassword !== confirmNewPassword && (
+                                                <p className="text-xs text-red-400 mt-1">Passwords do not match</p>
+                                            )}
+                                        </div>
+                                        <motion.button
+                                            type="submit"
+                                            disabled={passwordSaving || !currentPassword || !newPassword || newPassword !== confirmNewPassword}
+                                            whileHover={{ scale: passwordSaving ? 1 : 1.02 }}
+                                            whileTap={{ scale: passwordSaving ? 1 : 0.98 }}
+                                            className="px-8 py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg text-sm shadow-lg hover:shadow-amber-500/20 transition-all disabled:opacity-50"
+                                        >
+                                            {passwordSaving ? "Updating..." : "Update Password"}
+                                        </motion.button>
+                                    </form>
+                                </div>
+                            )}
+
+                            {/* Danger Zone */}
+                            <div className="bg-black/70 backdrop-blur-xl border border-red-500/20 rounded-2xl p-8 shadow-2xl">
+                                <h3 className="text-red-400 text-lg font-semibold mb-1">⚠️ Danger Zone</h3>
+                                <p className="text-gray-500 text-sm mb-6">
+                                    Permanently delete your account and all associated data. This action cannot be undone.
+                                </p>
+
+                                {!showDeleteConfirm ? (
+                                    <motion.button
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
+                                        onClick={() => setShowDeleteConfirm(true)}
+                                        className="px-6 py-2.5 bg-red-500/10 border border-red-500/30 text-red-400 font-semibold rounded-lg text-sm hover:bg-red-500/20 transition-all"
+                                    >
+                                        Delete My Account
+                                    </motion.button>
+                                ) : (
+                                    <motion.div
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: "auto" }}
+                                        className="space-y-4 max-w-md"
+                                    >
+                                        <div className="p-4 bg-red-500/5 border border-red-500/20 rounded-xl">
+                                            <p className="text-red-300 text-sm font-medium mb-1">This will permanently delete:</p>
+                                            <ul className="text-gray-400 text-sm space-y-1 ml-4 list-disc">
+                                                <li>Your profile and account data</li>
+                                                <li>All saved itineraries</li>
+                                                <li>All chat history and sessions</li>
+                                            </ul>
+                                        </div>
+
+                                        <div>
+                                            <label className="block text-gray-400 text-xs tracking-widest uppercase mb-1.5">
+                                                Enter your password to confirm
+                                            </label>
+                                            <input
+                                                type="password"
+                                                value={deletePassword}
+                                                onChange={(e) => setDeletePassword(e.target.value)}
+                                                className="w-full bg-white/5 border border-red-500/20 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-red-400/60 transition"
+                                                placeholder="Your current password"
+                                            />
+                                        </div>
+
+                                        <div>
+                                            <label className="block text-gray-400 text-xs tracking-widest uppercase mb-1.5">
+                                                Type <span className="text-red-400 font-mono">DELETE</span> to confirm
+                                            </label>
+                                            <input
+                                                type="text"
+                                                value={deleteTyped}
+                                                onChange={(e) => setDeleteTyped(e.target.value)}
+                                                className="w-full bg-white/5 border border-red-500/20 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-red-400/60 transition font-mono"
+                                                placeholder="DELETE"
+                                            />
+                                        </div>
+
+                                        <div className="flex gap-3 pt-1">
+                                            <motion.button
+                                                whileHover={{ scale: deleting ? 1 : 1.02 }}
+                                                whileTap={{ scale: deleting ? 1 : 0.98 }}
+                                                onClick={handleDeleteAccount}
+                                                disabled={deleting || !deletePassword || deleteTyped !== "DELETE"}
+                                                className="px-6 py-2.5 bg-red-600 text-white font-semibold rounded-lg text-sm hover:bg-red-500 transition-all disabled:opacity-40"
+                                            >
+                                                {deleting ? "Deleting..." : "Permanently Delete Account"}
+                                            </motion.button>
+                                            <button
+                                                onClick={() => { setShowDeleteConfirm(false); setDeletePassword(""); setDeleteTyped(""); }}
+                                                className="px-6 py-2.5 bg-white/5 border border-white/10 text-gray-400 rounded-lg text-sm hover:text-white transition"
+                                            >
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </div>
                         </motion.div>
                     )}
                 </AnimatePresence>
