@@ -16,7 +16,7 @@
                 "popularity_rank": 1,
                 "source": "Braj Tourism",
                 "images": [
-                    "https://source.unsplash.com/800x600/?Raman,Reti"
+                    "/gokul/raman-reti.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.43940,77.71950",
                 "tags": [
@@ -48,7 +48,7 @@
                 "popularity_rank": 2,
                 "source": "Historical records",
                 "images": [
-                    "https://source.unsplash.com/800x600/?Nand,Bhavan"
+                    "/gokul/Nand-Mahal-Gokul.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.43880,77.71880",
                 "tags": [
@@ -79,7 +79,7 @@
                 "popularity_rank": 3,
                 "source": "Local tourism",
                 "images": [
-                    "https://source.unsplash.com/800x600/?pillared,temple"
+                    "/gokul/chaurasi-khamba.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.43990,77.72050",
                 "tags": [
@@ -109,7 +109,7 @@
                 "popularity_rank": 4,
                 "source": "Local listings",
                 "images": [
-                    "https://source.unsplash.com/800x600/?ghat,river"
+                    "/gokul/brahmand-ghat.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.44080,77.72130",
                 "tags": [
@@ -140,7 +140,7 @@
                 "popularity_rank": 5,
                 "source": "Temple trust",
                 "images": [
-                    "https://source.unsplash.com/800x600/?balram,temple"
+                    "/gokul/shri-dauji-maharaj-mandir.webp"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.43750,77.72600",
                 "tags": [
@@ -170,7 +170,7 @@
                 "popularity_rank": 6,
                 "source": "Local heritage",
                 "images": [
-                    "https://source.unsplash.com/800x600/?samadhi"
+                    "/gokul/raman-reti.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.43700,77.72000",
                 "tags": [
@@ -199,7 +199,7 @@
                 "popularity_rank": 7,
                 "source": "Local listings",
                 "images": [
-                    "https://source.unsplash.com/800x600/?village,temple"
+                    "/gokul/rawal-village-temple.jpeg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.43500,77.73100",
                 "tags": [
@@ -227,7 +227,7 @@
                 "popularity_rank": 8,
                 "source": "Local listings",
                 "images": [
-                    "https://source.unsplash.com/800x600/?ghat"
+                    "/gokul/brahmand-ghat.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.44200,77.72250",
                 "tags": [
@@ -257,7 +257,7 @@
                 "popularity_rank": 9,
                 "source": "Temple records",
                 "images": [
-                    "https://source.unsplash.com/800x600/?radha,damodar"
+                    "/gokul/chaurasi-khamba.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.44010,77.72180",
                 "tags": [
@@ -287,7 +287,7 @@
                 "popularity_rank": 10,
                 "source": "Local listings",
                 "images": [
-                    "https://source.unsplash.com/800x600/?yogmaya,temple"
+                    "/gokul/Nand-Mahal-Gokul.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.43900,77.72300",
                 "tags": [
@@ -315,7 +315,7 @@
                 "popularity_rank": 11,
                 "source": "Local tradition",
                 "images": [
-                    "https://source.unsplash.com/800x600/?grove"
+                    "/gokul/raman-reti.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.43600,77.71800",
                 "tags": [
@@ -345,7 +345,7 @@
                 "popularity_rank": 12,
                 "source": "Religious lists",
                 "images": [
-                    "https://source.unsplash.com/800x600/?bethak"
+                    "/gokul/Nand-Mahal-Gokul.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.43800,77.72100",
                 "tags": [

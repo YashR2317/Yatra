@@ -9,6 +9,8 @@ import { LanguageProvider } from './contexts/LanguageContext'
 import { AuthProvider } from './contexts/AuthContext'
 import ErrorBoundary from './components/ErrorBoundary'
 import { ToastProvider } from './components/Toast'
+import { HelmetProvider } from 'react-helmet-async'
+import SkipToContent from './components/SkipToContent'
 
 // Read theme from localStorage before render to prevent flash
 const savedTheme = localStorage.getItem('brajyatra-theme');
@@ -18,18 +20,21 @@ if (savedTheme === 'dark') {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ErrorBoundary>
-      <BrowserRouter>
-        <AuthProvider>
-          <ThemeProvider>
-            <LanguageProvider>
-              <ToastProvider>
-                <App />
-              </ToastProvider>
-            </LanguageProvider>
-          </ThemeProvider>
-        </AuthProvider>
-      </BrowserRouter>
-    </ErrorBoundary>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <BrowserRouter>
+          <AuthProvider>
+            <ThemeProvider>
+              <LanguageProvider>
+                <ToastProvider>
+                  <SkipToContent />
+                  <App />
+                </ToastProvider>
+              </LanguageProvider>
+            </ThemeProvider>
+          </AuthProvider>
+        </BrowserRouter>
+      </ErrorBoundary>
+    </HelmetProvider>
   </StrictMode>,
 )

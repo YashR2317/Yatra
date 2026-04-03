@@ -24,6 +24,7 @@ import TravelDiaryDetailPage from "./pages/TravelDiaryDetailPage";
 import ScrollToTop from "./components/ScrollToTop";
 import StickyCreateTripButton from "./components/StickyCreateTripButton";
 import ProtectedRoute from "./components/ProtectedRoute";
+import GlobalSearch from "./components/GlobalSearch";
 
 /* Virtual Tours */
 import VirtualToursIndex from "./pages/virtual-tours/VirtualToursIndex";
@@ -56,6 +57,7 @@ function App() {
     <div>
       <ScrollToTop />
       <StickyCreateTripButton />
+      <GlobalSearch />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Landing />} />

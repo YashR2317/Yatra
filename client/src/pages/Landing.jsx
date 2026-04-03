@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
 import Destination from "../components/Destination";
 import Attractions from "../components/Attractions";
 import TravelDiaries from "../components/TravelDiaries";
@@ -9,11 +10,14 @@ import Hidden from "../components/Hidden";
 import Footer from "../components/Footer";
 import Delicacies from "../components/Delicacies";
 import heroSlides from "../data/landing.json";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Landing = () => {
   const [index, setIndex] = useState(0);
   const total = heroSlides.length;
   const nextIndex = (index + 1) % total;
+  const { t } = useLanguage();
+  const location = useLocation();
 
   const goNext = () => setIndex(nextIndex);
   const goPrev = () => setIndex((index - 1 + total) % total);
@@ -28,14 +32,25 @@ const Landing = () => {
     return () => window.removeEventListener("keydown", handleKey);
   }, [index]);
 
+  /* Scroll to hash section on mount (from cross-page navigation) */
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      // Small delay to ensure page is rendered
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    }
+  }, [location.hash]);
+
   return (
     <div>
       <Navbar navLinks={[
-        { label: "Destinations", href: "#destinations" },
-        { label: "Travel Diaries", href: "#travel-diaries" },
-        { label: "Itineraries", href: "#itineraries" },
-        { label: "Hidden Gems", href: "#hidden-gems" },
-        { label: "Delicacies", href: "#delicacies" },
+        { label: t('nav_destinations'), href: "#destinations" },
+        { label: t('nav_travel_diaries'), href: "#travel-diaries" },
+        { label: t('nav_itineraries'), href: "#itineraries" },
+        { label: t('nav_hidden_gems'), href: "#hidden-gems" },
+        { label: t('nav_delicacies'), href: "#delicacies" },
       ]} />
       <section
         className="relative w-full h-screen overflow-hidden cursor-pointer"

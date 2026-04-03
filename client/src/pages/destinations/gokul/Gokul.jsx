@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import SEOHead from "../../../components/SEOHead";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
@@ -135,6 +136,11 @@ const Gokul = () => {
 
     return (
         <div className="w-full min-h-screen overflow-x-hidden">
+            <SEOHead
+                title="Gokul — Cradle of Lord Krishna"
+                description="Visit Gokul, where Lord Krishna spent his childhood. Explore Brahmand Ghat, Nand Bhawan, Raman Reti, and sacred ghats on the Yamuna."
+                image="/destinations/gokul.jpg"
+            />
             <Navbar navLinks={[
                 { label: "Attractions", href: "#attractions" },
                 { label: "Folklore", href: "#folklore" },

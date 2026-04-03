@@ -1,270 +1,408 @@
+{
+  "mathura_places": [
     {
-        "mathura_places": [
-            {
-                "id": "mathura_001",
-                "name": "Shri Krishna Janmabhoomi Temple",
-                "category": "temple",
-                "address": "Shri Krishna Janmabhoomi Temple, Mathura, Uttar Pradesh, India",
-                "coordinates": {
-                    "lat": 27.5035,
-                    "lng": 77.6721
-                },
-                "description": "Shri Krishna Janmabhoomi Temple is a notable place in Mathura.",
-                "opening_hours": "Varies",
-                "entry_fee": null,
-                "highlight": true,
-                "popularity_rank": 1,
-                "tags": [
-                    "heritage",
-                    "pilgrimage"
-                ],
-                "estimated_visit_duration": 45,
-                "crowd_level": "high"
-            },
-            {
-                "id": "mathura_002",
-                "name": "Dwarkadhish Temple",
-                "category": "temple",
-                "address": "Dwarkadhish Temple, Mathura, Uttar Pradesh, India",
-                "coordinates": {
-                    "lat": 27.5046,
-                    "lng": 77.6725
-                },
-                "description": "Dwarkadhish Temple is a notable place in Mathura.",
-                "opening_hours": "Varies",
-                "entry_fee": null,
-                "highlight": true,
-                "popularity_rank": 2,
-                "tags": [
-                    "heritage",
-                    "pilgrimage"
-                ],
-                "estimated_visit_duration": 45,
-                "crowd_level": "high"
-            },
-            {
-                "id": "mathura_003",
-                "name": "Vishram Ghat",
-                "category": "ghat",
-                "address": "Vishram Ghat, Mathura, Uttar Pradesh, India",
-                "coordinates": {
-                    "lat": 27.5052,
-                    "lng": 77.6712
-                },
-                "description": "Vishram Ghat is a notable place in Mathura.",
-                "opening_hours": "Varies",
-                "entry_fee": null,
-                "highlight": true,
-                "popularity_rank": 3,
-                "tags": [
-                    "heritage",
-                    "pilgrimage"
-                ],
-                "estimated_visit_duration": 45,
-                "crowd_level": "high"
-            },
-            {
-                "id": "mathura_004",
-                "name": "Government Museum Mathura",
-                "category": "museum",
-                "address": "Government Museum Mathura, Mathura, Uttar Pradesh, India",
-                "coordinates": {
-                    "lat": 27.4924,
-                    "lng": 77.6737
-                },
-                "description": "Government Museum Mathura is a notable place in Mathura.",
-                "opening_hours": "Varies",
-                "entry_fee": null,
-                "highlight": true,
-                "popularity_rank": 4,
-                "tags": [
-                    "heritage"
-                ],
-                "estimated_visit_duration": 45,
-                "crowd_level": "high"
-            },
-            {
-                "id": "mathura_005",
-                "name": "Kans Qila",
-                "category": "monument",
-                "address": "Kans Qila, Mathura, Uttar Pradesh, India",
-                "coordinates": {
-                    "lat": 27.5085,
-                    "lng": 77.676
-                },
-                "description": "Kans Qila is a notable place in Mathura.",
-                "opening_hours": "Varies",
-                "entry_fee": null,
-                "highlight": true,
-                "popularity_rank": 5,
-                "tags": [
-                    "heritage"
-                ],
-                "estimated_visit_duration": 45,
-                "crowd_level": "high"
-            },
-            {
-                "id": "mathura_006",
-                "name": "Gita Mandir",
-                "category": "temple",
-                "address": "Gita Mandir, Mathura, Uttar Pradesh, India",
-                "coordinates": {
-                    "lat": 27.51,
-                    "lng": 77.673
-                },
-                "description": "Gita Mandir is a notable place in Mathura.",
-                "opening_hours": "Varies",
-                "entry_fee": null,
-                "highlight": false,
-                "popularity_rank": 6,
-                "tags": [
-                    "heritage",
-                    "pilgrimage"
-                ],
-                "estimated_visit_duration": 45,
-                "crowd_level": "medium"
-            },
-            {
-                "id": "mathura_007",
-                "name": "Bhuteshwar Mahadev Temple",
-                "category": "temple",
-                "address": "Bhuteshwar Mahadev Temple, Mathura, Uttar Pradesh, India",
-                "coordinates": {
-                    "lat": 27.498,
-                    "lng": 77.672
-                },
-                "description": "Bhuteshwar Mahadev Temple is a notable place in Mathura.",
-                "opening_hours": "Varies",
-                "entry_fee": null,
-                "highlight": false,
-                "popularity_rank": 7,
-                "tags": [
-                    "heritage",
-                    "pilgrimage"
-                ],
-                "estimated_visit_duration": 45,
-                "crowd_level": "medium"
-            },
-            {
-                "id": "mathura_008",
-                "name": "Potra Kund",
-                "category": "ghat",
-                "address": "Potra Kund, Mathura, Uttar Pradesh, India",
-                "coordinates": {
-                    "lat": 27.503,
-                    "lng": 77.6715
-                },
-                "description": "Potra Kund is a notable place in Mathura.",
-                "opening_hours": "Varies",
-                "entry_fee": null,
-                "highlight": false,
-                "popularity_rank": 8,
-                "tags": [
-                    "heritage",
-                    "pilgrimage"
-                ],
-                "estimated_visit_duration": 45,
-                "crowd_level": "medium"
-            },
-            {
-                "id": "mathura_009",
-                "name": "Tilak Dwar Market",
-                "category": "market",
-                "address": "Tilak Dwar Market, Mathura, Uttar Pradesh, India",
-                "coordinates": {
-                    "lat": 27.504,
-                    "lng": 77.673
-                },
-                "description": "Tilak Dwar Market is a notable place in Mathura.",
-                "opening_hours": "Varies",
-                "entry_fee": null,
-                "highlight": false,
-                "popularity_rank": 9,
-                "tags": [
-                    "heritage"
-                ],
-                "estimated_visit_duration": 45,
-                "crowd_level": "medium"
-            },
-            {
-                "id": "mathura_010",
-                "name": "Chowk Bazaar",
-                "category": "market",
-                "address": "Chowk Bazaar, Mathura, Uttar Pradesh, India",
-                "coordinates": {
-                    "lat": 27.5045,
-                    "lng": 77.6718
-                },
-                "description": "Chowk Bazaar is a notable place in Mathura.",
-                "opening_hours": "Varies",
-                "entry_fee": null,
-                "highlight": false,
-                "popularity_rank": 10,
-                "tags": [
-                    "heritage"
-                ],
-                "estimated_visit_duration": 45,
-                "crowd_level": "medium"
-            },
-            {
-                "id": "mathura_011",
-                "name": "Brijwasi Mithai",
-                "category": "restaurant",
-                "address": "Brijwasi Mithai, Mathura, Uttar Pradesh, India",
-                "coordinates": {
-                    "lat": 27.5055,
-                    "lng": 77.6725
-                },
-                "description": "Brijwasi Mithai is a notable place in Mathura.",
-                "opening_hours": "Varies",
-                "entry_fee": null,
-                "highlight": false,
-                "popularity_rank": 11,
-                "tags": [
-                    "heritage"
-                ],
-                "estimated_visit_duration": 45,
-                "crowd_level": "medium"
-            },
-            {
-                "id": "mathura_012",
-                "name": "Om Sweets Mathura",
-                "category": "restaurant",
-                "address": "Om Sweets Mathura, Mathura, Uttar Pradesh, India",
-                "coordinates": {
-                    "lat": 27.507,
-                    "lng": 77.6735
-                },
-                "description": "Om Sweets Mathura is a notable place in Mathura.",
-                "opening_hours": "Varies",
-                "entry_fee": null,
-                "highlight": false,
-                "popularity_rank": 12,
-                "tags": [
-                    "heritage"
-                ],
-                "estimated_visit_duration": 45,
-                "crowd_level": "medium"
-            },
-            {
-                "id": "mathura_013",
-                "name": "Jama Masjid Mathura",
-                "category": "mosque",
-                "address": "Jama Masjid Mathura, Mathura, Uttar Pradesh, India",
-                "coordinates": {
-                    "lat": 27.5038,
-                    "lng": 77.6705
-                },
-                "description": "Jama Masjid Mathura is a notable place in Mathura.",
-                "opening_hours": "Varies",
-                "entry_fee": null,
-                "highlight": false,
-                "popularity_rank": 13,
-                "tags": [
-                    "heritage"
-                ],
-                "estimated_visit_duration": 45,
-                "crowd_level": "medium"
-            }
-        ]
+      "id": "mathura_001",
+      "name": "Shri Krishna Janmabhoomi Temple",
+      "category": "temple",
+      "address": "Krishna Janmasthan, Mathura, Uttar Pradesh, India",
+      "coordinates": {
+        "lat": 27.5035,
+        "lng": 77.6721
+      },
+      "description": "The holiest site in Mathura, believed to be the exact birthplace of Lord Krishna in King Kansa's prison. The complex houses the main Keshavdeva Temple and the sacred underground prison cell (Garbha Griha). During Janmashtami, millions of devotees gather here for spectacular midnight celebrations marking Krishna's birth.",
+      "opening_hours": "05:00–12:00, 16:00–21:00",
+      "entry_fee": null,
+      "highlight": true,
+      "popularity_rank": 1,
+      "source": "Braj Tourism / Temple Trust",
+      "images": [
+        "/mathura/attractions/janmabhoomi.avif"
+      ],
+      "google_maps_link": "https://maps.google.com/?q=27.5035,77.6721",
+      "tags": [
+        "heritage",
+        "pilgrimage"
+      ],
+      "estimated_visit_duration": 60,
+      "crowd_level": "very_high",
+      "best_time_to_visit": "Early morning (05:30–08:00) or evening aarti",
+      "nearby_places": [
+        "mathura_002",
+        "mathura_003",
+        "mathura_008"
+      ]
+    },
+    {
+      "id": "mathura_002",
+      "name": "Dwarkadhish Temple",
+      "category": "temple",
+      "address": "Dwarkadhish Temple, Vishram Ghat Road, Mathura, Uttar Pradesh, India",
+      "coordinates": {
+        "lat": 27.5046,
+        "lng": 77.6725
+      },
+      "description": "One of the most revered temples in Mathura, dedicated to Lord Krishna as king of Dwarka. Built in 1814 by Seth Gokuldas Parikh, the temple features stunning Rajasthani-style architecture with intricate carvings and vibrant paintings. The Swing Festival (Jhulan Yatra) and Holi celebrations here are legendary.",
+      "opening_hours": "06:30–12:30, 16:00–21:00",
+      "entry_fee": null,
+      "highlight": true,
+      "popularity_rank": 2,
+      "source": "Temple Trust / Braj Tourism",
+      "images": [
+        "/mathura/attractions/dwarkadish.jpg"
+      ],
+      "google_maps_link": "https://maps.google.com/?q=27.5046,77.6725",
+      "tags": [
+        "heritage",
+        "pilgrimage"
+      ],
+      "estimated_visit_duration": 45,
+      "crowd_level": "very_high",
+      "best_time_to_visit": "Morning darshan or evening aarti",
+      "nearby_places": [
+        "mathura_001",
+        "mathura_003",
+        "mathura_010"
+      ]
+    },
+    {
+      "id": "mathura_003",
+      "name": "Vishram Ghat",
+      "category": "ghat",
+      "address": "Vishram Ghat, Mathura, Uttar Pradesh, India",
+      "coordinates": {
+        "lat": 27.5052,
+        "lng": 77.6712
+      },
+      "description": "The most sacred ghat in Mathura, where Lord Krishna is believed to have rested after slaying the tyrant King Kansa. The evening Yamuna Aarti here is a mesmerising spectacle of oil lamps, chanting, and devotion. A boat ride from Vishram Ghat reveals 25 beautiful ghats lining the Yamuna riverbank.",
+      "opening_hours": "Open 24 hours; Aarti at 19:00",
+      "entry_fee": null,
+      "highlight": true,
+      "popularity_rank": 3,
+      "source": "Braj Tourism",
+      "images": [
+        "/mathura/attractions/vishram-ghat.jpeg"
+      ],
+      "google_maps_link": "https://maps.google.com/?q=27.5052,77.6712",
+      "tags": [
+        "heritage",
+        "pilgrimage",
+        "nature"
+      ],
+      "estimated_visit_duration": 45,
+      "crowd_level": "high",
+      "best_time_to_visit": "Sunset for evening aarti",
+      "nearby_places": [
+        "mathura_001",
+        "mathura_002",
+        "mathura_008"
+      ]
+    },
+    {
+      "id": "mathura_004",
+      "name": "Government Museum Mathura",
+      "category": "museum",
+      "address": "Government Museum, Dampier Nagar, Mathura, Uttar Pradesh, India",
+      "coordinates": {
+        "lat": 27.4924,
+        "lng": 77.6737
+      },
+      "description": "One of the finest archaeological museums in India, housing an outstanding collection of sculptures from the ancient Mathura School of Art (Kushan and Gupta periods). The museum's prized collection includes rare Buddha and Jain statues, terracotta artefacts, coins, and inscriptions dating back over 2,000 years.",
+      "opening_hours": "10:30–16:30 (Closed on Mondays)",
+      "entry_fee": "₹20 Indians / ₹500 Foreigners",
+      "highlight": true,
+      "popularity_rank": 4,
+      "source": "ASI / Tourism Board",
+      "images": [
+        "/mathura/Government-Museum-Mathura.jpeg"
+      ],
+      "google_maps_link": "https://maps.google.com/?q=27.4924,77.6737",
+      "tags": [
+        "heritage",
+        "museum"
+      ],
+      "estimated_visit_duration": 90,
+      "crowd_level": "medium",
+      "best_time_to_visit": "Morning (10:30–13:00)",
+      "nearby_places": [
+        "mathura_005"
+      ]
+    },
+    {
+      "id": "mathura_005",
+      "name": "Kans Qila",
+      "category": "monument",
+      "address": "Kans Qila, Mathura, Uttar Pradesh, India",
+      "coordinates": {
+        "lat": 27.5085,
+        "lng": 77.676
+      },
+      "description": "An ancient fort on the banks of the Yamuna, believed to be the palace-fort of the tyrannical King Kansa. Though largely in ruins, the massive walls and strategic riverside location evoke the epic confrontation between Krishna and his maternal uncle. The site offers panoramic views of the Yamuna and surrounding ghats.",
+      "opening_hours": "Sunrise to Sunset",
+      "entry_fee": null,
+      "highlight": true,
+      "popularity_rank": 5,
+      "source": "ASI / Local listings",
+      "images": [
+        "/mathura/attractions/kans-quila.webp"
+      ],
+      "google_maps_link": "https://maps.google.com/?q=27.5085,77.676",
+      "tags": [
+        "heritage",
+        "monument"
+      ],
+      "estimated_visit_duration": 45,
+      "crowd_level": "low",
+      "best_time_to_visit": "Morning or late afternoon",
+      "nearby_places": [
+        "mathura_003",
+        "mathura_004"
+      ]
+    },
+    {
+      "id": "mathura_006",
+      "name": "Gita Mandir",
+      "category": "temple",
+      "address": "Gita Mandir, Mathura-Vrindavan Road, Mathura, Uttar Pradesh, India",
+      "coordinates": {
+        "lat": 27.51,
+        "lng": 77.673
+      },
+      "description": "Also known as Birla Mandir, this beautiful temple built by the Birla family features the entire Bhagavad Gita inscribed on its pillars and walls. The red sandstone structure sits amidst well-maintained gardens and is a popular stop on the Mathura-Vrindavan route. The temple's serene atmosphere makes it ideal for contemplation.",
+      "opening_hours": "06:00–12:00, 16:00–20:00",
+      "entry_fee": null,
+      "highlight": false,
+      "popularity_rank": 6,
+      "source": "Temple Trust",
+      "images": [
+        "/mathura/temples/birla_temple.avif"
+      ],
+      "google_maps_link": "https://maps.google.com/?q=27.51,77.673",
+      "tags": [
+        "heritage",
+        "pilgrimage"
+      ],
+      "estimated_visit_duration": 30,
+      "crowd_level": "medium",
+      "best_time_to_visit": "Morning",
+      "nearby_places": [
+        "mathura_005"
+      ]
+    },
+    {
+      "id": "mathura_007",
+      "name": "Bhuteshwar Mahadev Temple",
+      "category": "temple",
+      "address": "Bhuteshwar Mahadev Temple, Mathura, Uttar Pradesh, India",
+      "coordinates": {
+        "lat": 27.498,
+        "lng": 77.672
+      },
+      "description": "An ancient and deeply revered Shiva temple, considered one of the most important Shiva shrines in the Braj region. The temple draws large crowds during Shravan month and Maha Shivratri. The sacred linga here is believed to be self-manifested (swayambhu), and devotees come from across North India for darshan.",
+      "opening_hours": "05:00–21:00",
+      "entry_fee": null,
+      "highlight": false,
+      "popularity_rank": 7,
+      "source": "Local temple records",
+      "images": [
+        "/mathura/attractions/bhuteshwar.webp"
+      ],
+      "google_maps_link": "https://maps.google.com/?q=27.498,77.672",
+      "tags": [
+        "heritage",
+        "pilgrimage"
+      ],
+      "estimated_visit_duration": 30,
+      "crowd_level": "medium",
+      "best_time_to_visit": "Morning or Shravan month",
+      "nearby_places": [
+        "mathura_001",
+        "mathura_004"
+      ]
+    },
+    {
+      "id": "mathura_008",
+      "name": "Potra Kund",
+      "category": "ghat",
+      "address": "Potra Kund, near Krishna Janmasthan, Mathura, Uttar Pradesh, India",
+      "coordinates": {
+        "lat": 27.503,
+        "lng": 77.6715
+      },
+      "description": "A sacred ancient step-well (kund) located near the Krishna Janmabhoomi complex. According to tradition, this is where baby Krishna's clothes were washed after his birth. The beautifully preserved sandstone steps descend to the water level, and the kund remains an important pilgrimage site visited by devotees year-round.",
+      "opening_hours": "Open 24 hours",
+      "entry_fee": null,
+      "highlight": false,
+      "popularity_rank": 8,
+      "source": "Local tradition / Braj Tourism",
+      "images": [
+        "/mathura/attractions/potara-kund.avif"
+      ],
+      "google_maps_link": "https://maps.google.com/?q=27.503,77.6715",
+      "tags": [
+        "heritage",
+        "pilgrimage"
+      ],
+      "estimated_visit_duration": 20,
+      "crowd_level": "low",
+      "best_time_to_visit": "Morning",
+      "nearby_places": [
+        "mathura_001",
+        "mathura_003"
+      ]
+    },
+    {
+      "id": "mathura_009",
+      "name": "Tilak Dwar Market",
+      "category": "market",
+      "address": "Tilak Dwar, Mathura, Uttar Pradesh, India",
+      "coordinates": {
+        "lat": 27.504,
+        "lng": 77.673
+      },
+      "description": "A vibrant market area near the main temples, famous for Mathura's legendary pedas (milk sweets), puja items, and religious souvenirs. The narrow lanes are lined with sweet shops that have been crafting Mathura ke pedas for generations. Also a great place to buy brass items, bangles, and traditional Braj handicrafts.",
+      "opening_hours": "08:00–21:00",
+      "entry_fee": null,
+      "highlight": false,
+      "popularity_rank": 9,
+      "source": "Local commerce",
+      "images": [
+        "/mathura/attractions/keshav-dev.JPG"
+      ],
+      "google_maps_link": "https://maps.google.com/?q=27.504,77.673",
+      "tags": [
+        "food",
+        "heritage",
+        "market"
+      ],
+      "estimated_visit_duration": 45,
+      "crowd_level": "high",
+      "best_time_to_visit": "Late morning or evening",
+      "nearby_places": [
+        "mathura_001",
+        "mathura_002",
+        "mathura_010"
+      ]
+    },
+    {
+      "id": "mathura_010",
+      "name": "Chowk Bazaar",
+      "category": "market",
+      "address": "Chowk Bazaar, Mathura, Uttar Pradesh, India",
+      "coordinates": {
+        "lat": 27.5045,
+        "lng": 77.6718
+      },
+      "description": "The bustling heart of old Mathura, Chowk Bazaar is a lively market known for its traditional sweets, street food, and festive atmosphere. During Holi, this area transforms into one of the most colourful celebrations in India. The bazaar offers an authentic glimpse into Braj's daily life and culture.",
+      "opening_hours": "08:00–21:00",
+      "entry_fee": null,
+      "highlight": false,
+      "popularity_rank": 10,
+      "source": "Local listings",
+      "images": [
+        "/mathura/attractions/vishram-ghat.jpeg"
+      ],
+      "google_maps_link": "https://maps.google.com/?q=27.5045,77.6718",
+      "tags": [
+        "food",
+        "heritage",
+        "market"
+      ],
+      "estimated_visit_duration": 45,
+      "crowd_level": "high",
+      "best_time_to_visit": "Evening",
+      "nearby_places": [
+        "mathura_009",
+        "mathura_002"
+      ]
+    },
+    {
+      "id": "mathura_011",
+      "name": "Brijwasi Mithai",
+      "category": "restaurant",
+      "address": "Brijwasi Mithai, Mathura, Uttar Pradesh, India",
+      "coordinates": {
+        "lat": 27.5055,
+        "lng": 77.6725
+      },
+      "description": "The most iconic sweet shop in Mathura, established over a century ago. Famous for its melt-in-your-mouth Mathura Pedas — golden milk sweets made with pure khoya, sugar, and saffron. No visit to Mathura is complete without tasting their legendary pedas, kachoris, and lassi.",
+      "opening_hours": "07:00–22:00",
+      "entry_fee": null,
+      "highlight": false,
+      "popularity_rank": 11,
+      "source": "Local listings",
+      "images": [
+        "/mathura/attractions/dwarkadish.jpg"
+      ],
+      "google_maps_link": "https://maps.google.com/?q=27.5055,77.6725",
+      "tags": [
+        "food"
+      ],
+      "estimated_visit_duration": 30,
+      "crowd_level": "medium",
+      "best_time_to_visit": "Morning or evening",
+      "nearby_places": [
+        "mathura_009",
+        "mathura_010"
+      ]
+    },
+    {
+      "id": "mathura_012",
+      "name": "Om Sweets Mathura",
+      "category": "restaurant",
+      "address": "Om Sweets, Mathura, Uttar Pradesh, India",
+      "coordinates": {
+        "lat": 27.507,
+        "lng": 77.6735
+      },
+      "description": "A popular sweet and snack shop known for its wide variety of traditional Braj sweets, namkeens, and chaat. A favourite among locals and visitors, Om Sweets offers an authentic taste of Mathura's culinary heritage at reasonable prices.",
+      "opening_hours": "08:00–22:00",
+      "entry_fee": null,
+      "highlight": false,
+      "popularity_rank": 12,
+      "source": "Local listings",
+      "images": [
+        "/mathura/attractions/janmabhoomi.avif"
+      ],
+      "google_maps_link": "https://maps.google.com/?q=27.507,77.6735",
+      "tags": [
+        "food"
+      ],
+      "estimated_visit_duration": 30,
+      "crowd_level": "medium",
+      "best_time_to_visit": "Morning or evening",
+      "nearby_places": [
+        "mathura_011",
+        "mathura_009"
+      ]
+    },
+    {
+      "id": "mathura_013",
+      "name": "Jama Masjid Mathura",
+      "category": "mosque",
+      "address": "Jama Masjid, Mathura, Uttar Pradesh, India",
+      "coordinates": {
+        "lat": 27.5038,
+        "lng": 77.6705
+      },
+      "description": "A historic mosque built during the Mughal period by Aurangzeb's governor Abd-un-Nabi Khan. The mosque's four minarets and large courtyard reflect Mughal architectural style. It stands adjacent to the Krishna Janmasthan complex, representing the layered religious history of Mathura.",
+      "opening_hours": "05:00–21:00",
+      "entry_fee": null,
+      "highlight": false,
+      "popularity_rank": 13,
+      "source": "ASI / Local listings",
+      "images": [
+        "/mathura/attractions/keshav-dev.JPG"
+      ],
+      "google_maps_link": "https://maps.google.com/?q=27.5038,77.6705",
+      "tags": [
+        "heritage"
+      ],
+      "estimated_visit_duration": 20,
+      "crowd_level": "low",
+      "best_time_to_visit": "Morning",
+      "nearby_places": [
+        "mathura_001"
+      ]
     }
+  ]
+}

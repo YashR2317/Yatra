@@ -36,9 +36,9 @@ const chatSchema = z.object({
         .min(1, 'Message is required')
         .max(2000, 'Message is too long (max 2000 characters)')
         .transform(val => val.trim()),
-    sessionId: z.string().optional(),
+    sessionId: z.string().nullable().optional(),
     language: z.enum(['en', 'hi']).optional().default('en')
-});
+}).passthrough();
 
 // ─── Agent Itinerary Schema ──────────────────────────────────
 

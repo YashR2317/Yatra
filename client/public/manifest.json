@@ -1,0 +1,41 @@
+{
+  "name": "BrajYatra.AI",
+  "short_name": "BrajYatra",
+  "description": "Sacred Braj Travel Planner — Discover Mathura, Vrindavan, Agra & beyond with AI-powered pilgrimage planning",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1A1208",
+  "theme_color": "#C0622D",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["travel", "navigation", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Plan a Trip",
+      "url": "/create-trip",
+      "description": "Start planning your Braj Yatra with AI",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Virtual Tours",
+      "url": "/virtual-tours",
+      "description": "Explore heritage sites in 360°"
+    }
+  ]
+}

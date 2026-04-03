@@ -58,7 +58,7 @@ IMPORTANT: You MUST use the tools to gather data before creating the itinerary. 
         const {
             cities = [], days = 1, interests = [], pace = 'moderate',
             language = 'en', group_type = 'family', budget_level = 'medium',
-            weather_preference = null
+            weather_preference = null, visit_order_preference = 'auto'
         } = params;
 
         const targetCities = cities.length > 0 ? cities : ['Mathura', 'Vrindavan'];
@@ -95,6 +95,7 @@ CURRENT REQUEST:
 - Pace: ${pace} (${pace === 'relaxed' ? '4 places/day' : pace === 'intensive' ? '7 places/day' : '5 places/day'})
 - Group: ${group_type}
 - Budget: ${budget_level}
+- Visit Order: ${visit_order_preference} (${visit_order_preference === 'temples_first' ? 'temples & darshan first, then ghats and markets' : visit_order_preference === 'ghats_first' ? 'ghats & holy bath first, then temples' : visit_order_preference === 'monuments_first' ? 'monuments & forts first, then temples' : 'auto — decide based on weather conditions'})
 
 STEP-BY-STEP WORKFLOW:
 1. Call get_places_by_cities with cities: ${JSON.stringify(targetCities)}
@@ -167,7 +168,8 @@ CRITICAL: After using all tools, output ONLY the final JSON itinerary. The JSON 
                 places: allPlaces,
                 days,
                 budgetLevel,
-                people: GROUP_TYPE_PEOPLE[groupType] || 2
+                people: GROUP_TYPE_PEOPLE[groupType] || 2,
+                cities: [...new Set(itinerary.days.map(d => d.city).filter(Boolean))]
             });
 
             if (!itinerary.alternate_indoor || itinerary.alternate_indoor.length === 0) {
@@ -327,7 +329,8 @@ CRITICAL: After using all tools, output ONLY the final JSON itinerary. The JSON 
             places: allFallbackPlaces,
             days,
             budgetLevel: budgetLevel,
-            people: GROUP_TYPE_PEOPLE[groupType] || 2
+            people: GROUP_TYPE_PEOPLE[groupType] || 2,
+            cities
         });
 
         return { success: true, itinerary, source: 'fallback', cities, agentTrace: [{ step: 'fallback', reason: 'LLM failed' }] };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import SEOHead from "../../../components/SEOHead";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
@@ -155,6 +156,11 @@ const Barsana = () => {
 
     return (
         <div className="w-full min-h-screen overflow-x-hidden">
+            <SEOHead
+                title="Barsana — Sacred Abode of Radha Rani"
+                description="Explore Barsana, the birthplace of Radha Rani. Visit the hilltop Radha Rani Temple and experience the world-famous Lathmar Holi celebration."
+                image="/destinations/barsana.jpeg"
+            />
             <Navbar navLinks={[
                 { label: "Attractions", href: "#attractions" },
                 { label: "Folklore", href: "#folklore" },

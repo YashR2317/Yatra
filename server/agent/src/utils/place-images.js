@@ -31,6 +31,15 @@ const CATEGORY_IMAGES = {
     'museum': '/assets/images/taj_mahal.png',
     'park': '/assets/images/govardhan_hill.png',
     'religious': '/assets/images/prem_mandir.png',
+    'garden': '/assets/images/govardhan_hill.png',
+    'cafe': '/assets/images/banke_bihari.png',
+    'restaurant': '/assets/images/banke_bihari.png',
+    'church': '/assets/images/taj_mahal.png',
+    'mosque': '/assets/images/taj_mahal.png',
+    'gurudwara': '/assets/images/prem_mandir.png',
+    'hidden_gem': '/assets/images/nand_bhavan.png',
+    'parikrama_route': '/assets/images/govardhan_hill.png',
+    'other': '/assets/images/krishna_janmabhoomi.png',
 };
 
 const CITY_IMAGES = {
@@ -45,14 +54,22 @@ const CITY_IMAGES = {
 function getPlaceImage(place) {
     if (!place) return '/assets/images/krishna_janmabhoomi.png';
 
+    // Priority 1: Google Places photo (via proxy endpoint)
+    if (place.photo_reference && place.id) {
+        return `/api/agent/places/${place.id}/photo?maxwidth=400`;
+    }
+
+    // Priority 2: Hardcoded place-specific image
     if (place.id && PLACE_IMAGES[place.id]) {
         return PLACE_IMAGES[place.id];
     }
 
+    // Priority 3: City-based fallback
     if (place.city && CITY_IMAGES[place.city]) {
         return CITY_IMAGES[place.city];
     }
 
+    // Priority 4: Category-based fallback
     if (place.category && CATEGORY_IMAGES[place.category.toLowerCase()]) {
         return CATEGORY_IMAGES[place.category.toLowerCase()];
     }

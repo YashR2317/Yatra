@@ -10,6 +10,8 @@ import AttractionHighlights from "../components/attraction/AttractionHighlights"
 import AttractionVisitingInfo from "../components/attraction/AttractionVisitingInfo";
 import AttractionTips from "../components/attraction/AttractionTips";
 import AttractionMap from "../components/attraction/AttractionMap";
+import ShareButton from "../components/ShareButton";
+import SEOHead from "../components/SEOHead";
 
 /* ── Parse back-navigation context ────────────────────────── */
 function parseFrom(from) {
@@ -61,6 +63,19 @@ const PlacePage = () => {
 
     return (
         <div className="w-full min-h-screen overflow-x-hidden" style={{ backgroundColor: "var(--color-bg)" }}>
+            <SEOHead
+                title={`${place.name}, ${place.city}`}
+                description={place.description?.[0] || `Explore ${place.name} in ${place.city}. Plan your visit with BrajYatra.AI`}
+                image={place.heroImage}
+                jsonLd={{
+                    "@context": "https://schema.org",
+                    "@type": "TouristAttraction",
+                    "name": place.name,
+                    "description": place.description?.[0] || "",
+                    "address": { "@type": "PostalAddress", "addressLocality": place.city, "addressRegion": "Uttar Pradesh", "addressCountry": "IN" },
+                    ...(place.heroImage && { "image": place.heroImage }),
+                }}
+            />
             <Navbar />
 
             {/* Hero */}
@@ -93,6 +108,11 @@ const PlacePage = () => {
             </div>
             <div className="max-w-6xl mx-auto px-8 lg:px-16 pt-4 pb-2">
                 <button onClick={handleBack} className="btn-secondary text-sm">← Back to {backCtx.label}</button>
+                <ShareButton
+                    title={`${place.name} — BrajYatra.AI`}
+                    text={`Discover ${place.name} in ${place.city}! Plan your sacred pilgrimage with BrajYatra.AI`}
+                    size="md"
+                />
             </div>
 
             {/* Content */}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import SEOHead from "../../../components/SEOHead";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
@@ -154,6 +155,11 @@ const Govardhan = () => {
 
     return (
         <div className="w-full min-h-screen overflow-x-hidden">
+            <SEOHead
+                title="Govardhan — Where Faith Moves Mountains"
+                description="Discover Govardhan Hill, the sacred hill Lord Krishna lifted on his finger. Walk the 21 km Parikrama, visit Radha Kund and Manasi Ganga."
+                image="/destinations/govardhan.jpg"
+            />
             <Navbar navLinks={[
                 { label: "Attractions", href: "#attractions" },
                 { label: "Folklore", href: "#folklore" },

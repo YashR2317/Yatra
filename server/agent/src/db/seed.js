@@ -13,13 +13,19 @@ const CITY_FILES = {
     'Gokul': 'GOKUL.json'
 };
 
-function seed() {
+function seed(force = false) {
     const db = getDB();
     const existing = getPlacesCount();
 
-    if (existing > 0) {
-        console.log(`[Seed] Database already has ${existing} places. Skipping seed.`);
+    if (existing > 0 && !force) {
+        console.log(`[Seed] Database already has ${existing} places. Skipping seed. Use --force to reseed.`);
         return existing;
+    }
+
+    if (existing > 0 && force) {
+        console.log(`[Seed] Force reseed — clearing ${existing} existing places...`);
+        db.exec('DELETE FROM places');
+        db.exec("INSERT INTO places_fts(places_fts) VALUES('rebuild')");
     }
 
     console.log('[Seed] Starting database seed...');
@@ -92,7 +98,8 @@ function seed() {
 }
 
 if (require.main === module) {
-    const count = seed();
+    const force = process.argv.includes('--force');
+    const count = seed(force);
     console.log(`Seeding complete. ${count} places in database.`);
     process.exit(0);
 }

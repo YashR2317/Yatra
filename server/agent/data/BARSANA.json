@@ -16,7 +16,7 @@
                 "popularity_rank": 1,
                 "source": "Braj Tourism / Temple Trust",
                 "images": [
-                    "https://source.unsplash.com/800x600/?Radha,Rani,Temple"
+                    "/barsana/radha-rani-temple.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.64950,77.37630",
                 "tags": [
@@ -25,7 +25,7 @@
                 ],
                 "estimated_visit_duration": 45,
                 "crowd_level": "high",
-                "best_time_to_visit": "Early morning (05:30–08:30) or evening aarti",
+                "best_time_to_visit": "Early morning (05:30â€“08:30) or evening aarti",
                 "nearby_places": [
                     "barsana_002",
                     "barsana_004",
@@ -48,7 +48,7 @@
                 "popularity_rank": 2,
                 "source": "Local listings",
                 "images": [
-                    "https://source.unsplash.com/800x600/?Kirti,Mandir"
+                    "/barsana/kirti-mandir.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.65120,77.37800",
                 "tags": [
@@ -79,7 +79,7 @@
                 "popularity_rank": 3,
                 "source": "Local records",
                 "images": [
-                    "https://source.unsplash.com/800x600/?Maan,Mandir"
+                    "/barsana/maan-garh.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.64880,77.37490",
                 "tags": [
@@ -110,7 +110,7 @@
                 "popularity_rank": 4,
                 "source": "Tourism listings",
                 "images": [
-                    "https://source.unsplash.com/800x600/?palace,temple"
+                    "/barsana/Rangeeli_Mahal.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.65000,77.37700",
                 "tags": [
@@ -141,7 +141,7 @@
                 "popularity_rank": 5,
                 "source": "Local listings",
                 "images": [
-                    "https://source.unsplash.com/800x600/?market,india"
+                    "/barsana/radha-rani-temple.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.65050,77.37590",
                 "tags": [
@@ -172,7 +172,7 @@
                 "popularity_rank": 6,
                 "source": "Braj Tourism",
                 "images": [
-                    "https://source.unsplash.com/800x600/?lake,temple"
+                    "/barsana/prem-sarovar.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.64000,77.37000",
                 "tags": [
@@ -202,7 +202,7 @@
                 "popularity_rank": 7,
                 "source": "Local listings",
                 "images": [
-                    "https://source.unsplash.com/800x600/?small,temple"
+                    "/barsana/mor-kutir.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.64750,77.37350",
                 "tags": [
@@ -232,7 +232,7 @@
                 "popularity_rank": 8,
                 "source": "Local tradition",
                 "images": [
-                    "https://source.unsplash.com/800x600/?pond,india"
+                    "/barsana/pili-pokhar.jpg,india"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.64620,77.37210",
                 "tags": [
@@ -262,7 +262,7 @@
                 "popularity_rank": 9,
                 "source": "Local tradition",
                 "images": [
-                    "https://source.unsplash.com/800x600/?pond"
+                    "/barsana/pili-pokhar.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.64560,77.37120",
                 "tags": [
@@ -292,7 +292,7 @@
                 "popularity_rank": 10,
                 "source": "Local records",
                 "images": [
-                    "https://source.unsplash.com/800x600/?village,temple"
+                    "/barsana/chitra-sakhi.avif"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.65500,77.38000",
                 "tags": [
@@ -320,7 +320,7 @@
                 "popularity_rank": 11,
                 "source": "Local temple records",
                 "images": [
-                    "https://source.unsplash.com/800x600/?sakhi,temple"
+                    "/barsana/chitra-sakhi.avif"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.65150,77.37790",
                 "tags": [
@@ -349,7 +349,7 @@
                 "popularity_rank": 12,
                 "source": "Local tourism",
                 "images": [
-                    "https://source.unsplash.com/800x600/?woodland"
+                    "/barsana/gahvar-van.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.64400,77.36900",
                 "tags": [
@@ -378,7 +378,7 @@
                 "popularity_rank": 13,
                 "source": "Local tourism",
                 "images": [
-                    "https://source.unsplash.com/800x600/?viewpoint"
+                    "/barsana/shri-radha-sarovar.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.65300,77.38100",
                 "tags": [
@@ -406,7 +406,7 @@
                 "popularity_rank": 14,
                 "source": "Local commerce",
                 "images": [
-                    "https://source.unsplash.com/800x600/?handicraft,market"
+                    "/barsana/radha-rani-temple.jpg"
                 ],
                 "google_maps_link": "https://maps.google.com/?q=27.65070,77.37600",
                 "tags": [

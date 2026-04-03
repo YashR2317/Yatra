@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import SEOHead from "../../../components/SEOHead";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
@@ -137,6 +138,11 @@ const Vrindavan = () => {
 
   return (
     <div className="w-full min-h-screen overflow-x-hidden">
+      <SEOHead
+        title="Vrindavan — Land of Krishna's Divine Play"
+        description="Visit Vrindavan, the sacred town of Lord Krishna's childhood leelas. Explore Banke Bihari, ISKCON, Nidhivan, and the mystical groves of Braj."
+        image="/destinations/vrindavan.webp"
+      />
       <Navbar navLinks={[
         { label: "Attractions", href: "#attractions" },
         { label: "Folklore", href: "#folklore" },

@@ -20,6 +20,7 @@ const RecommenderAgent = require('./RecommenderAgent');
 const WeatherAgent = require('./WeatherAgent');
 const ChatAgent = require('./ChatAgent');
 const BudgetAgent = require('./BudgetAgent');
+const SearchAgent = require('./SearchAgent');
 
 class SupervisorAgent extends AgentBase {
     constructor() {
@@ -38,7 +39,8 @@ class SupervisorAgent extends AgentBase {
             RecommenderAgent: new RecommenderAgent(),
             WeatherAgent: new WeatherAgent(),
             ChatAgent: new ChatAgent(),
-            BudgetAgent: new BudgetAgent()
+            BudgetAgent: new BudgetAgent(),
+            SearchAgent: new SearchAgent()
         };
 
         // The delegation tool definition
@@ -50,7 +52,7 @@ class SupervisorAgent extends AgentBase {
                 properties: {
                     agent: {
                         type: 'string',
-                        description: 'Name of the specialist agent to delegate to. Must be one of: ItineraryAgent, RecommenderAgent, WeatherAgent, ChatAgent, BudgetAgent'
+                        description: 'Name of the specialist agent to delegate to. Must be one of: ItineraryAgent, RecommenderAgent, WeatherAgent, ChatAgent, BudgetAgent, SearchAgent'
                     },
                     task: {
                         type: 'string',
@@ -225,6 +227,9 @@ class SupervisorAgent extends AgentBase {
                 case 'BudgetAgent':
                     return await agent.run(task, context);
 
+                case 'SearchAgent':
+                    return await agent.search(task, context);
+
                 default:
                     return await agent.run(task, context);
             }
@@ -283,6 +288,21 @@ class SupervisorAgent extends AgentBase {
                 text: budget.text || supervisorText || 'Budget information unavailable.',
                 source: budget.source || 'BudgetAgent',
                 intent: { intent: 'budget' }
+            };
+        }
+
+        // Default: check for search results
+        if (lastAgent === 'SearchAgent' && agentResults.SearchAgent) {
+            const search = agentResults.SearchAgent;
+            return {
+                type: 'search',
+                text: supervisorText || search.text || 'Search completed.',
+                groundingMetadata: search.groundingMetadata || null,
+                isHotelSearch: search.isHotelSearch || false,
+                bookingLinks: search.bookingLinks || [],
+                searchQuery: search.searchQuery || '',
+                source: search.source || 'SearchAgent',
+                intent: { intent: 'search', query: search.searchQuery }
             };
         }
 

@@ -33,6 +33,7 @@ class AgentBase {
         this.memoryLimit = memoryLimit;
         this.memory = [];
         this.trace = []; // Execution trace for this run
+        this.sessionHistory = []; // Injected from API for multi-turn context
 
         // Register with the message bus
         messageBus.subscribe(this.name, this._handleMessage.bind(this));
@@ -70,8 +71,12 @@ class AgentBase {
                 ? `Original task: ${message}\n\nTool results so far:\n${toolContext}\n\nBased on the tool results above, either call another tool or provide your final answer.`
                 : currentMessage;
 
-            // THINK: Send message + tools to LLM (stateless — no history)
-            const thinkResult = await this._think(fullMessage, toolDeclarations, [], context);
+            // THINK: Send message + tools to LLM with conversation memory
+            const recentMemory = [
+                ...this.sessionHistory.slice(-6), // Last 3 exchanges from session DB
+                ...this.memory.slice(-6),          // Last 3 exchanges from agent memory
+            ].slice(-8); // Cap at 8 total messages for context window
+            const thinkResult = await this._think(fullMessage, toolDeclarations, recentMemory, context);
 
             if (!thinkResult.success) {
                 console.error(`[${this.name}] Think failed:`, thinkResult.error);
@@ -209,6 +214,16 @@ class AgentBase {
      */
     clearMemory() {
         this.memory = [];
+        this.sessionHistory = [];
+    }
+
+    /**
+     * Inject session history from the database for multi-turn context.
+     * Call this before run() for follow-up messages.
+     * @param {Array} history — [{role, content}, ...]
+     */
+    setSessionHistory(history = []) {
+        this.sessionHistory = history;
     }
 
     /**

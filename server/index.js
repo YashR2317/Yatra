@@ -8,7 +8,6 @@
  *   /api/agent/*  — AI Agent (chat, places, itinerary, weather, etc.)
  *   /api/user/*   — User data (saved itineraries, chat sessions)
  *   /api/health   — Server health check
- *   /agent/*      — Agent static UI (HTML/CSS/JS)
  */
 
 const path = require('path');
@@ -38,7 +37,7 @@ if (!process.env.JWT_SECRET || process.env.JWT_SECRET === 'dev-secret') {
 const connectDB = require('./auth/config/db');
 const authRoutes = require('./auth/routes/auth.routes');
 const { sendWelcomeEmail } = require('./auth/utils/email');
-const { apiRoutes: agentRoutes, initAgent, agentPublicPath } = require('./agent/src/server');
+const { apiRoutes: agentRoutes, initAgent } = require('./agent/src/server');
 const userRoutes = require('./routes/user.routes');
 
 // ─── Express App ────────────────────────────────────────────
@@ -62,21 +61,8 @@ app.use('/api/agent', agentRoutes);
 // ─── User Data Routes (/api/user/*) ─────────────────────────
 app.use('/api/user', userRoutes);
 
-// ─── Agent Static UI (/agent/*) ─────────────────────────────
-app.use('/agent', express.static(agentPublicPath, {
-    setHeaders: (res, filePath) => {
-        if (filePath.endsWith('.js')) {
-            res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
-        } else if (filePath.endsWith('.css')) {
-            res.setHeader('Content-Type', 'text/css; charset=utf-8');
-        }
-    }
-}));
-
-// SPA fallback for agent UI (serve index.html for all /agent/* paths)
-app.get('/agent/*', (req, res) => {
-    res.sendFile(path.join(agentPublicPath, 'index.html'));
-});
+// Agent UI is now a native React component in the client (CreateTrip.jsx).
+// The old /agent/* static route has been removed.
 
 // ─── Client Static Files (production build) ─────────────────
 const clientBuildPath = path.join(__dirname, 'public', 'client');
@@ -85,8 +71,8 @@ if (process.env.NODE_ENV === 'production') {
 
     // SPA fallback: serve index.html for all non-API routes
     app.get('*', (req, res, next) => {
-        // Skip API and agent routes
-        if (req.path.startsWith('/api/') || req.path.startsWith('/agent')) {
+        // Skip API routes
+        if (req.path.startsWith('/api/')) {
             return next();
         }
         res.sendFile(path.join(clientBuildPath, 'index.html'));
@@ -163,7 +149,6 @@ server = app.listen(PORT, () => {
     logger.info(`  /api/auth/*   — Authentication`);
     logger.info(`  /api/agent/*  — AI Agent`);
     logger.info(`  /api/user/*   — User Data`);
-    logger.info(`  /agent/*      — Agent UI`);
     logger.info(`Email: Resend API ${process.env.RESEND_API_KEY ? "✅ Configured" : "⚠️  NOT SET"}`);
     logger.info(`CORS: ${process.env.ALLOWED_ORIGINS || 'localhost (development)'}`);
     logger.info(`Rate limiting: ✅ Enabled`);

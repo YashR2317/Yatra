@@ -3,12 +3,14 @@ import { useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "../contexts/AuthContext";
 import { useToast } from "../components/Toast";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 const AccountPage = () => {
     const { user, token, logout, updateUser, updateToken } = useAuth();
     const { addToast } = useToast();
+    const { t } = useLanguage();
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState("profile");
     const [itineraries, setItineraries] = useState([]);
@@ -264,10 +266,10 @@ const AccountPage = () => {
         : "Recently";
 
     const tabs = [
-        { id: "profile", label: "👤 Profile" },
-        { id: "itineraries", label: "🗺️ Itineraries" },
-        { id: "chats", label: "💬 Chats" },
-        { id: "settings", label: "⚙️ Settings" },
+        { id: "profile", label: `👤 ${t('acc_profile')}` },
+        { id: "itineraries", label: `🗺️ ${t('acc_itineraries')}` },
+        { id: "chats", label: `💬 ${t('acc_chats')}` },
+        { id: "settings", label: `⚙️ ${t('acc_settings')}` },
     ];
 
     // Password strength indicator
@@ -298,7 +300,7 @@ const AccountPage = () => {
                         whileTap={{ scale: 0.98 }}
                         className="px-6 py-2 bg-white/5 border border-white/10 text-gray-300 rounded-lg hover:bg-amber-500/10 hover:border-amber-500/30 hover:text-amber-400 transition-all text-sm"
                     >
-                        ← Back to Home
+                        {t('acc_back_home')}
                     </motion.button>
                 </Link>
             </div>
@@ -413,22 +415,22 @@ const AccountPage = () => {
                                 {/* Stats */}
                                 <div className="grid grid-cols-3 gap-4 mb-8">
                                     <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
-                                        <p className="text-gray-400 text-xs uppercase tracking-widest mb-1">Member Since</p>
+                                        <p className="text-gray-400 text-xs uppercase tracking-widest mb-1">{t('acc_member_since')}</p>
                                         <p className="text-white font-semibold">{memberSince}</p>
                                     </div>
                                     <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
-                                        <p className="text-gray-400 text-xs uppercase tracking-widest mb-1">Saved Trips</p>
+                                        <p className="text-gray-400 text-xs uppercase tracking-widest mb-1">{t('acc_saved_trips')}</p>
                                         <p className="text-amber-400 font-bold text-xl">{itineraryCount > 0 ? itineraryCount : "–"}</p>
                                     </div>
                                     <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
-                                        <p className="text-gray-400 text-xs uppercase tracking-widest mb-1">Status</p>
-                                        <p className="text-green-400 font-semibold">Active Yatri</p>
+                                        <p className="text-gray-400 text-xs uppercase tracking-widest mb-1">{t('acc_status')}</p>
+                                        <p className="text-green-400 font-semibold">{t('acc_active_yatri')}</p>
                                     </div>
                                 </div>
 
                                 <motion.button onClick={handleLogout} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
                                     className="w-full py-3 bg-white/5 border border-white/10 text-gray-300 rounded-lg hover:bg-red-500/10 hover:border-red-500/30 hover:text-red-400 transition-all">
-                                    Log Out
+                                    {t('acc_logout')}
                                 </motion.button>
                             </div>
                         </motion.div>
@@ -488,12 +490,12 @@ const AccountPage = () => {
                                     ) : itineraries.length === 0 ? (
                                         <div className="bg-black/70 backdrop-blur-xl border border-white/10 rounded-2xl p-12 text-center">
                                             <p className="text-5xl mb-4">🗺️</p>
-                                            <h3 className="text-white text-lg font-semibold mb-2">No Saved Itineraries</h3>
-                                            <p className="text-gray-400 text-sm mb-6">Create a trip with the AI planner and save it to view here.</p>
+                                            <h3 className="text-white text-lg font-semibold mb-2">{t('acc_no_itineraries')}</h3>
+                                            <p className="text-gray-400 text-sm mb-6">{t('acc_no_itineraries_desc')}</p>
                                             <Link to="/create-trip">
                                                 <motion.button whileHover={{ scale: 1.02 }}
                                                     className="px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-xl font-semibold">
-                                                    🪷 Plan a Trip
+                                                    {t('acc_plan_trip')}
                                                 </motion.button>
                                             </Link>
                                         </div>
@@ -538,7 +540,7 @@ const AccountPage = () => {
                                 <div className="bg-black/70 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl">
                                     <button onClick={() => setSelectedSession(null)}
                                         className="text-amber-400 text-sm mb-4 hover:underline">← Back to list</button>
-                                    <h3 className="text-white font-semibold mb-4">💬 Conversation</h3>
+                                    <h3 className="text-white font-semibold mb-4">💬 {t('acc_conversation')}</h3>
                                     <div className="space-y-3 max-h-[60vh] overflow-y-auto pr-2">
                                         {selectedSession.messages.map((msg, i) => {
                                             const displayText = getMessageDisplay(msg);
@@ -562,12 +564,12 @@ const AccountPage = () => {
                                     ) : sessions.length === 0 ? (
                                         <div className="bg-black/70 backdrop-blur-xl border border-white/10 rounded-2xl p-12 text-center">
                                             <p className="text-5xl mb-4">💬</p>
-                                            <h3 className="text-white text-lg font-semibold mb-2">No Chat History</h3>
-                                            <p className="text-gray-400 text-sm mb-6">Start chatting with the AI planner to see your history here.</p>
+                                            <h3 className="text-white text-lg font-semibold mb-2">{t('acc_no_chats')}</h3>
+                                            <p className="text-gray-400 text-sm mb-6">{t('acc_no_chats_desc')}</p>
                                             <Link to="/create-trip">
                                                 <motion.button whileHover={{ scale: 1.02 }}
                                                     className="px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-xl font-semibold">
-                                                    🪷 Start Chatting
+                                                    {t('acc_start_chatting')}
                                                 </motion.button>
                                             </Link>
                                         </div>
@@ -603,8 +605,8 @@ const AccountPage = () => {
                             {/* Change Password Section */}
                             {user.authProvider !== "google" && (
                                 <div className="bg-black/70 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
-                                    <h3 className="text-white text-lg font-semibold mb-1">🔑 Change Password</h3>
-                                    <p className="text-gray-500 text-sm mb-6">Update your password to keep your account secure.</p>
+                                    <h3 className="text-white text-lg font-semibold mb-1">{t('acc_change_password')}</h3>
+                                    <p className="text-gray-500 text-sm mb-6">{t('acc_change_password_desc')}</p>
 
                                     <form onSubmit={handleChangePassword} className="space-y-4 max-w-md">
                                         <div>
@@ -669,7 +671,7 @@ const AccountPage = () => {
 
                             {/* Danger Zone */}
                             <div className="bg-black/70 backdrop-blur-xl border border-red-500/20 rounded-2xl p-8 shadow-2xl">
-                                <h3 className="text-red-400 text-lg font-semibold mb-1">⚠️ Danger Zone</h3>
+                                <h3 className="text-red-400 text-lg font-semibold mb-1">{t('acc_danger_zone')}</h3>
                                 <p className="text-gray-500 text-sm mb-6">
                                     Permanently delete your account and all associated data. This action cannot be undone.
                                 </p>
@@ -681,7 +683,7 @@ const AccountPage = () => {
                                         onClick={() => setShowDeleteConfirm(true)}
                                         className="px-6 py-2.5 bg-red-500/10 border border-red-500/30 text-red-400 font-semibold rounded-lg text-sm hover:bg-red-500/20 transition-all"
                                     >
-                                        Delete My Account
+                                        {t('acc_delete_account')}
                                     </motion.button>
                                 ) : (
                                     <motion.div

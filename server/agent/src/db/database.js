@@ -76,6 +76,8 @@ function initSchema() {
     // Safe ALTER for existing DBs — add columns if missing
     try { db.exec("ALTER TABLE chat_sessions ADD COLUMN user_id TEXT"); } catch (e) { }
     try { db.exec("ALTER TABLE chat_sessions ADD COLUMN title TEXT DEFAULT 'New Chat'"); } catch (e) { }
+    try { db.exec("ALTER TABLE places ADD COLUMN google_place_id TEXT"); } catch (e) { }
+    try { db.exec("ALTER TABLE places ADD COLUMN photo_reference TEXT"); } catch (e) { }
 
     const ftsExists = db.prepare(
         "SELECT name FROM sqlite_master WHERE type='table' AND name='places_fts'"
@@ -326,6 +328,12 @@ function getItineraryCount(userId) {
     return row ? row.count : 0;
 }
 
+function updatePlacePhoto(placeId, googlePlaceId, photoReference) {
+    getDB().prepare(
+        'UPDATE places SET google_place_id = ?, photo_reference = ? WHERE id = ?'
+    ).run(googlePlaceId, photoReference, placeId);
+}
+
 module.exports = {
     getDB,
     getAllPlaces,
@@ -351,7 +359,8 @@ module.exports = {
     getItinerariesByUser,
     getItineraryById,
     deleteItinerary,
-    getItineraryCount
+    getItineraryCount,
+    updatePlacePhoto
 };
 
 

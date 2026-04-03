@@ -22,6 +22,7 @@ import "swiper/css/effect-fade";
 
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 import { motion } from 'framer-motion'
+import SEOHead from "../../../components/SEOHead";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -46,6 +47,11 @@ const Agra = () => {
 
   return (
     <div className="w-full min-h-screen overflow-x-hidden">
+      <SEOHead
+        title="Agra — India's Timeless Mughal Capital"
+        description="Explore Agra, home of the iconic Taj Mahal, Agra Fort, and Fatehpur Sikri. Experience Mughal architecture, petha, and marble inlay craftsmanship."
+        image="/destinations/agra.jpg"
+      />
       <Navbar navLinks={[
         { label: "Attractions", href: "#attractions" },
         { label: "Folklore", href: "#folklore" },

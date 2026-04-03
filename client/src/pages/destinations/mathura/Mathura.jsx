@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import SEOHead from "../../../components/SEOHead";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
@@ -147,6 +148,11 @@ const Mathura = () => {
 
   return (
     <div className="w-full min-h-screen overflow-x-hidden">
+      <SEOHead
+        title="Mathura — Birthplace of Lord Krishna"
+        description="Explore Mathura, the sacred birthplace of Lord Krishna. Visit Krishna Janmabhoomi, Dwarkadheesh Temple, Vishram Ghat, and experience divine Holi celebrations."
+        image="/mathura/attractions/janmabhoomi.avif"
+      />
       <Navbar navLinks={[
         { label: "Attractions", href: "#attractions" },
         { label: "Folklore", href: "#folklore" },

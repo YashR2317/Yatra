@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import { Menu, X, Sun, Moon, User } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Menu, X, Sun, Moon, User, Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../contexts/ThemeContext";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -8,6 +8,7 @@ import { useAuth } from "../contexts/AuthContext";
 
 const Navbar = ({ navLinks, autoHide = false }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { theme, toggleTheme } = useTheme();
   const { language, toggleLanguage, t } = useLanguage();
   const { isLoggedIn, user } = useAuth();
@@ -38,16 +39,22 @@ const Navbar = ({ navLinks, autoHide = false }) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* ── Click handler — smooth scroll to section ───────────── */
+  /* ── Click handler — smooth scroll to section or navigate ── */
   const handleNav = (item) => {
     setOpenMobile(false);
     const targetId = item.href.replace("#", "");
-    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+    // If we're on the landing/home page, scroll to section
+    if (location.pathname === "/home" || location.pathname === "/") {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Navigate to home page with hash
+      navigate(`/home#${targetId}`);
+    }
   };
 
   /* ── Direct page navigation items ──────────────────────── */
   const directNavItems = [
-    { label: "Virtual Tours", path: "/virtual-tours" },
+    { label: t('nav_virtual_tours'), path: "/virtual-tours" },
   ];
 
   /* ── Intersection observer for active highlight ─────────── */
@@ -186,6 +193,16 @@ const Navbar = ({ navLinks, autoHide = false }) => {
 
         {/* ── CTA + TOGGLES + MOBILE TOGGLE ────────────────── */}
         <div className="flex items-center gap-3">
+          {/* Search button */}
+          <button
+            onClick={() => window.dispatchEvent(new KeyboardEvent("keydown", { key: "k", metaKey: true, bubbles: true }))}
+            aria-label="Search (⌘K)"
+            title="Search (⌘K)"
+            className="p-2 rounded-full text-white/60 hover:text-amber-300 hover:bg-white/10 transition-all duration-300"
+          >
+            <Search size={20} />
+          </button>
+
           {/* Dark mode toggle */}
           <button
             onClick={toggleTheme}
