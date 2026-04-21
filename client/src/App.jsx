@@ -25,6 +25,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import StickyCreateTripButton from "./components/StickyCreateTripButton";
 import ProtectedRoute from "./components/ProtectedRoute";
 import GlobalSearch from "./components/GlobalSearch";
+import { usePageTracking } from "./hooks/usePageTracking";
 
 /* Virtual Tours */
 import VirtualToursIndex from "./pages/virtual-tours/VirtualToursIndex";
@@ -53,6 +54,8 @@ function CitySubRoute({ section }) {
 }
 
 function App() {
+  usePageTracking(); // GA4 SPA page-view tracking
+
   return (
     <div>
       <ScrollToTop />

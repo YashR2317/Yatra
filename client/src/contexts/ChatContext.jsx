@@ -129,9 +129,11 @@ export function getTimeAgo(date) {
 
 /* ── State Management ────────────────────────────────────────── */
 const initialState = {
-  messages: [],        // { id, role, content, type, data }
+  messages: [],        // { id, role, content, type, data, reactions: [] }
   sessionId: localStorage.getItem("brajyatra_session") || null,
   isLoading: false,
+  isStreaming: false,
+  partialMessage: "",  // accumulated text during SSE stream
   currentItinerary: null,
   health: null,
   cities: [],
@@ -140,6 +142,13 @@ const initialState = {
   cityPickerOpen: false,
   cityPickerQueryKey: null,
   editMode: false,
+  commandPaletteOpen: false,
+  // Agent pipeline tracking
+  agentTrace: null,    // { agents: [{ name, status, elapsed }], currentAgent: string }
+  // User preferences
+  soundEnabled: localStorage.getItem("brajyatra_sound") === "true",
+  voiceEnabled: true,
+  ambientEnabled: localStorage.getItem("brajyatra_ambient") === "true",
 };
 
 function chatReducer(state, action) {
@@ -160,6 +169,27 @@ function chatReducer(state, action) {
       return { ...state, sessionId: action.payload };
     case "SET_LOADING":
       return { ...state, isLoading: action.payload };
+    case "STREAM_START":
+      return { ...state, isStreaming: true, partialMessage: "", isLoading: true };
+    case "STREAM_CHUNK":
+      return { ...state, partialMessage: action.payload };
+    case "STREAM_DONE":
+      return {
+        ...state,
+        isStreaming: false,
+        partialMessage: "",
+        isLoading: false,
+        messages: [...state.messages, { id: Date.now(), role: "assistant", content: action.payload.text, type: "text" }],
+        sessionId: action.payload.sessionId || state.sessionId,
+      };
+    case "STREAM_ERROR":
+      return {
+        ...state,
+        isStreaming: false,
+        partialMessage: "",
+        isLoading: false,
+        messages: [...state.messages, { id: Date.now(), role: "assistant", content: action.payload || "Something went wrong.", type: "text" }],
+      };
     case "SET_HEALTH":
       return { ...state, health: action.payload };
     case "SET_CITIES":
@@ -180,13 +210,6 @@ function chatReducer(state, action) {
       return { ...state, cityPickerOpen: false, cityPickerQueryKey: null };
     case "TOGGLE_EDIT":
       return { ...state, editMode: !state.editMode };
-    case "UPDATE_ITINERARY_SLOT": {
-      if (!state.currentItinerary) return state;
-      const itin = JSON.parse(JSON.stringify(state.currentItinerary));
-      const { dayIdx, slots } = action.payload;
-      if (itin.days[dayIdx]) itin.days[dayIdx].slots = slots;
-      return { ...state, currentItinerary: itin };
-    }
     case "CLEAR_MESSAGES":
       return { ...state, messages: [], currentItinerary: null, editMode: false, sessionId: null };
     case "LOAD_HISTORY":
@@ -200,6 +223,57 @@ function chatReducer(state, action) {
       }
       return { ...state, messages: msgs };
     }
+    case "REACT_TO_MESSAGE": {
+      const { messageId, reaction } = action.payload;
+      return {
+        ...state,
+        messages: state.messages.map((m) =>
+          m.id === messageId
+            ? { ...m, reactions: m.reactions?.includes(reaction)
+                ? m.reactions.filter((r) => r !== reaction)
+                : [...(m.reactions || []), reaction] }
+            : m
+        ),
+      };
+    }
+    case "UPDATE_ITINERARY_SLOT": {
+      // Drag-and-drop reorder: update slots for a specific day in the latest itinerary message
+      const { dayIdx, slots } = action.payload;
+      const msgs = state.messages.map((m) => {
+        if (m.type === "itinerary" && m.data?.days?.[dayIdx]) {
+          const newDays = [...m.data.days];
+          newDays[dayIdx] = { ...newDays[dayIdx], slots };
+          return { ...m, data: { ...m.data, days: newDays } };
+        }
+        return m;
+      });
+      // Also update currentItinerary if set
+      let newCurrent = state.currentItinerary;
+      if (newCurrent?.days?.[dayIdx]) {
+        const newDays = [...newCurrent.days];
+        newDays[dayIdx] = { ...newDays[dayIdx], slots };
+        newCurrent = { ...newCurrent, days: newDays };
+      }
+      return { ...state, messages: msgs, currentItinerary: newCurrent };
+    }
+    case "TOGGLE_SOUND":
+      localStorage.setItem("brajyatra_sound", !state.soundEnabled);
+      return { ...state, soundEnabled: !state.soundEnabled };
+    case "TOGGLE_VOICE":
+      return { ...state, voiceEnabled: !state.voiceEnabled };
+    case "TOGGLE_AMBIENT":
+      localStorage.setItem("brajyatra_ambient", !state.ambientEnabled);
+      return { ...state, ambientEnabled: !state.ambientEnabled };
+    case "SET_AGENT_TRACE":
+      return { ...state, agentTrace: action.payload };
+    case "CLEAR_AGENT_TRACE":
+      return { ...state, agentTrace: null };
+    case "OPEN_COMMAND_PALETTE":
+      return { ...state, commandPaletteOpen: true };
+    case "CLOSE_COMMAND_PALETTE":
+      return { ...state, commandPaletteOpen: false };
+    case "TOGGLE_COMMAND_PALETTE":
+      return { ...state, commandPaletteOpen: !state.commandPaletteOpen };
     default:
       return state;
   }

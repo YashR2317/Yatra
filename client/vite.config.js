@@ -6,15 +6,15 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    // Output to server/public for production serving
-    outDir: '../server/public/client',
+    // Output to dist/ for production builds
+    outDir: 'dist',
     emptyOutDir: true,
   },
   server: {
     proxy: {
-      // Proxy API calls to the unified server in development
+      // Proxy API calls to the unified Python/FastAPI server in development
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'http://localhost:3000',
         changeOrigin: true,
       },
     },

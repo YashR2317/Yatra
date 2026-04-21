@@ -1,7 +1,7 @@
 import { useCallback, useRef } from "react";
 import { useAuth } from "../contexts/AuthContext";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:3000/api";
 const AGENT_API = `${API_BASE}/agent`;
 const USER_API = `${API_BASE}/user`;
 
@@ -15,7 +15,7 @@ export function useChat() {
     return h;
   }, [token]);
 
-  /** POST /api/agent/chat */
+  /** POST /api/agent/chat (standard JSON response) */
   const sendMessage = useCallback(
     async (message, sessionId, language = "en", extra = {}) => {
       abortRef.current = new AbortController();
@@ -29,6 +29,74 @@ export function useChat() {
       });
       if (!res.ok) throw new Error(`Chat failed: ${res.status}`);
       return res.json();
+    },
+    [headers]
+  );
+
+  /**
+   * POST /api/agent/chat/stream (SSE — token-by-token)
+   * @param {string}   message
+   * @param {string}   sessionId
+   * @param {string}   language
+   * @param {object}   extra      — additional body fields
+   * @param {function} onChunk    — called with accumulated text on each token
+   * @param {function} onDone     — called with { text, sessionId } when stream completes
+   * @param {function} onError    — called with error message string
+   */
+  const sendMessageStream = useCallback(
+    async (message, sessionId, language = "en", extra = {}, { onChunk, onDone, onError } = {}) => {
+      abortRef.current = new AbortController();
+      const body = { message, language, ...extra };
+      if (sessionId) body.sessionId = sessionId;
+
+      try {
+        const res = await fetch(`${AGENT_API}/chat/stream`, {
+          method: "POST",
+          headers: headers(),
+          body: JSON.stringify(body),
+          signal: abortRef.current.signal,
+        });
+
+        if (!res.ok) {
+          const errText = await res.text().catch(() => `Stream failed: ${res.status}`);
+          if (onError) onError(errText);
+          throw new Error(errText);
+        }
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+        let streamSessionId = sessionId;
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split('\n');
+          buffer = lines.pop() || ''; // keep incomplete line in buffer
+
+          for (const line of lines) {
+            if (!line.startsWith('data: ')) continue;
+            try {
+              const data = JSON.parse(line.slice(6));
+              if (data.type === 'session' || data.type === 'session_done') {
+                // Server sends sessionId at start and end of stream
+                if (data.sessionId) streamSessionId = data.sessionId;
+              } else if (data.type === 'chunk' && onChunk) {
+                onChunk(data.accumulated);
+              } else if (data.type === 'done') {
+                if (onDone) onDone({ text: data.text, sessionId: streamSessionId });
+              } else if (data.type === 'error' && onError) {
+                onError(data.error);
+              }
+            } catch { /* skip malformed JSON lines */ }
+          }
+        }
+      } catch (err) {
+        if (err.name === 'AbortError') return; // user cancelled
+        if (onError) onError(err.message);
+      }
     },
     [headers]
   );
@@ -139,6 +207,7 @@ export function useChat() {
 
   return {
     sendMessage,
+    sendMessageStream,
     stopChat,
     loadHistory,
     checkHealth,

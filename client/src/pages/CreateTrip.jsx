@@ -1,19 +1,77 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback, useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChatProvider, useChatContext } from "../contexts/ChatContext";
 import { useChat } from "../hooks/useChat";
+import { useSoundEffects } from "../hooks/useSoundEffects";
 import ChatSidebar from "../components/chat/ChatSidebar";
 import ChatWelcome from "../components/chat/ChatWelcome";
 import ChatMessages from "../components/chat/ChatMessages";
 import ChatInput from "../components/chat/ChatInput";
 import QuestionnaireModal from "../components/chat/QuestionnaireModal";
 import CityPickerModal from "../components/chat/CityPickerModal";
+import CommandPalette from "../components/chat/CommandPalette";
+
+/* ── Toast Notification System ─────────────────────────── */
+function ToastContainer({ toasts, onDismiss }) {
+  return (
+    <div className="fixed bottom-20 right-4 z-[200] flex flex-col gap-2 pointer-events-none">
+      <AnimatePresence>
+        {toasts.map((toast) => (
+          <motion.div
+            key={toast.id}
+            initial={{ opacity: 0, x: 80, scale: 0.95 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: 80, scale: 0.95 }}
+            className={`pointer-events-auto px-4 py-3 rounded-xl text-sm font-semibold shadow-lg border flex items-center gap-2 ${
+              toast.type === "success"
+                ? "bg-green-50 dark:bg-green-900/30 border-green-200 dark:border-green-800 text-green-700 dark:text-green-300"
+                : toast.type === "error"
+                ? "bg-red-50 dark:bg-red-900/30 border-red-200 dark:border-red-800 text-red-700 dark:text-red-300"
+                : "bg-amber-50 dark:bg-amber-900/30 border-amber-200 dark:border-amber-800 text-amber-700 dark:text-amber-300"
+            }`}
+          >
+            <span>{toast.icon}</span>
+            <span>{toast.message}</span>
+            <button onClick={() => onDismiss(toast.id)} className="ml-2 opacity-60 hover:opacity-100 text-xs">✕</button>
+          </motion.div>
+        ))}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+/* ── Ambient Background Helper ─────────────────────────── */
+function getAmbientClass() {
+  const hour = new Date().getHours();
+  if (hour >= 5 && hour < 8) return "ambient-dawn";
+  if (hour >= 8 && hour < 17) return "ambient-day";
+  if (hour >= 17 && hour < 20) return "ambient-dusk";
+  return "ambient-night";
+}
 
 function ChatPage() {
   const navigate = useNavigate();
   const { state, dispatch } = useChatContext();
-  const { sendMessage, stopChat, loadHistory, checkHealth, fetchCities } = useChat();
+  const { sendMessage, sendMessageStream, stopChat, loadHistory, checkHealth, fetchCities } = useChat();
+  const { playSend, playReceive, playSuccess } = useSoundEffects(state.soundEnabled);
+  const [toasts, setToasts] = useState([]);
+
+  // Toast helper
+  const showToast = useCallback((message, type = "info", icon = "ℹ️") => {
+    const id = Date.now();
+    setToasts((prev) => [...prev, { id, message, type, icon }]);
+    setTimeout(() => setToasts((prev) => prev.filter((t) => t.id !== id)), 4000);
+    // Haptic feedback on mobile
+    if (navigator.vibrate) navigator.vibrate(type === "success" ? [100] : [50]);
+  }, []);
+
+  const dismissToast = useCallback((id) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id));
+  }, []);
+
+  // Ambient background class
+  const ambientClass = useMemo(() => state.ambientEnabled ? getAmbientClass() : "", [state.ambientEnabled]);
 
   // Load health + cities on mount
   useEffect(() => {
@@ -32,7 +90,6 @@ function ChatPage() {
           if (msg.role === "user") {
             return { id: Date.now() + i, role: "user", content: msg.content, type: "text" };
           }
-          // Try to parse as structured data
           try {
             const parsed = JSON.parse(msg.content);
             if (parsed && parsed.days && Array.isArray(parsed.days)) {
@@ -49,10 +106,49 @@ function ChatPage() {
     }
   }, [state.sessionId]); // intentionally minimal deps
 
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handler = (e) => {
+      const isMod = e.metaKey || e.ctrlKey;
+
+      // ⌘/Ctrl + N → New chat
+      if (isMod && e.key === "n") {
+        e.preventDefault();
+        dispatch({ type: "CLEAR_MESSAGES" });
+      }
+      // ⌘/Ctrl + K → Command Palette
+      if (isMod && e.key === "k") {
+        e.preventDefault();
+        dispatch({ type: "TOGGLE_COMMAND_PALETTE" });
+      }
+      // Escape → Close modals
+      if (e.key === "Escape") {
+        if (state.commandPaletteOpen) dispatch({ type: "CLOSE_COMMAND_PALETTE" });
+        else if (state.questionnaireOpen) dispatch({ type: "CLOSE_QUESTIONNAIRE" });
+        else if (state.cityPickerOpen) dispatch({ type: "CLOSE_CITY_PICKER" });
+        else if (state.sidebarOpen) dispatch({ type: "CLOSE_SIDEBAR" });
+      }
+      // ⌘ + 1-4 → Quick actions
+      if (isMod && ["1", "2", "3", "4"].includes(e.key)) {
+        e.preventDefault();
+        const actions = [
+          { action: "questionnaire" },
+          { queryKey: "query_darshan" },
+          { queryKey: "query_festivals" },
+          { queryKey: "query_parikrama" },
+        ];
+        handleAction(actions[parseInt(e.key) - 1]);
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [state.questionnaireOpen, state.cityPickerOpen, state.sidebarOpen, state.commandPaletteOpen, dispatch]);
+
   // Handle sending a message
   const handleSend = useCallback(
     async (text) => {
       dispatch({ type: "ADD_USER_MESSAGE", payload: text });
+      playSend();
 
       try {
         const data = await sendMessage(text, state.sessionId, "en");
@@ -61,6 +157,8 @@ function ChatPage() {
           dispatch({ type: "SET_SESSION", payload: data.sessionId });
         }
 
+        playReceive();
+
         switch (data.type) {
           case "itinerary":
             dispatch({
@@ -68,6 +166,8 @@ function ChatPage() {
               payload: { content: "", type: "itinerary", data: data.itinerary },
             });
             dispatch({ type: "SET_ITINERARY", payload: data.itinerary });
+            playSuccess();
+            showToast("Yatra planned successfully!", "success", "🛕");
             break;
           case "recommend":
             dispatch({
@@ -115,7 +215,7 @@ function ChatPage() {
         });
       }
     },
-    [sendMessage, state.sessionId, dispatch]
+    [sendMessage, state.sessionId, dispatch, playSend, playReceive, playSuccess]
   );
 
   // Handle weather preference selection
@@ -124,15 +224,19 @@ function ChatPage() {
       const selectedLabel = data.options.choices.find((c) => c.id === prefId)?.label || prefId;
       dispatch({ type: "ADD_USER_MESSAGE", payload: `🗺️ ${selectedLabel}` });
       dispatch({ type: "SET_LOADING", payload: true });
+      playSend();
 
       try {
         const result = await sendMessage(data.originalMessage, state.sessionId, "en", { weather_preference: prefId });
 
         if (result.sessionId) dispatch({ type: "SET_SESSION", payload: result.sessionId });
 
+        playReceive();
+
         if (result.type === "itinerary") {
           dispatch({ type: "ADD_ASSISTANT_MESSAGE", payload: { content: "", type: "itinerary", data: result.itinerary } });
           dispatch({ type: "SET_ITINERARY", payload: result.itinerary });
+          playSuccess();
         } else {
           dispatch({ type: "ADD_ASSISTANT_MESSAGE", payload: { content: result.text || "Could not generate itinerary.", type: "text" } });
         }
@@ -142,7 +246,7 @@ function ChatPage() {
         }
       }
     },
-    [sendMessage, state.sessionId, dispatch]
+    [sendMessage, state.sessionId, dispatch, playSend, playReceive, playSuccess]
   );
 
   // Handle welcome card / sidebar action
@@ -231,7 +335,7 @@ function ChatPage() {
   );
 
   return (
-    <div className="fixed inset-0 flex bg-[var(--color-bg)]">
+    <div className={`fixed inset-0 flex bg-[var(--color-bg)] ${ambientClass} transition-all duration-1000`}>
       {/* Sidebar */}
       <ChatSidebar onAction={handleAction} onLoadSession={handleLoadSession} onNewChat={handleNewChat} />
 
@@ -253,25 +357,42 @@ function ChatPage() {
 
             {/* Status */}
             <div className="flex items-center gap-2">
-              <div className={`w-2 h-2 rounded-full ${state.health?.status === "ok" ? "bg-green-500" : "bg-red-500"}`} />
-              <span className="text-[11px] text-[var(--color-text-secondary)]">
+              <div className={`w-2 h-2 rounded-full ${state.health?.status === "ok" ? "bg-green-500 shadow-sm shadow-green-500/50" : "bg-red-500 shadow-sm shadow-red-500/50"}`} />
+              <span className="text-[11px] text-[var(--color-text-secondary)] font-medium">
                 {state.health?.status === "ok"
                   ? `Online · ${state.health?.places || 0} tirth sthals`
-                  : "Connecting..."}
+                  : "Connecting…"}
               </span>
             </div>
           </div>
 
-          {/* Back Button */}
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => navigate("/home")}
-            className="px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-white text-xs font-bold shadow-md hover:shadow-amber-500/30 transition-all flex items-center gap-1.5"
-          >
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="15 18 9 12 15 6" /></svg>
-            Back
-          </motion.button>
+          {/* Back + Shortcuts */}
+          <div className="flex items-center gap-2">
+            <span className="hidden sm:inline text-[9px] text-[var(--color-text-secondary)] opacity-40">
+              ⌘N new · ⌘K commands · Esc close
+            </span>
+            {/* Ambient toggle */}
+            <button
+              onClick={() => dispatch({ type: "TOGGLE_AMBIENT" })}
+              className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs transition-all ${
+                state.ambientEnabled
+                  ? "bg-amber-100 dark:bg-amber-900/30 text-amber-600"
+                  : "text-[var(--color-text-secondary)] hover:bg-gray-100 dark:hover:bg-gray-800"
+              }`}
+              title={state.ambientEnabled ? "Disable ambient background" : "Enable ambient background"}
+            >
+              🌓
+            </button>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => navigate("/home")}
+              className="px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 text-white text-xs font-bold shadow-md hover:shadow-lg hover:shadow-amber-500/25 transition-all flex items-center gap-1.5"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="15 18 9 12 15 6" /></svg>
+              Back
+            </motion.button>
+          </div>
         </div>
 
         {/* Messages or Welcome */}
@@ -288,6 +409,10 @@ function ChatPage() {
       {/* Modals */}
       <QuestionnaireModal onSubmit={handleSend} />
       <CityPickerModal onSelect={handleSend} />
+      <CommandPalette onSendMessage={handleSend} onNewChat={handleNewChat} />
+
+      {/* Toast Notifications */}
+      <ToastContainer toasts={toasts} onDismiss={dismissToast} />
     </div>
   );
 }

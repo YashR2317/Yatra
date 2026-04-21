@@ -1,21 +1,17 @@
 {
   "name": "brajyatra-complete",
-  "version": "1.0.0",
-  "description": "Complete BrajYatra.AI — Sacred Braj Travel Planner with AI Agent, Auth, and Virtual Tours",
+  "version": "2.0.0",
+  "description": "BrajYatra.AI — Sacred Braj Travel Planner with Python/FastAPI Backend",
   "private": true,
   "scripts": {
     "dev": "concurrently -n server,client -c blue,magenta \"npm run dev:server\" \"npm run dev:client\"",
-    "dev:server": "cd server && node index.js",
-    "dev:agent": "cd server/agent && npm start",
-    "dev:auth": "cd server/auth && node index.js",
+    "dev:server": "cd server_py && .\\venv\\Scripts\\python.exe -m uvicorn main:app --reload --port 3000",
     "dev:client": "cd client && npm run dev",
+    "start": "cd server_py && .\\venv\\Scripts\\python.exe main.py",
     "build": "cd client && npm run build",
-    "start": "cd server && node index.js",
-    "start:prod": "set NODE_ENV=production && cd server && node index.js",
-    "install:all": "cd server && npm install && cd agent && npm install && cd ../auth && npm install && cd ../../client && npm install",
-    "seed": "cd server/agent && npm run seed",
-    "test": "cd server && npx vitest run",
-    "test:watch": "cd server && npx vitest"
+    "test": "cd server_py && .\\venv\\Scripts\\python.exe -m pytest tests/ -v",
+    "seed": "cd server_py && .\\venv\\Scripts\\python.exe -m agent.db.seed",
+    "install:client": "cd client && npm install"
   },
   "devDependencies": {
     "concurrently": "^9.1.0"

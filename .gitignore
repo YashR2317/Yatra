@@ -3,6 +3,7 @@ node_modules/
 
 # Environment files
 .env
+client/.env
 !.env.example
 
 # Build output
@@ -13,6 +14,14 @@ build/
 *.db
 *.db-shm
 *.db-wal
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+venv/
+*.egg-info/
 
 # OS files
 .DS_Store
